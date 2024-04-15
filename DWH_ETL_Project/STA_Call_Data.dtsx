@@ -11,233 +11,11 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{219478BA-18F3-4051-BEF8-002420E36748}">
+  DTS:VersionBuild="24"
+  DTS:VersionGUID="{4A6688A7-CAF6-4CF2-AC69-76A1AA125B34}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[FFCM - Call Data 2018]"
-      DTS:CreationName="FLATFILE"
-      DTS:DTSID="{5E876CE3-BC29-475B-9D37-4251E5905AA9}"
-      DTS:ObjectName="FFCM - Call Data 2018">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:Format="Delimited"
-          DTS:LocaleID="1033"
-          DTS:HeaderRowDelimiter="_x000D__x000A_"
-          DTS:ColumnNamesInFirstDataRow="True"
-          DTS:RowDelimiter=""
-          DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Administrator\source\repos\dwh_etl_project\DWH_ETL_Project\Data\Data 2018.csv">
-          <DTS:FlatFileColumns>
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="CallTimestamp"
-              DTS:DTSID="{B05F7A85-58DF-4843-B1A1-DBAF68A67A55}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Call Type"
-              DTS:DTSID="{5758C537-AC51-48E0-BD88-3AB85A5D7889}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="EmployeeID"
-              DTS:DTSID="{B09268FD-F307-4724-98D2-08C87315CF3E}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="CallDuration"
-              DTS:DTSID="{D9A903FF-C6E5-4F84-B27E-C64ABF6137BB}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="WaitTime"
-              DTS:DTSID="{A8EF30B0-1B03-4691-AEE3-1C392E370D71}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="CallAbandoned"
-              DTS:DTSID="{08E2E359-CEA4-4A02-B095-C4DA7E224AD9}"
-              DTS:CreationName="" />
-          </DTS:FlatFileColumns>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[FFCM - Call Data 2019]"
-      DTS:CreationName="FLATFILE"
-      DTS:DTSID="{A2C2021B-B5E5-446F-807B-87724A4BB14E}"
-      DTS:ObjectName="FFCM - Call Data 2019">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:Format="Delimited"
-          DTS:LocaleID="1033"
-          DTS:HeaderRowDelimiter="_x000D__x000A_"
-          DTS:ColumnNamesInFirstDataRow="True"
-          DTS:RowDelimiter=""
-          DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Administrator\source\repos\dwh_etl_project\DWH_ETL_Project\Data\Data 2019.csv">
-          <DTS:FlatFileColumns>
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="CallTimestamp"
-              DTS:DTSID="{4960CD22-982F-4E5C-8746-6844B93A5565}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Call Type"
-              DTS:DTSID="{A966752C-BFA5-4C06-B897-32D03D67B741}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="EmployeeID"
-              DTS:DTSID="{F45FD8EF-5BD3-42AC-9DBD-F107EA8C5E29}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="CallDuration"
-              DTS:DTSID="{2D6F7543-4F2A-47DA-AD93-5C2545A89D69}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="WaitTime"
-              DTS:DTSID="{F0C65DF3-4DBE-4928-B6E4-7C650CF6293F}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="CallAbandoned"
-              DTS:DTSID="{6CADE05E-7DFC-488C-BCEA-BEE81B9C2D1B}"
-              DTS:CreationName="" />
-          </DTS:FlatFileColumns>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[FFCM - Call Data 2020]"
-      DTS:CreationName="FLATFILE"
-      DTS:DTSID="{5EBCA07F-8F4A-4376-B4D8-9B6E03DB1CEC}"
-      DTS:ObjectName="FFCM - Call Data 2020">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:Format="Delimited"
-          DTS:LocaleID="1033"
-          DTS:HeaderRowDelimiter="_x000D__x000A_"
-          DTS:ColumnNamesInFirstDataRow="True"
-          DTS:RowDelimiter=""
-          DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Administrator\source\repos\dwh_etl_project\DWH_ETL_Project\Data\Data 2020.csv">
-          <DTS:FlatFileColumns>
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="CallTimestamp"
-              DTS:DTSID="{CB9A9635-3FED-4665-B66E-05FF91B6B4CA}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Call Type"
-              DTS:DTSID="{D11FCCD4-5AAC-4CB8-9B6C-C2936ADB078E}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="EmployeeID"
-              DTS:DTSID="{4880C635-8C92-42D8-BDEF-C75A7BFEB881}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="CallDuration"
-              DTS:DTSID="{52AE6A4A-6870-40AA-A4CA-C3BABD12054E}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="WaitTime"
-              DTS:DTSID="{9202E0EB-FC6A-488A-8B23-8C6808E4CD91}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="CallAbandoned"
-              DTS:DTSID="{E41BD35B-B05A-4FBF-8997-336F991EE382}"
-              DTS:CreationName="" />
-          </DTS:FlatFileColumns>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[localhost.Project_STA]"
       DTS:CreationName="OLEDB"
@@ -248,6 +26,80 @@
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
           DTS:ConnectionString="Data Source=localhost;Initial Catalog=Project_STA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{3B22D137-2D3B-42C5-B2DD-8F47AE1CA03F}localhost.Project_STA;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[MFCM - Call Data CSVs]"
+      DTS:CreationName="MULTIFLATFILE"
+      DTS:DTSID="{AE76251F-90F8-45AC-907A-A14EAF3BA4AF}"
+      DTS:ObjectName="MFCM - Call Data CSVs">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Administrator\source\repos\dwh_etl_project\DWH_ETL_Project\Data\Call Data\*.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CallTimestamp"
+              DTS:DTSID="{19E118FD-D21C-4044-B77B-6ABF949E0C5D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Call Type"
+              DTS:DTSID="{AE143827-28D3-411D-A08C-CDB77E2EA56F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EmployeeID"
+              DTS:DTSID="{61C4CAE6-E576-49EF-99CB-D4DC8291CB48}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CallDuration"
+              DTS:DTSID="{09805AC8-E4E9-4BF8-BCED-F59E8526941C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="WaitTime"
+              DTS:DTSID="{DEE1A9A1-2348-4BE1-BE23-8831B3D3AD77}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CallAbandoned"
+              DTS:DTSID="{FD1F0C8C-D0DC-4494-A406-166054B7DE78}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -267,373 +119,12 @@
           version="1">
           <components>
             <component
-              refId="Package\DFT - STA Call Data\ALL - STA Call Data"
-              componentClassID="Microsoft.UnionAll"
-              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
-              name="ALL - STA Call Data"
-              version="1">
-              <inputs>
-                <input
-                  refId="Package\DFT - STA Call Data\ALL - STA Call Data.Inputs[Union All Input 1]"
-                  name="Union All Input 1">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\DFT - STA Call Data\ALL - STA Call Data.Inputs[Union All Input 1].Columns[CallTimestamp]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="CallTimestamp"
-                      lineageId="Package\DFT - STA Call Data\FF_SRC - STA Call Data 2018.Outputs[Flat File Source Output].Columns[CallTimestamp]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DFT - STA Call Data\ALL - STA Call Data.Outputs[Union All Output 1].Columns[CallTimestamp]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DFT - STA Call Data\ALL - STA Call Data.Inputs[Union All Input 1].Columns[CallType]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="CallType"
-                      lineageId="Package\DFT - STA Call Data\FF_SRC - STA Call Data 2018.Outputs[Flat File Source Output].Columns[CallType]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DFT - STA Call Data\ALL - STA Call Data.Outputs[Union All Output 1].Columns[CallType]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DFT - STA Call Data\ALL - STA Call Data.Inputs[Union All Input 1].Columns[EmployeeID]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="EmployeeID"
-                      lineageId="Package\DFT - STA Call Data\FF_SRC - STA Call Data 2018.Outputs[Flat File Source Output].Columns[EmployeeID]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DFT - STA Call Data\ALL - STA Call Data.Outputs[Union All Output 1].Columns[EmployeeID]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DFT - STA Call Data\ALL - STA Call Data.Inputs[Union All Input 1].Columns[CallDuration]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="CallDuration"
-                      lineageId="Package\DFT - STA Call Data\FF_SRC - STA Call Data 2018.Outputs[Flat File Source Output].Columns[CallDuration]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DFT - STA Call Data\ALL - STA Call Data.Outputs[Union All Output 1].Columns[CallDuration]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DFT - STA Call Data\ALL - STA Call Data.Inputs[Union All Input 1].Columns[WaitTime]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="WaitTime"
-                      lineageId="Package\DFT - STA Call Data\FF_SRC - STA Call Data 2018.Outputs[Flat File Source Output].Columns[WaitTime]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DFT - STA Call Data\ALL - STA Call Data.Outputs[Union All Output 1].Columns[WaitTime]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DFT - STA Call Data\ALL - STA Call Data.Inputs[Union All Input 1].Columns[CallAbandoned]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="CallAbandoned"
-                      lineageId="Package\DFT - STA Call Data\FF_SRC - STA Call Data 2018.Outputs[Flat File Source Output].Columns[CallAbandoned]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DFT - STA Call Data\ALL - STA Call Data.Outputs[Union All Output 1].Columns[CallAbandoned]}</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-                <input
-                  refId="Package\DFT - STA Call Data\ALL - STA Call Data.Inputs[Union All Input 2]"
-                  hasSideEffects="true"
-                  name="Union All Input 2">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\DFT - STA Call Data\ALL - STA Call Data.Inputs[Union All Input 2].Columns[CallTimestamp]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="CallTimestamp"
-                      lineageId="Package\DFT - STA Call Data\FF_SRC  - Call Data 2019.Outputs[Flat File Source Output].Columns[CallTimestamp]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DFT - STA Call Data\ALL - STA Call Data.Outputs[Union All Output 1].Columns[CallTimestamp]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DFT - STA Call Data\ALL - STA Call Data.Inputs[Union All Input 2].Columns[CallType]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="CallType"
-                      lineageId="Package\DFT - STA Call Data\FF_SRC  - Call Data 2019.Outputs[Flat File Source Output].Columns[CallType]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DFT - STA Call Data\ALL - STA Call Data.Outputs[Union All Output 1].Columns[CallType]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DFT - STA Call Data\ALL - STA Call Data.Inputs[Union All Input 2].Columns[EmployeeID]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="EmployeeID"
-                      lineageId="Package\DFT - STA Call Data\FF_SRC  - Call Data 2019.Outputs[Flat File Source Output].Columns[EmployeeID]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DFT - STA Call Data\ALL - STA Call Data.Outputs[Union All Output 1].Columns[EmployeeID]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DFT - STA Call Data\ALL - STA Call Data.Inputs[Union All Input 2].Columns[CallDuration]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="CallDuration"
-                      lineageId="Package\DFT - STA Call Data\FF_SRC  - Call Data 2019.Outputs[Flat File Source Output].Columns[CallDuration]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DFT - STA Call Data\ALL - STA Call Data.Outputs[Union All Output 1].Columns[CallDuration]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DFT - STA Call Data\ALL - STA Call Data.Inputs[Union All Input 2].Columns[WaitTime]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="WaitTime"
-                      lineageId="Package\DFT - STA Call Data\FF_SRC  - Call Data 2019.Outputs[Flat File Source Output].Columns[WaitTime]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DFT - STA Call Data\ALL - STA Call Data.Outputs[Union All Output 1].Columns[WaitTime]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DFT - STA Call Data\ALL - STA Call Data.Inputs[Union All Input 2].Columns[CallAbandoned]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="CallAbandoned"
-                      lineageId="Package\DFT - STA Call Data\FF_SRC  - Call Data 2019.Outputs[Flat File Source Output].Columns[CallAbandoned]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DFT - STA Call Data\ALL - STA Call Data.Outputs[Union All Output 1].Columns[CallAbandoned]}</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-                <input
-                  refId="Package\DFT - STA Call Data\ALL - STA Call Data.Inputs[Union All Input 3]"
-                  hasSideEffects="true"
-                  name="Union All Input 3">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\DFT - STA Call Data\ALL - STA Call Data.Inputs[Union All Input 3].Columns[CallTimestamp]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="CallTimestamp"
-                      lineageId="Package\DFT - STA Call Data\FF_SRC - Call Data 2020.Outputs[Flat File Source Output].Columns[CallTimestamp]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DFT - STA Call Data\ALL - STA Call Data.Outputs[Union All Output 1].Columns[CallTimestamp]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DFT - STA Call Data\ALL - STA Call Data.Inputs[Union All Input 3].Columns[CallType]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="CallType"
-                      lineageId="Package\DFT - STA Call Data\FF_SRC - Call Data 2020.Outputs[Flat File Source Output].Columns[CallType]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DFT - STA Call Data\ALL - STA Call Data.Outputs[Union All Output 1].Columns[CallType]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DFT - STA Call Data\ALL - STA Call Data.Inputs[Union All Input 3].Columns[EmployeeID]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="EmployeeID"
-                      lineageId="Package\DFT - STA Call Data\FF_SRC - Call Data 2020.Outputs[Flat File Source Output].Columns[EmployeeID]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DFT - STA Call Data\ALL - STA Call Data.Outputs[Union All Output 1].Columns[EmployeeID]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DFT - STA Call Data\ALL - STA Call Data.Inputs[Union All Input 3].Columns[CallDuration]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="CallDuration"
-                      lineageId="Package\DFT - STA Call Data\FF_SRC - Call Data 2020.Outputs[Flat File Source Output].Columns[CallDuration]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DFT - STA Call Data\ALL - STA Call Data.Outputs[Union All Output 1].Columns[CallDuration]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DFT - STA Call Data\ALL - STA Call Data.Inputs[Union All Input 3].Columns[WaitTime]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="WaitTime"
-                      lineageId="Package\DFT - STA Call Data\FF_SRC - Call Data 2020.Outputs[Flat File Source Output].Columns[WaitTime]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DFT - STA Call Data\ALL - STA Call Data.Outputs[Union All Output 1].Columns[WaitTime]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DFT - STA Call Data\ALL - STA Call Data.Inputs[Union All Input 3].Columns[CallAbandoned]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="CallAbandoned"
-                      lineageId="Package\DFT - STA Call Data\FF_SRC - Call Data 2020.Outputs[Flat File Source Output].Columns[CallAbandoned]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DFT - STA Call Data\ALL - STA Call Data.Outputs[Union All Output 1].Columns[CallAbandoned]}</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-                <input
-                  refId="Package\DFT - STA Call Data\ALL - STA Call Data.Inputs[Union All Input 4]"
-                  dangling="true"
-                  hasSideEffects="true"
-                  name="Union All Input 4">
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\DFT - STA Call Data\ALL - STA Call Data.Outputs[Union All Output 1]"
-                  name="Union All Output 1">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\DFT - STA Call Data\ALL - STA Call Data.Outputs[Union All Output 1].Columns[CallTimestamp]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      lineageId="Package\DFT - STA Call Data\ALL - STA Call Data.Outputs[Union All Output 1].Columns[CallTimestamp]"
-                      name="CallTimestamp" />
-                    <outputColumn
-                      refId="Package\DFT - STA Call Data\ALL - STA Call Data.Outputs[Union All Output 1].Columns[CallType]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      lineageId="Package\DFT - STA Call Data\ALL - STA Call Data.Outputs[Union All Output 1].Columns[CallType]"
-                      name="CallType" />
-                    <outputColumn
-                      refId="Package\DFT - STA Call Data\ALL - STA Call Data.Outputs[Union All Output 1].Columns[EmployeeID]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      lineageId="Package\DFT - STA Call Data\ALL - STA Call Data.Outputs[Union All Output 1].Columns[EmployeeID]"
-                      name="EmployeeID" />
-                    <outputColumn
-                      refId="Package\DFT - STA Call Data\ALL - STA Call Data.Outputs[Union All Output 1].Columns[CallDuration]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      lineageId="Package\DFT - STA Call Data\ALL - STA Call Data.Outputs[Union All Output 1].Columns[CallDuration]"
-                      name="CallDuration" />
-                    <outputColumn
-                      refId="Package\DFT - STA Call Data\ALL - STA Call Data.Outputs[Union All Output 1].Columns[WaitTime]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      lineageId="Package\DFT - STA Call Data\ALL - STA Call Data.Outputs[Union All Output 1].Columns[WaitTime]"
-                      name="WaitTime" />
-                    <outputColumn
-                      refId="Package\DFT - STA Call Data\ALL - STA Call Data.Outputs[Union All Output 1].Columns[CallAbandoned]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      lineageId="Package\DFT - STA Call Data\ALL - STA Call Data.Outputs[Union All Output 1].Columns[CallAbandoned]"
-                      name="CallAbandoned" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\DFT - STA Call Data\FF_SRC  - Call Data 2019"
+              refId="Package\DFT - STA Call Data\FF_SRC - Call Data"
               componentClassID="Microsoft.FlatFileSource"
               contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Flat File Source"
               localeId="1033"
-              name="FF_SRC  - Call Data 2019"
+              name="FF_SRC - Call Data"
               usesDispositions="true"
               version="1">
               <properties>
@@ -648,25 +139,25 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\DFT - STA Call Data\FF_SRC  - Call Data 2019.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[FFCM - Call Data 2019]"
-                  connectionManagerRefId="Package.ConnectionManagers[FFCM - Call Data 2019]"
+                  refId="Package\DFT - STA Call Data\FF_SRC - Call Data.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[MFCM - Call Data CSVs]"
+                  connectionManagerRefId="Package.ConnectionManagers[MFCM - Call Data CSVs]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\DFT - STA Call Data\FF_SRC  - Call Data 2019.Outputs[Flat File Source Output]"
+                  refId="Package\DFT - STA Call Data\FF_SRC - Call Data.Outputs[Flat File Source Output]"
                   name="Flat File Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DFT - STA Call Data\FF_SRC  - Call Data 2019.Outputs[Flat File Source Output].Columns[CallTimestamp]"
+                      refId="Package\DFT - STA Call Data\FF_SRC - Call Data.Outputs[Flat File Source Output].Columns[CallTimestamp]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - STA Call Data\FF_SRC  - Call Data 2019.Outputs[Flat File Source Output].ExternalColumns[CallTimestamp]"
+                      externalMetadataColumnId="Package\DFT - STA Call Data\FF_SRC - Call Data.Outputs[Flat File Source Output].ExternalColumns[CallTimestamp]"
                       length="255"
-                      lineageId="Package\DFT - STA Call Data\FF_SRC  - Call Data 2019.Outputs[Flat File Source Output].Columns[CallTimestamp]"
+                      lineageId="Package\DFT - STA Call Data\FF_SRC - Call Data.Outputs[Flat File Source Output].Columns[CallTimestamp]"
                       name="CallTimestamp"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -681,14 +172,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\DFT - STA Call Data\FF_SRC  - Call Data 2019.Outputs[Flat File Source Output].Columns[CallType]"
+                      refId="Package\DFT - STA Call Data\FF_SRC - Call Data.Outputs[Flat File Source Output].Columns[CallType]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - STA Call Data\FF_SRC  - Call Data 2019.Outputs[Flat File Source Output].ExternalColumns[Call Type]"
+                      externalMetadataColumnId="Package\DFT - STA Call Data\FF_SRC - Call Data.Outputs[Flat File Source Output].ExternalColumns[Call Type]"
                       length="255"
-                      lineageId="Package\DFT - STA Call Data\FF_SRC  - Call Data 2019.Outputs[Flat File Source Output].Columns[CallType]"
+                      lineageId="Package\DFT - STA Call Data\FF_SRC - Call Data.Outputs[Flat File Source Output].Columns[CallType]"
                       name="CallType"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -703,14 +194,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\DFT - STA Call Data\FF_SRC  - Call Data 2019.Outputs[Flat File Source Output].Columns[EmployeeID]"
+                      refId="Package\DFT - STA Call Data\FF_SRC - Call Data.Outputs[Flat File Source Output].Columns[EmployeeID]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - STA Call Data\FF_SRC  - Call Data 2019.Outputs[Flat File Source Output].ExternalColumns[EmployeeID]"
+                      externalMetadataColumnId="Package\DFT - STA Call Data\FF_SRC - Call Data.Outputs[Flat File Source Output].ExternalColumns[EmployeeID]"
                       length="255"
-                      lineageId="Package\DFT - STA Call Data\FF_SRC  - Call Data 2019.Outputs[Flat File Source Output].Columns[EmployeeID]"
+                      lineageId="Package\DFT - STA Call Data\FF_SRC - Call Data.Outputs[Flat File Source Output].Columns[EmployeeID]"
                       name="EmployeeID"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -725,14 +216,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\DFT - STA Call Data\FF_SRC  - Call Data 2019.Outputs[Flat File Source Output].Columns[CallDuration]"
+                      refId="Package\DFT - STA Call Data\FF_SRC - Call Data.Outputs[Flat File Source Output].Columns[CallDuration]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - STA Call Data\FF_SRC  - Call Data 2019.Outputs[Flat File Source Output].ExternalColumns[CallDuration]"
+                      externalMetadataColumnId="Package\DFT - STA Call Data\FF_SRC - Call Data.Outputs[Flat File Source Output].ExternalColumns[CallDuration]"
                       length="255"
-                      lineageId="Package\DFT - STA Call Data\FF_SRC  - Call Data 2019.Outputs[Flat File Source Output].Columns[CallDuration]"
+                      lineageId="Package\DFT - STA Call Data\FF_SRC - Call Data.Outputs[Flat File Source Output].Columns[CallDuration]"
                       name="CallDuration"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -747,14 +238,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\DFT - STA Call Data\FF_SRC  - Call Data 2019.Outputs[Flat File Source Output].Columns[WaitTime]"
+                      refId="Package\DFT - STA Call Data\FF_SRC - Call Data.Outputs[Flat File Source Output].Columns[WaitTime]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - STA Call Data\FF_SRC  - Call Data 2019.Outputs[Flat File Source Output].ExternalColumns[WaitTime]"
+                      externalMetadataColumnId="Package\DFT - STA Call Data\FF_SRC - Call Data.Outputs[Flat File Source Output].ExternalColumns[WaitTime]"
                       length="255"
-                      lineageId="Package\DFT - STA Call Data\FF_SRC  - Call Data 2019.Outputs[Flat File Source Output].Columns[WaitTime]"
+                      lineageId="Package\DFT - STA Call Data\FF_SRC - Call Data.Outputs[Flat File Source Output].Columns[WaitTime]"
                       name="WaitTime"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -769,14 +260,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\DFT - STA Call Data\FF_SRC  - Call Data 2019.Outputs[Flat File Source Output].Columns[CallAbandoned]"
+                      refId="Package\DFT - STA Call Data\FF_SRC - Call Data.Outputs[Flat File Source Output].Columns[CallAbandoned]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - STA Call Data\FF_SRC  - Call Data 2019.Outputs[Flat File Source Output].ExternalColumns[CallAbandoned]"
+                      externalMetadataColumnId="Package\DFT - STA Call Data\FF_SRC - Call Data.Outputs[Flat File Source Output].ExternalColumns[CallAbandoned]"
                       length="255"
-                      lineageId="Package\DFT - STA Call Data\FF_SRC  - Call Data 2019.Outputs[Flat File Source Output].Columns[CallAbandoned]"
+                      lineageId="Package\DFT - STA Call Data\FF_SRC - Call Data.Outputs[Flat File Source Output].Columns[CallAbandoned]"
                       name="CallAbandoned"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -794,37 +285,37 @@
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\DFT - STA Call Data\FF_SRC  - Call Data 2019.Outputs[Flat File Source Output].ExternalColumns[CallTimestamp]"
+                      refId="Package\DFT - STA Call Data\FF_SRC - Call Data.Outputs[Flat File Source Output].ExternalColumns[CallTimestamp]"
                       codePage="1252"
                       dataType="str"
                       length="255"
                       name="CallTimestamp" />
                     <externalMetadataColumn
-                      refId="Package\DFT - STA Call Data\FF_SRC  - Call Data 2019.Outputs[Flat File Source Output].ExternalColumns[Call Type]"
+                      refId="Package\DFT - STA Call Data\FF_SRC - Call Data.Outputs[Flat File Source Output].ExternalColumns[Call Type]"
                       codePage="1252"
                       dataType="str"
                       length="255"
                       name="Call Type" />
                     <externalMetadataColumn
-                      refId="Package\DFT - STA Call Data\FF_SRC  - Call Data 2019.Outputs[Flat File Source Output].ExternalColumns[EmployeeID]"
+                      refId="Package\DFT - STA Call Data\FF_SRC - Call Data.Outputs[Flat File Source Output].ExternalColumns[EmployeeID]"
                       codePage="1252"
                       dataType="str"
                       length="255"
                       name="EmployeeID" />
                     <externalMetadataColumn
-                      refId="Package\DFT - STA Call Data\FF_SRC  - Call Data 2019.Outputs[Flat File Source Output].ExternalColumns[CallDuration]"
+                      refId="Package\DFT - STA Call Data\FF_SRC - Call Data.Outputs[Flat File Source Output].ExternalColumns[CallDuration]"
                       codePage="1252"
                       dataType="str"
                       length="255"
                       name="CallDuration" />
                     <externalMetadataColumn
-                      refId="Package\DFT - STA Call Data\FF_SRC  - Call Data 2019.Outputs[Flat File Source Output].ExternalColumns[WaitTime]"
+                      refId="Package\DFT - STA Call Data\FF_SRC - Call Data.Outputs[Flat File Source Output].ExternalColumns[WaitTime]"
                       codePage="1252"
                       dataType="str"
                       length="255"
                       name="WaitTime" />
                     <externalMetadataColumn
-                      refId="Package\DFT - STA Call Data\FF_SRC  - Call Data 2019.Outputs[Flat File Source Output].ExternalColumns[CallAbandoned]"
+                      refId="Package\DFT - STA Call Data\FF_SRC - Call Data.Outputs[Flat File Source Output].ExternalColumns[CallAbandoned]"
                       codePage="1252"
                       dataType="str"
                       length="255"
@@ -832,493 +323,27 @@
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\DFT - STA Call Data\FF_SRC  - Call Data 2019.Outputs[Flat File Source Error Output]"
+                  refId="Package\DFT - STA Call Data\FF_SRC - Call Data.Outputs[Flat File Source Error Output]"
                   isErrorOut="true"
                   name="Flat File Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DFT - STA Call Data\FF_SRC  - Call Data 2019.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      refId="Package\DFT - STA Call Data\FF_SRC - Call Data.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                       codePage="1252"
                       dataType="text"
                       description="Flat File Source Error Output Column"
-                      lineageId="Package\DFT - STA Call Data\FF_SRC  - Call Data 2019.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      lineageId="Package\DFT - STA Call Data\FF_SRC - Call Data.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                       name="Flat File Source Error Output Column" />
                     <outputColumn
-                      refId="Package\DFT - STA Call Data\FF_SRC  - Call Data 2019.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      refId="Package\DFT - STA Call Data\FF_SRC - Call Data.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\DFT - STA Call Data\FF_SRC  - Call Data 2019.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\DFT - STA Call Data\FF_SRC - Call Data.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\DFT - STA Call Data\FF_SRC  - Call Data 2019.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\DFT - STA Call Data\FF_SRC - Call Data.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\DFT - STA Call Data\FF_SRC  - Call Data 2019.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\DFT - STA Call Data\FF_SRC - Call Data 2020"
-              componentClassID="Microsoft.FlatFileSource"
-              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Flat File Source"
-              localeId="1033"
-              name="FF_SRC - Call Data 2020"
-              usesDispositions="true"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Specifies whether zero-length columns are treated as null."
-                  name="RetainNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
-                  name="FileNameColumnName"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\DFT - STA Call Data\FF_SRC - Call Data 2020.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[FFCM - Call Data 2020]"
-                  connectionManagerRefId="Package.ConnectionManagers[FFCM - Call Data 2020]"
-                  name="FlatFileConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\DFT - STA Call Data\FF_SRC - Call Data 2020.Outputs[Flat File Source Output]"
-                  name="Flat File Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\DFT - STA Call Data\FF_SRC - Call Data 2020.Outputs[Flat File Source Output].Columns[CallTimestamp]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - STA Call Data\FF_SRC - Call Data 2020.Outputs[Flat File Source Output].ExternalColumns[CallTimestamp]"
-                      length="255"
-                      lineageId="Package\DFT - STA Call Data\FF_SRC - Call Data 2020.Outputs[Flat File Source Output].Columns[CallTimestamp]"
-                      name="CallTimestamp"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT - STA Call Data\FF_SRC - Call Data 2020.Outputs[Flat File Source Output].Columns[CallType]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - STA Call Data\FF_SRC - Call Data 2020.Outputs[Flat File Source Output].ExternalColumns[Call Type]"
-                      length="255"
-                      lineageId="Package\DFT - STA Call Data\FF_SRC - Call Data 2020.Outputs[Flat File Source Output].Columns[CallType]"
-                      name="CallType"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT - STA Call Data\FF_SRC - Call Data 2020.Outputs[Flat File Source Output].Columns[EmployeeID]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - STA Call Data\FF_SRC - Call Data 2020.Outputs[Flat File Source Output].ExternalColumns[EmployeeID]"
-                      length="255"
-                      lineageId="Package\DFT - STA Call Data\FF_SRC - Call Data 2020.Outputs[Flat File Source Output].Columns[EmployeeID]"
-                      name="EmployeeID"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT - STA Call Data\FF_SRC - Call Data 2020.Outputs[Flat File Source Output].Columns[CallDuration]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - STA Call Data\FF_SRC - Call Data 2020.Outputs[Flat File Source Output].ExternalColumns[CallDuration]"
-                      length="255"
-                      lineageId="Package\DFT - STA Call Data\FF_SRC - Call Data 2020.Outputs[Flat File Source Output].Columns[CallDuration]"
-                      name="CallDuration"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT - STA Call Data\FF_SRC - Call Data 2020.Outputs[Flat File Source Output].Columns[WaitTime]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - STA Call Data\FF_SRC - Call Data 2020.Outputs[Flat File Source Output].ExternalColumns[WaitTime]"
-                      length="255"
-                      lineageId="Package\DFT - STA Call Data\FF_SRC - Call Data 2020.Outputs[Flat File Source Output].Columns[WaitTime]"
-                      name="WaitTime"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT - STA Call Data\FF_SRC - Call Data 2020.Outputs[Flat File Source Output].Columns[CallAbandoned]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - STA Call Data\FF_SRC - Call Data 2020.Outputs[Flat File Source Output].ExternalColumns[CallAbandoned]"
-                      length="255"
-                      lineageId="Package\DFT - STA Call Data\FF_SRC - Call Data 2020.Outputs[Flat File Source Output].Columns[CallAbandoned]"
-                      name="CallAbandoned"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\DFT - STA Call Data\FF_SRC - Call Data 2020.Outputs[Flat File Source Output].ExternalColumns[CallTimestamp]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="CallTimestamp" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - STA Call Data\FF_SRC - Call Data 2020.Outputs[Flat File Source Output].ExternalColumns[Call Type]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="Call Type" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - STA Call Data\FF_SRC - Call Data 2020.Outputs[Flat File Source Output].ExternalColumns[EmployeeID]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="EmployeeID" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - STA Call Data\FF_SRC - Call Data 2020.Outputs[Flat File Source Output].ExternalColumns[CallDuration]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="CallDuration" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - STA Call Data\FF_SRC - Call Data 2020.Outputs[Flat File Source Output].ExternalColumns[WaitTime]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="WaitTime" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - STA Call Data\FF_SRC - Call Data 2020.Outputs[Flat File Source Output].ExternalColumns[CallAbandoned]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="CallAbandoned" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\DFT - STA Call Data\FF_SRC - Call Data 2020.Outputs[Flat File Source Error Output]"
-                  isErrorOut="true"
-                  name="Flat File Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\DFT - STA Call Data\FF_SRC - Call Data 2020.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                      codePage="1252"
-                      dataType="text"
-                      description="Flat File Source Error Output Column"
-                      lineageId="Package\DFT - STA Call Data\FF_SRC - Call Data 2020.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                      name="Flat File Source Error Output Column" />
-                    <outputColumn
-                      refId="Package\DFT - STA Call Data\FF_SRC - Call Data 2020.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\DFT - STA Call Data\FF_SRC - Call Data 2020.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\DFT - STA Call Data\FF_SRC - Call Data 2020.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\DFT - STA Call Data\FF_SRC - Call Data 2020.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\DFT - STA Call Data\FF_SRC - STA Call Data 2018"
-              componentClassID="Microsoft.FlatFileSource"
-              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Flat File Source"
-              localeId="1033"
-              name="FF_SRC - STA Call Data 2018"
-              usesDispositions="true"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Specifies whether zero-length columns are treated as null."
-                  name="RetainNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
-                  name="FileNameColumnName"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\DFT - STA Call Data\FF_SRC - STA Call Data 2018.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[FFCM - Call Data 2018]"
-                  connectionManagerRefId="Package.ConnectionManagers[FFCM - Call Data 2018]"
-                  name="FlatFileConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\DFT - STA Call Data\FF_SRC - STA Call Data 2018.Outputs[Flat File Source Output]"
-                  name="Flat File Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\DFT - STA Call Data\FF_SRC - STA Call Data 2018.Outputs[Flat File Source Output].Columns[CallTimestamp]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - STA Call Data\FF_SRC - STA Call Data 2018.Outputs[Flat File Source Output].ExternalColumns[CallTimestamp]"
-                      length="255"
-                      lineageId="Package\DFT - STA Call Data\FF_SRC - STA Call Data 2018.Outputs[Flat File Source Output].Columns[CallTimestamp]"
-                      name="CallTimestamp"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT - STA Call Data\FF_SRC - STA Call Data 2018.Outputs[Flat File Source Output].Columns[CallType]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - STA Call Data\FF_SRC - STA Call Data 2018.Outputs[Flat File Source Output].ExternalColumns[Call Type]"
-                      length="255"
-                      lineageId="Package\DFT - STA Call Data\FF_SRC - STA Call Data 2018.Outputs[Flat File Source Output].Columns[CallType]"
-                      name="CallType"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT - STA Call Data\FF_SRC - STA Call Data 2018.Outputs[Flat File Source Output].Columns[EmployeeID]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - STA Call Data\FF_SRC - STA Call Data 2018.Outputs[Flat File Source Output].ExternalColumns[EmployeeID]"
-                      length="255"
-                      lineageId="Package\DFT - STA Call Data\FF_SRC - STA Call Data 2018.Outputs[Flat File Source Output].Columns[EmployeeID]"
-                      name="EmployeeID"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT - STA Call Data\FF_SRC - STA Call Data 2018.Outputs[Flat File Source Output].Columns[CallDuration]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - STA Call Data\FF_SRC - STA Call Data 2018.Outputs[Flat File Source Output].ExternalColumns[CallDuration]"
-                      length="255"
-                      lineageId="Package\DFT - STA Call Data\FF_SRC - STA Call Data 2018.Outputs[Flat File Source Output].Columns[CallDuration]"
-                      name="CallDuration"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT - STA Call Data\FF_SRC - STA Call Data 2018.Outputs[Flat File Source Output].Columns[WaitTime]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - STA Call Data\FF_SRC - STA Call Data 2018.Outputs[Flat File Source Output].ExternalColumns[WaitTime]"
-                      length="255"
-                      lineageId="Package\DFT - STA Call Data\FF_SRC - STA Call Data 2018.Outputs[Flat File Source Output].Columns[WaitTime]"
-                      name="WaitTime"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT - STA Call Data\FF_SRC - STA Call Data 2018.Outputs[Flat File Source Output].Columns[CallAbandoned]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - STA Call Data\FF_SRC - STA Call Data 2018.Outputs[Flat File Source Output].ExternalColumns[CallAbandoned]"
-                      length="255"
-                      lineageId="Package\DFT - STA Call Data\FF_SRC - STA Call Data 2018.Outputs[Flat File Source Output].Columns[CallAbandoned]"
-                      name="CallAbandoned"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\DFT - STA Call Data\FF_SRC - STA Call Data 2018.Outputs[Flat File Source Output].ExternalColumns[CallTimestamp]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="CallTimestamp" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - STA Call Data\FF_SRC - STA Call Data 2018.Outputs[Flat File Source Output].ExternalColumns[Call Type]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="Call Type" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - STA Call Data\FF_SRC - STA Call Data 2018.Outputs[Flat File Source Output].ExternalColumns[EmployeeID]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="EmployeeID" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - STA Call Data\FF_SRC - STA Call Data 2018.Outputs[Flat File Source Output].ExternalColumns[CallDuration]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="CallDuration" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - STA Call Data\FF_SRC - STA Call Data 2018.Outputs[Flat File Source Output].ExternalColumns[WaitTime]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="WaitTime" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - STA Call Data\FF_SRC - STA Call Data 2018.Outputs[Flat File Source Output].ExternalColumns[CallAbandoned]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="CallAbandoned" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\DFT - STA Call Data\FF_SRC - STA Call Data 2018.Outputs[Flat File Source Error Output]"
-                  isErrorOut="true"
-                  name="Flat File Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\DFT - STA Call Data\FF_SRC - STA Call Data 2018.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                      codePage="1252"
-                      dataType="text"
-                      description="Flat File Source Error Output Column"
-                      lineageId="Package\DFT - STA Call Data\FF_SRC - STA Call Data 2018.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                      name="Flat File Source Error Output Column" />
-                    <outputColumn
-                      refId="Package\DFT - STA Call Data\FF_SRC - STA Call Data 2018.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\DFT - STA Call Data\FF_SRC - STA Call Data 2018.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\DFT - STA Call Data\FF_SRC - STA Call Data 2018.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\DFT - STA Call Data\FF_SRC - STA Call Data 2018.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\DFT - STA Call Data\FF_SRC - Call Data.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1405,7 +430,7 @@
                       cachedLength="255"
                       cachedName="CallTimestamp"
                       externalMetadataColumnId="Package\DFT - STA Call Data\OLE_DST - STA Call Data.Inputs[OLE DB Destination Input].ExternalColumns[CallTimestamp]"
-                      lineageId="Package\DFT - STA Call Data\ALL - STA Call Data.Outputs[Union All Output 1].Columns[CallTimestamp]" />
+                      lineageId="Package\DFT - STA Call Data\FF_SRC - Call Data.Outputs[Flat File Source Output].Columns[CallTimestamp]" />
                     <inputColumn
                       refId="Package\DFT - STA Call Data\OLE_DST - STA Call Data.Inputs[OLE DB Destination Input].Columns[CallType]"
                       cachedCodepage="1252"
@@ -1413,7 +438,7 @@
                       cachedLength="255"
                       cachedName="CallType"
                       externalMetadataColumnId="Package\DFT - STA Call Data\OLE_DST - STA Call Data.Inputs[OLE DB Destination Input].ExternalColumns[CallType]"
-                      lineageId="Package\DFT - STA Call Data\ALL - STA Call Data.Outputs[Union All Output 1].Columns[CallType]" />
+                      lineageId="Package\DFT - STA Call Data\FF_SRC - Call Data.Outputs[Flat File Source Output].Columns[CallType]" />
                     <inputColumn
                       refId="Package\DFT - STA Call Data\OLE_DST - STA Call Data.Inputs[OLE DB Destination Input].Columns[EmployeeID]"
                       cachedCodepage="1252"
@@ -1421,7 +446,7 @@
                       cachedLength="255"
                       cachedName="EmployeeID"
                       externalMetadataColumnId="Package\DFT - STA Call Data\OLE_DST - STA Call Data.Inputs[OLE DB Destination Input].ExternalColumns[EmployeeID]"
-                      lineageId="Package\DFT - STA Call Data\ALL - STA Call Data.Outputs[Union All Output 1].Columns[EmployeeID]" />
+                      lineageId="Package\DFT - STA Call Data\FF_SRC - Call Data.Outputs[Flat File Source Output].Columns[EmployeeID]" />
                     <inputColumn
                       refId="Package\DFT - STA Call Data\OLE_DST - STA Call Data.Inputs[OLE DB Destination Input].Columns[CallDuration]"
                       cachedCodepage="1252"
@@ -1429,7 +454,7 @@
                       cachedLength="255"
                       cachedName="CallDuration"
                       externalMetadataColumnId="Package\DFT - STA Call Data\OLE_DST - STA Call Data.Inputs[OLE DB Destination Input].ExternalColumns[CallDuration]"
-                      lineageId="Package\DFT - STA Call Data\ALL - STA Call Data.Outputs[Union All Output 1].Columns[CallDuration]" />
+                      lineageId="Package\DFT - STA Call Data\FF_SRC - Call Data.Outputs[Flat File Source Output].Columns[CallDuration]" />
                     <inputColumn
                       refId="Package\DFT - STA Call Data\OLE_DST - STA Call Data.Inputs[OLE DB Destination Input].Columns[WaitTime]"
                       cachedCodepage="1252"
@@ -1437,7 +462,7 @@
                       cachedLength="255"
                       cachedName="WaitTime"
                       externalMetadataColumnId="Package\DFT - STA Call Data\OLE_DST - STA Call Data.Inputs[OLE DB Destination Input].ExternalColumns[WaitTime]"
-                      lineageId="Package\DFT - STA Call Data\ALL - STA Call Data.Outputs[Union All Output 1].Columns[WaitTime]" />
+                      lineageId="Package\DFT - STA Call Data\FF_SRC - Call Data.Outputs[Flat File Source Output].Columns[WaitTime]" />
                     <inputColumn
                       refId="Package\DFT - STA Call Data\OLE_DST - STA Call Data.Inputs[OLE DB Destination Input].Columns[CallAbandoned]"
                       cachedCodepage="1252"
@@ -1445,7 +470,7 @@
                       cachedLength="255"
                       cachedName="CallAbandoned"
                       externalMetadataColumnId="Package\DFT - STA Call Data\OLE_DST - STA Call Data.Inputs[OLE DB Destination Input].ExternalColumns[CallAbandoned]"
-                      lineageId="Package\DFT - STA Call Data\ALL - STA Call Data.Outputs[Union All Output 1].Columns[CallAbandoned]" />
+                      lineageId="Package\DFT - STA Call Data\FF_SRC - Call Data.Outputs[Flat File Source Output].Columns[CallAbandoned]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1517,24 +542,9 @@
           <paths>
             <path
               refId="Package\DFT - STA Call Data.Paths[Flat File Source Output]"
-              endId="Package\DFT - STA Call Data\ALL - STA Call Data.Inputs[Union All Input 1]"
-              name="Flat File Source Output"
-              startId="Package\DFT - STA Call Data\FF_SRC - STA Call Data 2018.Outputs[Flat File Source Output]" />
-            <path
-              refId="Package\DFT - STA Call Data.Paths[Flat File Source Output1]"
-              endId="Package\DFT - STA Call Data\ALL - STA Call Data.Inputs[Union All Input 2]"
-              name="Flat File Source Output"
-              startId="Package\DFT - STA Call Data\FF_SRC  - Call Data 2019.Outputs[Flat File Source Output]" />
-            <path
-              refId="Package\DFT - STA Call Data.Paths[Flat File Source Output2]"
-              endId="Package\DFT - STA Call Data\ALL - STA Call Data.Inputs[Union All Input 3]"
-              name="Flat File Source Output"
-              startId="Package\DFT - STA Call Data\FF_SRC - Call Data 2020.Outputs[Flat File Source Output]" />
-            <path
-              refId="Package\DFT - STA Call Data.Paths[Union All Output 1]"
               endId="Package\DFT - STA Call Data\OLE_DST - STA Call Data.Inputs[OLE DB Destination Input]"
-              name="Union All Output 1"
-              startId="Package\DFT - STA Call Data\ALL - STA Call Data.Outputs[Union All Output 1]" />
+              name="Flat File Source Output"
+              startId="Package\DFT - STA Call Data\FF_SRC - Call Data.Outputs[Flat File Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -1561,7 +571,7 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{6DEFC1F7-211D-4FEE-BCC2-3CBDCD3EE7F6}"
+      DTS:DTSID="{73EC5027-11D9-4D27-86E9-B05C2C712860}"
       DTS:From="Package\SQL - Truncate Call Data"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
@@ -1580,39 +590,27 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="177,43"
-          Id="Package\DFT - STA Call Data"
-          TopLeft="233.624989802018,158.078945693134" />
-        <NodeLayout
           Size="199,43"
           Id="Package\SQL - Truncate Call Data"
-          TopLeft="232.49998960644,67.736841361526" />
+          TopLeft="235.49998960644,66.736841361526" />
+        <NodeLayout
+          Size="179,42"
+          Id="Package\DFT - STA Call Data"
+          TopLeft="247.624989802018,182.078945693134" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="331.833322939774,110.403508028193">
+          TopLeft="336.062489704229,109.736841361526">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-9.54166647108883,47.6754376649417"
+              EndConnector="0,72.342104331608"
               Start="0,0"
-              End="-9.54166647108883,40.1754376649417">
+              End="0,64.842104331608">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19.8377188324708" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,19.8377188324708"
-                    Point2="0,23.8377188324708"
-                    Point3="-4,23.8377188324708" />
-                  <mssgle:LineSegment
-                    End="-5.54166647108883,23.8377188324708" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-5.54166647108883,23.8377188324708"
-                    Point2="-9.54166647108883,23.8377188324708"
-                    Point3="-9.54166647108883,27.8377188324708" />
-                  <mssgle:LineSegment
-                    End="-9.54166647108883,40.1754376649417" />
+                    End="0,64.842104331608" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1628,131 +626,29 @@
     design-time-name="Package\DFT - STA Call Data">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="204,43"
-          Id="Package\DFT - STA Call Data\FF_SRC  - Call Data 2019"
-          TopLeft="284.999991506338,263.999992132187" />
-        <NodeLayout
-          Size="201,43"
-          Id="Package\DFT - STA Call Data\FF_SRC - Call Data 2020"
-          TopLeft="283.374991564081,332.999990075827" />
-        <NodeLayout
-          Size="224,43"
-          Id="Package\DFT - STA Call Data\FF_SRC - STA Call Data 2018"
-          TopLeft="277.999991744757,196.99999409914" />
+          Size="176,42"
+          Id="Package\DFT - STA Call Data\FF_SRC - Call Data"
+          TopLeft="498,267" />
         <NodeLayout
           Size="205,43"
           Id="Package\DFT - STA Call Data\OLE_DST - STA Call Data"
-          TopLeft="783.749964963646,261.368418182858" />
-        <NodeLayout
-          Size="175,43"
-          Id="Package\DFT - STA Call Data\ALL - STA Call Data"
-          TopLeft="573.124974379317,260.684207664055" />
-        <EdgeLayout
-          Id="Package\DFT - STA Call Data.Paths[Union All Output 1]"
-          TopLeft="747.791641045983,282.35964625679">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="35.9583239176624,0"
-              Start="0,0"
-              End="28.4583239176624,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="28.4583239176624,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT - STA Call Data.Paths[Flat File Source Output2]"
-          TopLeft="383.708324897414,332.999990075827">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="276.749982815236,-29.6491157451056"
-              Start="0,0"
-              End="276.749982815236,-22.1491157451056">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-10.8245578725528" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-10.8245578725528"
-                    Point2="0,-14.8245578725528"
-                    Point3="4,-14.8245578725528" />
-                  <mssgle:LineSegment
-                    End="272.749982815236,-14.8245578725528" />
-                  <mssgle:CubicBezierSegment
-                    Point1="272.749982815236,-14.8245578725528"
-                    Point2="276.749982815236,-14.8245578725528"
-                    Point3="276.749982815236,-18.8245578725528" />
-                  <mssgle:LineSegment
-                    End="276.749982815236,-22.1491157451056" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT - STA Call Data.Paths[Flat File Source Output1]"
-          TopLeft="488.999991506338,286.564322120343">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="84.1249828729788,0"
-              Start="0,0"
-              End="76.6249828729788,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="76.6249828729788,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="851.749964963646,270.368418182858" />
         <EdgeLayout
           Id="Package\DFT - STA Call Data.Paths[Flat File Source Output]"
-          TopLeft="501.999991744757,218.49999409914">
+          TopLeft="674,289.934209091429">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="71.12498263456,57.8508802315817"
+              EndConnector="177.749964963646,0"
               Start="0,0"
-              End="63.62498263456,57.8508802315817">
+              End="170.249964963646,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="37.1440482504854,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="37.1440482504854,0"
-                    Point2="41.1440482504854,0"
-                    Point3="41.1440482504854,4" />
-                  <mssgle:LineSegment
-                    End="41.1440482504854,53.8508802315817" />
-                  <mssgle:CubicBezierSegment
-                    Point1="41.1440482504854,53.8508802315817"
-                    Point2="41.1440482504854,57.8508802315817"
-                    Point3="45.1440482504854,57.8508802315817" />
-                  <mssgle:LineSegment
-                    End="63.62498263456,57.8508802315817" />
+                    End="170.249964963646,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1761,6 +657,13 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <AnnotationLayout
+          Text="Caveat: All the files that are going to be processed using MultiFlatFile MUST have the same format including data types"
+          ParentId="Package\DFT - STA Call Data"
+          FontInfo="{assembly:Null}"
+          Size="373,60"
+          Id="de139e4f-1ff2-4a03-a4fa-090ede23bc8e"
+          TopLeft="401,188" />
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>

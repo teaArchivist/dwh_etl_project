@@ -11,16 +11,16 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="1"
-  DTS:VersionGUID="{0DC6F71E-E29C-4D88-B5AF-40C2BA2430BF}">
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{0672CDCA-EA97-4303-9E23-9CCD2FC3A6A3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:refId="Package.ConnectionManagers[FFCM - Call Types CSV]"
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{36CD8BC3-D595-4AA0-99A0-B5D66541CDBE}"
-      DTS:ObjectName="Flat File Connection Manager">
+      DTS:ObjectName="FFCM - Call Types CSV">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -30,7 +30,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Administrator\Documents\Data Warehousing &amp; ETL\Project files\Data\Call Types.csv">
+          DTS:ConnectionString="C:\Users\Administrator\source\repos\dwh_etl_project\DWH_ETL_Project\Data\Call Types.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -39,7 +39,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CallTypeID"
-              DTS:DTSID="{337CCCD6-C6B6-4524-B190-91B7551DBEAD}"
+              DTS:DTSID="{F483A75C-DDA6-4591-8FF1-9DAC0AD5B05C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -48,7 +48,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CallTypeLabel"
-              DTS:DTSID="{E55D4CD5-C5DF-4B31-8EEB-AA055C03A44A}"
+              DTS:DTSID="{C7CF06D5-91A8-47E8-B4DD-F925C6CFC329}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -92,8 +92,8 @@
               <connections>
                 <connection
                   refId="Package\DFT - STA Call Types\FF_SRC - STA Call Types.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
-                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerID="Package.ConnectionManagers[FFCM - Call Types CSV]"
+                  connectionManagerRefId="Package.ConnectionManagers[FFCM - Call Types CSV]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
@@ -374,27 +374,27 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="184,42.6666666666667"
+          Size="184,43"
           Id="Package\DFT - STA Call Types"
-          TopLeft="349.249984633178,158.763156211938" />
+          TopLeft="348.249984633178,159.763156211938" />
         <NodeLayout
-          Size="229.333333333334,42.6666666666667"
+          Size="229,43"
           Id="Package\SQL - Truncate STA Call Types"
           TopLeft="325.624985443429,73.8947360307556" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="440.770818371637,116.561402697422">
+          TopLeft="440.187485038304,116.894736030756">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,42.2017535145153"
+              EndConnector="0,42.8684201811824"
               Start="0,0"
-              End="0,34.7017535145153">
+              End="0,35.3684201811824">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,34.7017535145153" />
+                    End="0,35.3684201811824" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -412,27 +412,27 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="204,42.6666666666667"
-          Id="Package\DFT - STA Call Types\FF_SRC - STA Call Types"
-          TopLeft="542.999983817339,271.999991893768" />
-        <NodeLayout
-          Size="212,42.6666666666667"
+          Size="212,43"
           Id="Package\DFT - STA Call Types\OLE_DST - STA Call Types"
-          TopLeft="544.999983757735,347.999989628792" />
+          TopLeft="545.999983757735,348.999989628792" />
+        <NodeLayout
+          Size="204,43"
+          Id="Package\DFT - STA Call Types\FF_SRC - STA Call Types"
+          TopLeft="542.999983817339,272.999991893768" />
         <EdgeLayout
           Id="Package\DFT - STA Call Types.Paths[Flat File Source Output]"
-          TopLeft="647.999983787537,314.666658560435">
+          TopLeft="648.499983787537,315.999991893768">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,33.3333310683569"
+              EndConnector="0,32.999997735024"
               Start="0,0"
-              End="0,25.8333310683569">
+              End="0,25.499997735024">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.8333310683569" />
+                    End="0,25.499997735024" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

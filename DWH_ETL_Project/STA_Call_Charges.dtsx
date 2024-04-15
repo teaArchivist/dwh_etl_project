@@ -11,16 +11,16 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="5"
-  DTS:VersionGUID="{4423D92A-219D-4634-B623-F0BEA375AEF9}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{ED6FA6FF-698E-4E96-86EB-028348F8120D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Call Charges]"
+      DTS:refId="Package.ConnectionManagers[FFCM - Call Charges CSV]"
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{83095972-A634-4809-856A-0B3FB16625B8}"
-      DTS:ObjectName="Call Charges">
+      DTS:ObjectName="FFCM - Call Charges CSV">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -30,7 +30,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Administrator\Documents\Data Warehousing &amp; ETL\Project files\Data\Call Charges.csv">
+          DTS:ConnectionString="C:\Users\Administrator\source\repos\dwh_etl_project\DWH_ETL_Project\Data\Call Charges.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -39,7 +39,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Call Type "
-              DTS:DTSID="{61187F27-DEE2-4045-9DAD-72C17E84E1F6}"
+              DTS:DTSID="{E15C8212-9D15-4A54-914D-587F392F6856}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -48,7 +48,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Call Charges (2018)"
-              DTS:DTSID="{821B1698-EB45-46EC-8CF0-3D4E17297900}"
+              DTS:DTSID="{2080AA06-9A2D-4499-AA81-C872BB60BF01}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -57,7 +57,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Call Charges (2019)"
-              DTS:DTSID="{1F6059E5-F1CC-4085-8F7F-6F39456F7237}"
+              DTS:DTSID="{C3B94D94-CFBA-4990-AE29-DFC83CD5DFB9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -66,7 +66,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Call Charges (2020)"
-              DTS:DTSID="{8C4029D6-0749-499D-907D-625C6F4B1C2E}"
+              DTS:DTSID="{D447DD1A-FA70-425C-83B1-B0B97B9F5B36}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -75,7 +75,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Call Charges (2021)"
-              DTS:DTSID="{BD07BE9D-57F1-4AD4-A9BB-AE9EA72D94F1}"
+              DTS:DTSID="{FA798B24-78AE-4195-989A-5036B49A1DB5}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -119,8 +119,8 @@
               <connections>
                 <connection
                   refId="Package\DFT - STA Call Charges\FF_SRC - STA Call Charges.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Call Charges]"
-                  connectionManagerRefId="Package.ConnectionManagers[Call Charges]"
+                  connectionManagerID="Package.ConnectionManagers[FFCM - Call Charges CSV]"
+                  connectionManagerRefId="Package.ConnectionManagers[FFCM - Call Charges CSV]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
@@ -527,27 +527,27 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="194.666666666667,42.6666666666667"
+          Size="195,43"
           Id="Package\DFT - STA Call Charges"
-          TopLeft="345.499984800816,177.92105073843" />
+          TopLeft="346.499984800816,177.92105073843" />
         <NodeLayout
-          Size="240,42.6666666666667"
+          Size="240,43"
           Id="Package\SQL - Truncate STA Call Charges"
           TopLeft="328.74998530373,94.4210515948544" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="445.79165171894,137.087718261521">
+          TopLeft="446.374985052273,137.421051594854">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,40.8333324769087"
+              EndConnector="0,40.4999991435756"
               Start="0,0"
-              End="0,33.3333324769087">
+              End="0,32.9999991435756">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,33.3333324769087" />
+                    End="0,32.9999991435756" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -565,27 +565,27 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="216,42.6666666666667"
-          Id="Package\DFT - STA Call Charges\FF_SRC - STA Call Charges"
-          TopLeft="453.999986469746,221.999993383885" />
-        <NodeLayout
-          Size="222.666666666667,42.6666666666667"
+          Size="223,43"
           Id="Package\DFT - STA Call Charges\OLE_DST - STA Call Charges"
-          TopLeft="455.999986410141,306.999990850687" />
+          TopLeft="455.999986410141,307.999990850687" />
+        <NodeLayout
+          Size="216,43"
+          Id="Package\DFT - STA Call Charges\FF_SRC - STA Call Charges"
+          TopLeft="452.999986469746,222.999993383885" />
         <EdgeLayout
           Id="Package\DFT - STA Call Charges.Paths[Flat File Source Output]"
-          TopLeft="564.66665310661,264.666660050551">
+          TopLeft="564.249986439944,265.999993383885">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,42.3333308001359"
+              EndConnector="0,41.999997466802"
               Start="0,0"
-              End="0,34.8333308001359">
+              End="0,34.499997466802">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,34.8333308001359" />
+                    End="0,34.499997466802" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

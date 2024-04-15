@@ -11,16 +11,16 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="STA_"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{950A3B5E-C297-4204-944E-9E21E266BD43}">
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{9970DCB9-9F0F-4581-92C5-6474E60170D7}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Employees]"
+      DTS:refId="Package.ConnectionManagers[FFCM - Employees CSV]"
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{025647A8-5C70-42FC-AA0B-E7F31942EE7F}"
-      DTS:ObjectName="Employees">
+      DTS:ObjectName="FFCM - Employees CSV">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -30,7 +30,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Administrator\Documents\Data Warehousing &amp; ETL\Project files\Data\Employees.csv">
+          DTS:ConnectionString="C:\Users\Administrator\source\repos\dwh_etl_project\DWH_ETL_Project\Data\Employees.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -39,7 +39,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="EmployeeID"
-              DTS:DTSID="{0FF7DD14-6A4C-4E91-8CAB-7043808F6A76}"
+              DTS:DTSID="{208BC141-45CF-47D2-89CF-6DC6A0D0D572}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -48,7 +48,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="EmployeeName"
-              DTS:DTSID="{82FC0AD4-276D-4B37-B537-4673193A0255}"
+              DTS:DTSID="{9F9BDAFD-0F75-433D-A7AC-C497C05CEDA5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -57,7 +57,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Site"
-              DTS:DTSID="{A2F05722-B70B-4AD2-A516-77D38CEF3DD6}"
+              DTS:DTSID="{E6223065-9705-4ECA-8438-91E19FB641AB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -66,7 +66,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ManagerName"
-              DTS:DTSID="{700FACE1-E54C-413E-8F16-E2876F7B9B47}"
+              DTS:DTSID="{2CD5E18A-C6B3-4C98-B2F8-49E35E00E9A7}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -110,8 +110,8 @@
               <connections>
                 <connection
                   refId="Package\DFT - STA Employees\FF_SRC - STA Employees.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Employees]"
-                  connectionManagerRefId="Package.ConnectionManagers[Employees]"
+                  connectionManagerID="Package.ConnectionManagers[FFCM - Employees CSV]"
+                  connectionManagerRefId="Package.ConnectionManagers[FFCM - Employees CSV]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
@@ -476,11 +476,11 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="186.666666666667,42.6666666666667"
+          Size="187,43"
           Id="Package\DFT - STA Employees"
           TopLeft="293.624987119809,164.921050881167" />
         <NodeLayout
-          Size="232,42.6666666666667"
+          Size="232,43"
           Id="Package\SQL - Truncate STA Employees"
           TopLeft="276.874987622723,67.736841361526" />
         <EdgeLayout
@@ -514,39 +514,27 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="206.666666666667,42.6666666666667"
-          Id="Package\DFT - STA Employees\FF_SRC - STA Employees"
-          TopLeft="401.999988019467,209.999993741512" />
-        <NodeLayout
-          Size="213.333333333334,42.6666666666667"
+          Size="213,43"
           Id="Package\DFT - STA Employees\OLE_DST - STA Employees"
           TopLeft="413.999987661839,285.999991476536" />
+        <NodeLayout
+          Size="207,43"
+          Id="Package\DFT - STA Employees\FF_SRC - STA Employees"
+          TopLeft="417.999988019467,191.999993741512" />
         <EdgeLayout
           Id="Package\DFT - STA Employees.Paths[Flat File Source Output]"
-          TopLeft="505.3333213528,252.666660408179">
+          TopLeft="520.999987840653,234.999993741512">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="15.3333329757054,33.3333310683568"
+              EndConnector="0,50.999997735024"
               Start="0,0"
-              End="15.3333329757054,25.8333310683568">
+              End="0,43.499997735024">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,12.6666655341784" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,12.6666655341784"
-                    Point2="0,16.6666655341784"
-                    Point3="4,16.6666655341784" />
-                  <mssgle:LineSegment
-                    End="11.3333329757054,16.6666655341784" />
-                  <mssgle:CubicBezierSegment
-                    Point1="11.3333329757054,16.6666655341784"
-                    Point2="15.3333329757054,16.6666655341784"
-                    Point3="15.3333329757054,20.6666655341784" />
-                  <mssgle:LineSegment
-                    End="15.3333329757054,25.8333310683568" />
+                    End="0,43.499997735024" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

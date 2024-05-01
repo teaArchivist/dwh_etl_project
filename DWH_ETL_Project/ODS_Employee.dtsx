@@ -11,8 +11,8 @@
   DTS:LocaleID="1036"
   DTS:ObjectName="ODS_Employee"
   DTS:PackageType="5"
-  DTS:VersionBuild="15"
-  DTS:VersionGUID="{A4E2FFD1-4050-4AEE-B04A-4A11DA91E8D0}">
+  DTS:VersionBuild="28"
+  DTS:VersionGUID="{FA435EF0-317B-438D-8EDC-B452FC5D352D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -32,69 +32,20 @@
           version="1">
           <components>
             <component
-              refId="Package\DFT - ODS Employees\Colonne dérivée 1"
+              refId="Package\DFT - ODS Employees\DER - EmployeeFirstName"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Colonne dérivée;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
               description="Crée de nouvelles valeurs de colonne en appliquant des expressions aux colonnes d'entrée de transformation. Créez de nouvelles colonnes ou remplacez celles qui existent déjà. Par exemple, concaténez les valeurs de la colonne 'prénom' et de la colonne 'nom' pour créer une colonne 'nom complet'."
-              name="Colonne dérivée 1"
+              name="DER - EmployeeFirstName"
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\DFT - ODS Employees\Colonne dérivée 1.Inputs[Entrée de colonne dérivée]"
-                  description="Entrée de la transformation de colonnes dérivées"
-                  name="Entrée de colonne dérivée">
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\DFT - ODS Employees\Colonne dérivée 1.Outputs[Sortie de colonne dérivée]"
-                  description="Sortie par défaut de la transformation de colonnes dérivées"
-                  exclusionGroup="1"
-                  name="Sortie de colonne dérivée"
-                  synchronousInputId="Package\DFT - ODS Employees\Colonne dérivée 1.Inputs[Entrée de colonne dérivée]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\DFT - ODS Employees\Colonne dérivée 1.Outputs[Sortie d'erreur de colonne dérivée]"
-                  description="Sortie d'erreur de la transformation de colonnes dérivées"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Sortie d'erreur de colonne dérivée"
-                  synchronousInputId="Package\DFT - ODS Employees\Colonne dérivée 1.Inputs[Entrée de colonne dérivée]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\DFT - ODS Employees\Colonne dérivée 1.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\DFT - ODS Employees\Colonne dérivée 1.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\DFT - ODS Employees\Colonne dérivée 1.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\DFT - ODS Employees\Colonne dérivée 1.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\DFT - ODS Employees\DER - FirstName"
-              componentClassID="Microsoft.DerivedColumn"
-              contactInfo="Colonne dérivée;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
-              description="Crée de nouvelles valeurs de colonne en appliquant des expressions aux colonnes d'entrée de transformation. Créez de nouvelles colonnes ou remplacez celles qui existent déjà. Par exemple, concaténez les valeurs de la colonne 'prénom' et de la colonne 'nom' pour créer une colonne 'nom complet'."
-              name="DER - FirstName"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\DFT - ODS Employees\DER - FirstName.Inputs[Entrée de colonne dérivée]"
+                  refId="Package\DFT - ODS Employees\DER - EmployeeFirstName.Inputs[Entrée de colonne dérivée]"
                   description="Entrée de la transformation de colonnes dérivées"
                   name="Entrée de colonne dérivée">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\DFT - ODS Employees\DER - FirstName.Inputs[Entrée de colonne dérivée].Columns[EmployeeName]"
+                      refId="Package\DFT - ODS Employees\DER - EmployeeFirstName.Inputs[Entrée de colonne dérivée].Columns[EmployeeName]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="255"
@@ -106,20 +57,20 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\DFT - ODS Employees\DER - FirstName.Outputs[Sortie de colonne dérivée]"
+                  refId="Package\DFT - ODS Employees\DER - EmployeeFirstName.Outputs[Sortie de colonne dérivée]"
                   description="Sortie par défaut de la transformation de colonnes dérivées"
                   exclusionGroup="1"
                   name="Sortie de colonne dérivée"
-                  synchronousInputId="Package\DFT - ODS Employees\DER - FirstName.Inputs[Entrée de colonne dérivée]">
+                  synchronousInputId="Package\DFT - ODS Employees\DER - EmployeeFirstName.Inputs[Entrée de colonne dérivée]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DFT - ODS Employees\DER - FirstName.Outputs[Sortie de colonne dérivée].Columns[FirstName]"
+                      refId="Package\DFT - ODS Employees\DER - EmployeeFirstName.Outputs[Sortie de colonne dérivée].Columns[EmployeeFirstName]"
                       dataType="wstr"
                       errorOrTruncationOperation="Calcul"
                       errorRowDisposition="FailComponent"
                       length="255"
-                      lineageId="Package\DFT - ODS Employees\DER - FirstName.Outputs[Sortie de colonne dérivée].Columns[FirstName]"
-                      name="FirstName"
+                      lineageId="Package\DFT - ODS Employees\DER - EmployeeFirstName.Outputs[Sortie de colonne dérivée].Columns[EmployeeFirstName]"
+                      name="EmployeeFirstName"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -139,23 +90,23 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\DFT - ODS Employees\DER - FirstName.Outputs[Sortie d'erreur de colonne dérivée]"
+                  refId="Package\DFT - ODS Employees\DER - EmployeeFirstName.Outputs[Sortie d'erreur de colonne dérivée]"
                   description="Sortie d'erreur de la transformation de colonnes dérivées"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Sortie d'erreur de colonne dérivée"
-                  synchronousInputId="Package\DFT - ODS Employees\DER - FirstName.Inputs[Entrée de colonne dérivée]">
+                  synchronousInputId="Package\DFT - ODS Employees\DER - EmployeeFirstName.Inputs[Entrée de colonne dérivée]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DFT - ODS Employees\DER - FirstName.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      refId="Package\DFT - ODS Employees\DER - EmployeeFirstName.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\DFT - ODS Employees\DER - FirstName.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      lineageId="Package\DFT - ODS Employees\DER - EmployeeFirstName.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\DFT - ODS Employees\DER - FirstName.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      refId="Package\DFT - ODS Employees\DER - EmployeeFirstName.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\DFT - ODS Employees\DER - FirstName.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      lineageId="Package\DFT - ODS Employees\DER - EmployeeFirstName.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -164,20 +115,20 @@
               </outputs>
             </component>
             <component
-              refId="Package\DFT - ODS Employees\DER - LastName"
+              refId="Package\DFT - ODS Employees\DER - EmployeeLastName"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Colonne dérivée;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
               description="Crée de nouvelles valeurs de colonne en appliquant des expressions aux colonnes d'entrée de transformation. Créez de nouvelles colonnes ou remplacez celles qui existent déjà. Par exemple, concaténez les valeurs de la colonne 'prénom' et de la colonne 'nom' pour créer une colonne 'nom complet'."
-              name="DER - LastName"
+              name="DER - EmployeeLastName"
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\DFT - ODS Employees\DER - LastName.Inputs[Entrée de colonne dérivée]"
+                  refId="Package\DFT - ODS Employees\DER - EmployeeLastName.Inputs[Entrée de colonne dérivée]"
                   description="Entrée de la transformation de colonnes dérivées"
                   name="Entrée de colonne dérivée">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\DFT - ODS Employees\DER - LastName.Inputs[Entrée de colonne dérivée].Columns[EmployeeName]"
+                      refId="Package\DFT - ODS Employees\DER - EmployeeLastName.Inputs[Entrée de colonne dérivée].Columns[EmployeeName]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="255"
@@ -189,20 +140,20 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\DFT - ODS Employees\DER - LastName.Outputs[Sortie de colonne dérivée]"
+                  refId="Package\DFT - ODS Employees\DER - EmployeeLastName.Outputs[Sortie de colonne dérivée]"
                   description="Sortie par défaut de la transformation de colonnes dérivées"
                   exclusionGroup="1"
                   name="Sortie de colonne dérivée"
-                  synchronousInputId="Package\DFT - ODS Employees\DER - LastName.Inputs[Entrée de colonne dérivée]">
+                  synchronousInputId="Package\DFT - ODS Employees\DER - EmployeeLastName.Inputs[Entrée de colonne dérivée]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DFT - ODS Employees\DER - LastName.Outputs[Sortie de colonne dérivée].Columns[LastName]"
+                      refId="Package\DFT - ODS Employees\DER - EmployeeLastName.Outputs[Sortie de colonne dérivée].Columns[EmployeeLastName]"
                       dataType="wstr"
                       errorOrTruncationOperation="Calcul"
                       errorRowDisposition="FailComponent"
                       length="255"
-                      lineageId="Package\DFT - ODS Employees\DER - LastName.Outputs[Sortie de colonne dérivée].Columns[LastName]"
-                      name="LastName"
+                      lineageId="Package\DFT - ODS Employees\DER - EmployeeLastName.Outputs[Sortie de colonne dérivée].Columns[EmployeeLastName]"
+                      name="EmployeeLastName"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -222,23 +173,355 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\DFT - ODS Employees\DER - LastName.Outputs[Sortie d'erreur de colonne dérivée]"
+                  refId="Package\DFT - ODS Employees\DER - EmployeeLastName.Outputs[Sortie d'erreur de colonne dérivée]"
                   description="Sortie d'erreur de la transformation de colonnes dérivées"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Sortie d'erreur de colonne dérivée"
-                  synchronousInputId="Package\DFT - ODS Employees\DER - LastName.Inputs[Entrée de colonne dérivée]">
+                  synchronousInputId="Package\DFT - ODS Employees\DER - EmployeeLastName.Inputs[Entrée de colonne dérivée]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DFT - ODS Employees\DER - LastName.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      refId="Package\DFT - ODS Employees\DER - EmployeeLastName.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\DFT - ODS Employees\DER - LastName.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      lineageId="Package\DFT - ODS Employees\DER - EmployeeLastName.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\DFT - ODS Employees\DER - LastName.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      refId="Package\DFT - ODS Employees\DER - EmployeeLastName.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\DFT - ODS Employees\DER - LastName.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      lineageId="Package\DFT - ODS Employees\DER - EmployeeLastName.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - ODS Employees\DER - ManagerFirstName"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Colonne dérivée;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Crée de nouvelles valeurs de colonne en appliquant des expressions aux colonnes d'entrée de transformation. Créez de nouvelles colonnes ou remplacez celles qui existent déjà. Par exemple, concaténez les valeurs de la colonne 'prénom' et de la colonne 'nom' pour créer une colonne 'nom complet'."
+              name="DER - ManagerFirstName"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT - ODS Employees\DER - ManagerFirstName.Inputs[Entrée de colonne dérivée]"
+                  description="Entrée de la transformation de colonnes dérivées"
+                  name="Entrée de colonne dérivée">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - ODS Employees\DER - ManagerFirstName.Inputs[Entrée de colonne dérivée].Columns[ManagerName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="ManagerName"
+                      lineageId="Package\DFT - ODS Employees\OLE_SRC - STA Employees.Outputs[Sortie de source OLE DB].Columns[ManagerName]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - ODS Employees\DER - ManagerFirstName.Outputs[Sortie de colonne dérivée]"
+                  description="Sortie par défaut de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  name="Sortie de colonne dérivée"
+                  synchronousInputId="Package\DFT - ODS Employees\DER - ManagerFirstName.Inputs[Entrée de colonne dérivée]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - ODS Employees\DER - ManagerFirstName.Outputs[Sortie de colonne dérivée].Columns[ManagerFirstName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\DFT - ODS Employees\DER - ManagerFirstName.Outputs[Sortie de colonne dérivée].Columns[ManagerFirstName]"
+                      name="ManagerFirstName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">[SUBSTRING](#{Package\DFT - ODS Employees\OLE_SRC - STA Employees.Outputs[Sortie de source OLE DB].Columns[ManagerName]},1,[FINDSTRING](#{Package\DFT - ODS Employees\OLE_SRC - STA Employees.Outputs[Sortie de source OLE DB].Columns[ManagerName]}," ",1) - 1)</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">SUBSTRING(ManagerName,1,FINDSTRING(ManagerName," ",1) - 1)</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - ODS Employees\DER - ManagerFirstName.Outputs[Sortie d'erreur de colonne dérivée]"
+                  description="Sortie d'erreur de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de colonne dérivée"
+                  synchronousInputId="Package\DFT - ODS Employees\DER - ManagerFirstName.Inputs[Entrée de colonne dérivée]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - ODS Employees\DER - ManagerFirstName.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - ODS Employees\DER - ManagerFirstName.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - ODS Employees\DER - ManagerFirstName.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - ODS Employees\DER - ManagerFirstName.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - ODS Employees\DER - ManagerLastName"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Colonne dérivée;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Crée de nouvelles valeurs de colonne en appliquant des expressions aux colonnes d'entrée de transformation. Créez de nouvelles colonnes ou remplacez celles qui existent déjà. Par exemple, concaténez les valeurs de la colonne 'prénom' et de la colonne 'nom' pour créer une colonne 'nom complet'."
+              name="DER - ManagerLastName"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT - ODS Employees\DER - ManagerLastName.Inputs[Entrée de colonne dérivée]"
+                  description="Entrée de la transformation de colonnes dérivées"
+                  name="Entrée de colonne dérivée">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - ODS Employees\DER - ManagerLastName.Inputs[Entrée de colonne dérivée].Columns[ManagerName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="ManagerName"
+                      lineageId="Package\DFT - ODS Employees\OLE_SRC - STA Employees.Outputs[Sortie de source OLE DB].Columns[ManagerName]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - ODS Employees\DER - ManagerLastName.Outputs[Sortie de colonne dérivée]"
+                  description="Sortie par défaut de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  name="Sortie de colonne dérivée"
+                  synchronousInputId="Package\DFT - ODS Employees\DER - ManagerLastName.Inputs[Entrée de colonne dérivée]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - ODS Employees\DER - ManagerLastName.Outputs[Sortie de colonne dérivée].Columns[ManagerLastName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\DFT - ODS Employees\DER - ManagerLastName.Outputs[Sortie de colonne dérivée].Columns[ManagerLastName]"
+                      name="ManagerLastName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">[RIGHT](#{Package\DFT - ODS Employees\OLE_SRC - STA Employees.Outputs[Sortie de source OLE DB].Columns[ManagerName]},[FINDSTRING]([REVERSE](#{Package\DFT - ODS Employees\OLE_SRC - STA Employees.Outputs[Sortie de source OLE DB].Columns[ManagerName]})," ",1) - 1)</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">RIGHT(ManagerName,FINDSTRING(REVERSE(ManagerName)," ",1) - 1)</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - ODS Employees\DER - ManagerLastName.Outputs[Sortie d'erreur de colonne dérivée]"
+                  description="Sortie d'erreur de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de colonne dérivée"
+                  synchronousInputId="Package\DFT - ODS Employees\DER - ManagerLastName.Inputs[Entrée de colonne dérivée]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - ODS Employees\DER - ManagerLastName.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - ODS Employees\DER - ManagerLastName.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - ODS Employees\DER - ManagerLastName.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - ODS Employees\DER - ManagerLastName.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - ODS Employees\DER - SiteStateCD"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Colonne dérivée;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Crée de nouvelles valeurs de colonne en appliquant des expressions aux colonnes d'entrée de transformation. Créez de nouvelles colonnes ou remplacez celles qui existent déjà. Par exemple, concaténez les valeurs de la colonne 'prénom' et de la colonne 'nom' pour créer une colonne 'nom complet'."
+              name="DER - SiteStateCD"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT - ODS Employees\DER - SiteStateCD.Inputs[Entrée de colonne dérivée]"
+                  description="Entrée de la transformation de colonnes dérivées"
+                  name="Entrée de colonne dérivée">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - ODS Employees\DER - SiteStateCD.Inputs[Entrée de colonne dérivée].Columns[Site]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Site"
+                      lineageId="Package\DFT - ODS Employees\OLE_SRC - STA Employees.Outputs[Sortie de source OLE DB].Columns[Site]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - ODS Employees\DER - SiteStateCD.Outputs[Sortie de colonne dérivée]"
+                  description="Sortie par défaut de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  name="Sortie de colonne dérivée"
+                  synchronousInputId="Package\DFT - ODS Employees\DER - SiteStateCD.Inputs[Entrée de colonne dérivée]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - ODS Employees\DER - SiteStateCD.Outputs[Sortie de colonne dérivée].Columns[SiteStateCD]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\DFT - ODS Employees\DER - SiteStateCD.Outputs[Sortie de colonne dérivée].Columns[SiteStateCD]"
+                      name="SiteStateCD"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">[RIGHT](#{Package\DFT - ODS Employees\OLE_SRC - STA Employees.Outputs[Sortie de source OLE DB].Columns[Site]},[FINDSTRING]([REVERSE](#{Package\DFT - ODS Employees\OLE_SRC - STA Employees.Outputs[Sortie de source OLE DB].Columns[Site]}),",",1) - 1)</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">RIGHT(Site,FINDSTRING(REVERSE(Site),",",1) - 1)</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - ODS Employees\DER - SiteStateCD.Outputs[Sortie d'erreur de colonne dérivée]"
+                  description="Sortie d'erreur de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de colonne dérivée"
+                  synchronousInputId="Package\DFT - ODS Employees\DER - SiteStateCD.Inputs[Entrée de colonne dérivée]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - ODS Employees\DER - SiteStateCD.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - ODS Employees\DER - SiteStateCD.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - ODS Employees\DER - SiteStateCD.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - ODS Employees\DER - SiteStateCD.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - ODS Employees\DER - SiteTown"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Colonne dérivée;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Crée de nouvelles valeurs de colonne en appliquant des expressions aux colonnes d'entrée de transformation. Créez de nouvelles colonnes ou remplacez celles qui existent déjà. Par exemple, concaténez les valeurs de la colonne 'prénom' et de la colonne 'nom' pour créer une colonne 'nom complet'."
+              name="DER - SiteTown"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT - ODS Employees\DER - SiteTown.Inputs[Entrée de colonne dérivée]"
+                  description="Entrée de la transformation de colonnes dérivées"
+                  name="Entrée de colonne dérivée">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - ODS Employees\DER - SiteTown.Inputs[Entrée de colonne dérivée].Columns[Site]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Site"
+                      lineageId="Package\DFT - ODS Employees\OLE_SRC - STA Employees.Outputs[Sortie de source OLE DB].Columns[Site]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - ODS Employees\DER - SiteTown.Outputs[Sortie de colonne dérivée]"
+                  description="Sortie par défaut de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  name="Sortie de colonne dérivée"
+                  synchronousInputId="Package\DFT - ODS Employees\DER - SiteTown.Inputs[Entrée de colonne dérivée]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - ODS Employees\DER - SiteTown.Outputs[Sortie de colonne dérivée].Columns[SiteTown]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\DFT - ODS Employees\DER - SiteTown.Outputs[Sortie de colonne dérivée].Columns[SiteTown]"
+                      name="SiteTown"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">[SUBSTRING](#{Package\DFT - ODS Employees\OLE_SRC - STA Employees.Outputs[Sortie de source OLE DB].Columns[Site]},1,[FINDSTRING](#{Package\DFT - ODS Employees\OLE_SRC - STA Employees.Outputs[Sortie de source OLE DB].Columns[Site]},",",1) - 1)</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">SUBSTRING(Site,1,FINDSTRING(Site,",",1) - 1)</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - ODS Employees\DER - SiteTown.Outputs[Sortie d'erreur de colonne dérivée]"
+                  description="Sortie d'erreur de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de colonne dérivée"
+                  synchronousInputId="Package\DFT - ODS Employees\DER - SiteTown.Inputs[Entrée de colonne dérivée]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - ODS Employees\DER - SiteTown.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - ODS Employees\DER - SiteTown.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - ODS Employees\DER - SiteTown.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - ODS Employees\DER - SiteTown.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -434,17 +717,32 @@
           <paths>
             <path
               refId="Package\DFT - ODS Employees.Paths[Sortie de colonne dérivée]"
-              endId="Package\DFT - ODS Employees\DER - LastName.Inputs[Entrée de colonne dérivée]"
+              endId="Package\DFT - ODS Employees\DER - EmployeeLastName.Inputs[Entrée de colonne dérivée]"
               name="Sortie de colonne dérivée"
-              startId="Package\DFT - ODS Employees\DER - FirstName.Outputs[Sortie de colonne dérivée]" />
+              startId="Package\DFT - ODS Employees\DER - EmployeeFirstName.Outputs[Sortie de colonne dérivée]" />
             <path
               refId="Package\DFT - ODS Employees.Paths[Sortie de colonne dérivée1]"
-              endId="Package\DFT - ODS Employees\Colonne dérivée 1.Inputs[Entrée de colonne dérivée]"
+              endId="Package\DFT - ODS Employees\DER - ManagerFirstName.Inputs[Entrée de colonne dérivée]"
               name="Sortie de colonne dérivée"
-              startId="Package\DFT - ODS Employees\DER - LastName.Outputs[Sortie de colonne dérivée]" />
+              startId="Package\DFT - ODS Employees\DER - EmployeeLastName.Outputs[Sortie de colonne dérivée]" />
+            <path
+              refId="Package\DFT - ODS Employees.Paths[Sortie de colonne dérivée2]"
+              endId="Package\DFT - ODS Employees\DER - ManagerLastName.Inputs[Entrée de colonne dérivée]"
+              name="Sortie de colonne dérivée"
+              startId="Package\DFT - ODS Employees\DER - ManagerFirstName.Outputs[Sortie de colonne dérivée]" />
+            <path
+              refId="Package\DFT - ODS Employees.Paths[Sortie de colonne dérivée3]"
+              endId="Package\DFT - ODS Employees\DER - SiteTown.Inputs[Entrée de colonne dérivée]"
+              name="Sortie de colonne dérivée"
+              startId="Package\DFT - ODS Employees\DER - ManagerLastName.Outputs[Sortie de colonne dérivée]" />
+            <path
+              refId="Package\DFT - ODS Employees.Paths[Sortie de colonne dérivée4]"
+              endId="Package\DFT - ODS Employees\DER - SiteStateCD.Inputs[Entrée de colonne dérivée]"
+              name="Sortie de colonne dérivée"
+              startId="Package\DFT - ODS Employees\DER - SiteTown.Outputs[Sortie de colonne dérivée]" />
             <path
               refId="Package\DFT - ODS Employees.Paths[Sortie de source OLE DB]"
-              endId="Package\DFT - ODS Employees\DER - FirstName.Inputs[Entrée de colonne dérivée]"
+              endId="Package\DFT - ODS Employees\DER - EmployeeFirstName.Inputs[Entrée de colonne dérivée]"
               name="Sortie de source OLE DB"
               startId="Package\DFT - ODS Employees\OLE_SRC - STA Employees.Outputs[Sortie de source OLE DB]" />
           </paths>
@@ -475,83 +773,45 @@
     design-time-name="Package\DFT - ODS Employees">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="211,42"
+          Id="Package\DFT - ODS Employees\DER - EmployeeLastName"
+          TopLeft="59.5,123.5" />
+        <NodeLayout
+          Size="211,42"
+          Id="Package\DFT - ODS Employees\DER - EmployeeFirstName"
+          TopLeft="60,71" />
         <NodeLayout
           Size="219,42"
           Id="Package\DFT - ODS Employees\OLE_SRC - STA Employees"
-          TopLeft="446,111" />
-        <NodeLayout
-          Size="163,42"
-          Id="Package\DFT - ODS Employees\DER - FirstName"
-          TopLeft="500,203" />
-        <EdgeLayout
-          Id="Package\DFT - ODS Employees.Paths[Sortie de source OLE DB]"
-          TopLeft="555.5,153">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="26,50"
-              Start="0,0"
-              End="26,42.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,21" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,21"
-                    Point2="0,25"
-                    Point3="4,25" />
-                  <mssgle:LineSegment
-                    End="22,25" />
-                  <mssgle:CubicBezierSegment
-                    Point1="22,25"
-                    Point2="26,25"
-                    Point3="26,29" />
-                  <mssgle:LineSegment
-                    End="26,42.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="162,42"
-          Id="Package\DFT - ODS Employees\DER - LastName"
-          TopLeft="477.5,277.5" />
-        <NodeLayout
-          Size="168,42"
-          Id="Package\DFT - ODS Employees\Colonne dérivée 1"
-          TopLeft="472,363" />
+          TopLeft="59,25" />
         <EdgeLayout
           Id="Package\DFT - ODS Employees.Paths[Sortie de colonne dérivée]"
-          TopLeft="581.5,245">
+          TopLeft="271,97.6666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-23,32.5"
+              EndConnector="-0.5,46.8333333333333"
               Start="0,0"
-              End="-23,25">
+              End="7,46.8333333333333">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,12.25" />
+                    End="18.5,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,12.25"
-                    Point2="0,16.25"
-                    Point3="-4,16.25" />
+                    Point1="18.5,0"
+                    Point2="22.5,0"
+                    Point3="22.5,4" />
                   <mssgle:LineSegment
-                    End="-19,16.25" />
+                    End="22.5,42.8333333333333" />
                   <mssgle:CubicBezierSegment
-                    Point1="-19,16.25"
-                    Point2="-23,16.25"
-                    Point3="-23,20.25" />
+                    Point1="22.5,42.8333333333333"
+                    Point2="22.5,46.8333333333333"
+                    Point3="18.5,46.8333333333333" />
                   <mssgle:LineSegment
-                    End="-23,25" />
+                    End="7,46.8333333333333" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -561,19 +821,183 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DFT - ODS Employees.Paths[Sortie de colonne dérivée1]"
-          TopLeft="557.25,319.5">
+          Id="Package\DFT - ODS Employees.Paths[Sortie de source OLE DB]"
+          TopLeft="278,46">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,43.5"
+              EndConnector="-7,46"
               Start="0,0"
-              End="0,36">
+              End="0.5,46">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,36" />
+                    End="18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="18.5,0"
+                    Point2="22.5,0"
+                    Point3="22.5,4" />
+                  <mssgle:LineSegment
+                    End="22.5,42" />
+                  <mssgle:CubicBezierSegment
+                    Point1="22.5,42"
+                    Point2="22.5,46"
+                    Point3="18.5,46" />
+                  <mssgle:LineSegment
+                    End="0.5,46" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="190,42"
+          Id="Package\DFT - ODS Employees\DER - SiteTown"
+          TopLeft="63,271" />
+        <NodeLayout
+          Size="184,42"
+          Id="Package\DFT - ODS Employees\DER - SiteStateCD"
+          TopLeft="73,319" />
+        <NodeLayout
+          Size="206,42"
+          Id="Package\DFT - ODS Employees\DER - ManagerFirstName"
+          TopLeft="60.5,171.5" />
+        <EdgeLayout
+          Id="Package\DFT - ODS Employees.Paths[Sortie de colonne dérivée1]"
+          TopLeft="270.5,150.166666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-4,42.3333333333333"
+              Start="0,0"
+              End="3.5,42.3333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="18.5,0"
+                    Point2="22.5,0"
+                    Point3="22.5,4" />
+                  <mssgle:LineSegment
+                    End="22.5,38.3333333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="22.5,38.3333333333333"
+                    Point2="22.5,42.3333333333333"
+                    Point3="18.5,42.3333333333333" />
+                  <mssgle:LineSegment
+                    End="3.5,42.3333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="205,42"
+          Id="Package\DFT - ODS Employees\DER - ManagerLastName"
+          TopLeft="63,224" />
+        <EdgeLayout
+          Id="Package\DFT - ODS Employees.Paths[Sortie de colonne dérivée2]"
+          TopLeft="60.5,192.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="2.5,52.5"
+              Start="0,0"
+              End="-5,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-18.5,0"
+                    Point2="-22.5,0"
+                    Point3="-22.5,4" />
+                  <mssgle:LineSegment
+                    End="-22.5,48.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-22.5,48.5"
+                    Point2="-22.5,52.5"
+                    Point3="-18.5,52.5" />
+                  <mssgle:LineSegment
+                    End="-5,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - ODS Employees.Paths[Sortie de colonne dérivée3]"
+          TopLeft="268,245">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-15,47"
+              Start="0,0"
+              End="-7.5,47">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="18.5,0"
+                    Point2="22.5,0"
+                    Point3="22.5,4" />
+                  <mssgle:LineSegment
+                    End="22.5,43" />
+                  <mssgle:CubicBezierSegment
+                    Point1="22.5,43"
+                    Point2="22.5,47"
+                    Point3="18.5,47" />
+                  <mssgle:LineSegment
+                    End="-7.5,47" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - ODS Employees.Paths[Sortie de colonne dérivée4]"
+          TopLeft="63,292">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="10,48"
+              Start="0,0"
+              End="2.5,48">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-18.5,0"
+                    Point2="-22.5,0"
+                    Point3="-22.5,4" />
+                  <mssgle:LineSegment
+                    End="-22.5,44" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-22.5,44"
+                    Point2="-22.5,48"
+                    Point3="-18.5,48" />
+                  <mssgle:LineSegment
+                    End="2.5,48" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

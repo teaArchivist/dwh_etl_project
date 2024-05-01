@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{73776C84-995C-4736-861F-F0F5BA57DA50}">
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{9BD09736-84A4-43A2-AFD3-88B196A25B04}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -61,6 +61,18 @@
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.Project_STA]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{7BF6A5AB-9876-4162-91CB-7201F4F8F7B3}"
+      DTS:ObjectName="localhost.Project_STA">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=Project_STA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{7BF6A5AB-9876-4162-91CB-7201F4F8F7B3}localhost.Project_STA;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -287,8 +299,8 @@
               <connections>
                 <connection
                   refId="Package\DFT - STA US States\OLE_DST - STA US States.Connections[OleDbConnection]"
-                  connectionManagerID="{17F0F903-D12B-424F-8C17-34423D2BA897}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[localhost.Project_STA]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.Project_STA]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.Project_STA]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -397,7 +409,7 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{17F0F903-D12B-424F-8C17-34423D2BA897}"
+          SQLTask:Connection="{7BF6A5AB-9876-4162-91CB-7201F4F8F7B3}"
           SQLTask:SqlStatementSource=" TRUNCATE TABLE dbo.US_States" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>

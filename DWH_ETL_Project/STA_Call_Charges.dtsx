@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{ED6FA6FF-698E-4E96-86EB-028348F8120D}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{02644F39-BE5A-48BF-96EC-4E774A1D04C9}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -79,6 +79,18 @@
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.Project_STA]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{1E2FA06B-8831-42F2-87BB-0CCDCA23941B}"
+      DTS:ObjectName="localhost.Project_STA">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=Project_STA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{1E2FA06B-8831-42F2-87BB-0CCDCA23941B}localhost.Project_STA;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -361,8 +373,8 @@
               <connections>
                 <connection
                   refId="Package\DFT - STA Call Charges\OLE_DST - STA Call Charges.Connections[OleDbConnection]"
-                  connectionManagerID="{17F0F903-D12B-424F-8C17-34423D2BA897}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[localhost.Project_STA]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.Project_STA]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.Project_STA]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -499,7 +511,7 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{17F0F903-D12B-424F-8C17-34423D2BA897}"
+          SQLTask:Connection="{1E2FA06B-8831-42F2-87BB-0CCDCA23941B}"
           SQLTask:SqlStatementSource="TRUNCATE TABLE dbo.Call_Charges" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>

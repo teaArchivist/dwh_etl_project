@@ -11,8 +11,8 @@
   DTS:LocaleID="1036"
   DTS:ObjectName="ODS_Employee"
   DTS:PackageType="5"
-  DTS:VersionBuild="57"
-  DTS:VersionGUID="{B7C84E6C-83B5-468E-B86A-47CDBEEFCB0F}">
+  DTS:VersionBuild="58"
+  DTS:VersionGUID="{8B584CD2-CBDF-415A-8D89-F6B9A56C808B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1314,12 +1314,6 @@ where [refTable].[StateCD] = ?</property>
                   name="Entrée de destination OLE DB">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\DFT - ODS Employees\OLE_DST - ADM Rejects.Inputs[Entrée de destination OLE DB].Columns[Reject Date]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="Reject Date"
-                      externalMetadataColumnId="Package\DFT - ODS Employees\OLE_DST - ADM Rejects.Inputs[Entrée de destination OLE DB].ExternalColumns[Reject Date]"
-                      lineageId="Package\DFT - ODS Employees\DER - State CD Rejects.Outputs[Sortie de colonne dérivée].Columns[Reject Date]" />
-                    <inputColumn
                       refId="Package\DFT - ODS Employees\OLE_DST - ADM Rejects.Inputs[Entrée de destination OLE DB].Columns[RejectPackageAndTask]"
                       cachedDataType="wstr"
                       cachedLength="205"
@@ -1340,27 +1334,33 @@ where [refTable].[StateCD] = ?</property>
                       cachedName="RejectDescription"
                       externalMetadataColumnId="Package\DFT - ODS Employees\OLE_DST - ADM Rejects.Inputs[Entrée de destination OLE DB].ExternalColumns[RejectDescription]"
                       lineageId="Package\DFT - ODS Employees\DER - State CD Rejects.Outputs[Sortie de colonne dérivée].Columns[RejectDescription]" />
+                    <inputColumn
+                      refId="Package\DFT - ODS Employees\OLE_DST - ADM Rejects.Inputs[Entrée de destination OLE DB].Columns[Reject Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Reject Date"
+                      externalMetadataColumnId="Package\DFT - ODS Employees\OLE_DST - ADM Rejects.Inputs[Entrée de destination OLE DB].ExternalColumns[RejectDate]"
+                      lineageId="Package\DFT - ODS Employees\DER - State CD Rejects.Outputs[Sortie de colonne dérivée].Columns[Reject Date]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\DFT - ODS Employees\OLE_DST - ADM Rejects.Inputs[Entrée de destination OLE DB].ExternalColumns[Reject Date]"
-                      dataType="dbTimeStamp"
-                      name="Reject Date" />
-                    <externalMetadataColumn
                       refId="Package\DFT - ODS Employees\OLE_DST - ADM Rejects.Inputs[Entrée de destination OLE DB].ExternalColumns[RejectPackageAndTask]"
                       dataType="wstr"
-                      length="205"
+                      length="255"
                       name="RejectPackageAndTask" />
                     <externalMetadataColumn
                       refId="Package\DFT - ODS Employees\OLE_DST - ADM Rejects.Inputs[Entrée de destination OLE DB].ExternalColumns[RejectColumn]"
                       dataType="wstr"
-                      length="9"
+                      length="50"
                       name="RejectColumn" />
                     <externalMetadataColumn
                       refId="Package\DFT - ODS Employees\OLE_DST - ADM Rejects.Inputs[Entrée de destination OLE DB].ExternalColumns[RejectDescription]"
                       dataType="nText"
                       name="RejectDescription" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - ODS Employees\OLE_DST - ADM Rejects.Inputs[Entrée de destination OLE DB].ExternalColumns[RejectDate]"
+                      dataType="dbTimeStamp"
+                      name="RejectDate" />
                   </externalMetadataColumns>
                 </input>
               </inputs>

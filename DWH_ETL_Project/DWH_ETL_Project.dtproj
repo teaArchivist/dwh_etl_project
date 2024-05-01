@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">WIN-IK73KKU469C</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAK3NARPC0Pk+ZxeSfOTg3vwAAAAACAAAAAAAQZgAAAAEAACAAAAB+PvAQDG4S9GcuyQ5w2P8lKFpDe22KDPFiAkKEZQlbXgAAAAAOgAAAAAIAACAAAACNpbmpUFWM0GUviOWvW0MilhHttXfaV9wdRi6cyMy6KZAAAADu1IfaDveFi5BxJ7zuGJZSykwEExUgrAcimrFy/CD9NZculuFhzO/LaYlYfUufsxqO4UPN0GSWuo82ltlgaJEKYxtrOhGOMt64IkAx5fUAh62+Ec2yWKl1pPUBEZzIKB0gMNzCHUJCb9jc52nKX+MIzJegIGXxgflPbFkxL8t6UlPWd7YU0T9kWRcmQ9uaYihAAAAASUSgj1+qcNwZNaJq6JQhyH2yw2A7tYanGLtYX4Kh8T+kocELRVRf6PcBwW95RojJc/HcNiWIkwB5oopUiAVfHA==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAK3NARPC0Pk+ZxeSfOTg3vwAAAAACAAAAAAAQZgAAAAEAACAAAACDm2/4cbMzHChD9lj3EFOYr/BiThhyETnyhSaCPCRubAAAAAAOgAAAAAIAACAAAADcJR9gbuSxIUXwJv3Q6DymvApMaBPpR1OSu/H04DiL7JAAAABeFX3sEhgi9r8Kgzp0hYNxhvrQdNulNwY6nQBNnx5RwB+o7Opxo3SlkX/+KatxeIapCwR5puZTxwZerWCqQAX5eKCjE3z0m6iLyxzihjpc5iQFrdCHEAA5Boj5I5F3AwhB/D2y1BpfBDQitcdC+vc7ZhY535JBfgmrjTflOsk60bH4UgZAYTGCHW90bGq/K7tAAAAAkhCLKEbdpRwQChW4eSi3N900HTZ2JYA8A8RUYtDGTUmTf7XsA8nPb9iJXY+eipUfz9WZg30wD1TJ4cxS6OsLbA==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -35,6 +35,7 @@
           <SSIS:Package SSIS:Name="STA_Call_Charges.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="STA_Call_Types.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="STA_US_States.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="ODS_Employee.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="localhost.Project_STA.conmgr" />
@@ -1403,6 +1404,23 @@
                   </SSIS:Properties>
                 </SSIS:Parameter>
               </SSIS:Parameters>
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="ODS_Employee.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{3D1E9AB3-6301-43AD-9E62-EFC1732EA5E7}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">ODS_Employee</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">15</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{A4E2FFD1-4050-4AEE-B04A-4A11DA91E8D0}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
             </SSIS:PackageMetaData>
           </SSIS:PackageInfo>
         </SSIS:DeploymentInfo>

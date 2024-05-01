@@ -11,11 +11,23 @@
   DTS:LocaleID="1036"
   DTS:ObjectName="ODS_Employee"
   DTS:PackageType="5"
-  DTS:VersionBuild="43"
-  DTS:VersionGUID="{EE2401A5-8946-49DD-99FB-173DC2EAA9E4}">
+  DTS:VersionBuild="52"
+  DTS:VersionGUID="{887934B6-6320-4EE6-A44A-CB0501C6CCDE}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.Project_ADM]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{E645BC4D-4F8F-4954-A3A4-762A9292BF15}"
+      DTS:ObjectName="localhost.Project_ADM">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=Project_ADM;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-ODS_Employee-{E645BC4D-4F8F-4954-A3A4-762A9292BF15}localhost.Project_ADM;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[localhost.Project_ODS]"
       DTS:CreationName="OLEDB"
@@ -899,6 +911,148 @@
               </outputs>
             </component>
             <component
+              refId="Package\DFT - ODS Employees\DER - State CD Rejects"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Colonne dérivée;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Crée de nouvelles valeurs de colonne en appliquant des expressions aux colonnes d'entrée de transformation. Créez de nouvelles colonnes ou remplacez celles qui existent déjà. Par exemple, concaténez les valeurs de la colonne 'prénom' et de la colonne 'nom' pour créer une colonne 'nom complet'."
+              name="DER - State CD Rejects"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT - ODS Employees\DER - State CD Rejects.Inputs[Entrée de colonne dérivée]"
+                  description="Entrée de la transformation de colonnes dérivées"
+                  name="Entrée de colonne dérivée">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - ODS Employees\DER - State CD Rejects.Outputs[Sortie de colonne dérivée]"
+                  description="Sortie par défaut de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  name="Sortie de colonne dérivée"
+                  synchronousInputId="Package\DFT - ODS Employees\DER - State CD Rejects.Inputs[Entrée de colonne dérivée]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - ODS Employees\DER - State CD Rejects.Outputs[Sortie de colonne dérivée].Columns[Reject Date]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT - ODS Employees\DER - State CD Rejects.Outputs[Sortie de colonne dérivée].Columns[Reject Date]"
+                      name="Reject Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - ODS Employees\DER - State CD Rejects.Outputs[Sortie de colonne dérivée].Columns[RejectPackageAndTask]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      length="205"
+                      lineageId="Package\DFT - ODS Employees\DER - State CD Rejects.Outputs[Sortie de colonne dérivée].Columns[RejectPackageAndTask]"
+                      name="RejectPackageAndTask"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">(DT_WSTR,100)@[System::PackageName] + " AND " + (DT_WSTR,100)@[System::TaskName]</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_WSTR,100)@[System::PackageName] + " AND " + (DT_WSTR,100)@[System::TaskName]</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - ODS Employees\DER - State CD Rejects.Outputs[Sortie de colonne dérivée].Columns[RejectColumn]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      length="7"
+                      lineageId="Package\DFT - ODS Employees\DER - State CD Rejects.Outputs[Sortie de colonne dérivée].Columns[RejectColumn]"
+                      name="RejectColumn"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">"StateCD"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"StateCD"</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - ODS Employees\DER - State CD Rejects.Outputs[Sortie de colonne dérivée].Columns[RejectDescription]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      length="72"
+                      lineageId="Package\DFT - ODS Employees\DER - State CD Rejects.Outputs[Sortie de colonne dérivée].Columns[RejectDescription]"
+                      name="RejectDescription"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">"The state code written on the employee's site is not a valid state code."</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"The state code written on the employee's site is not a valid state code."</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - ODS Employees\DER - State CD Rejects.Outputs[Sortie d'erreur de colonne dérivée]"
+                  description="Sortie d'erreur de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de colonne dérivée"
+                  synchronousInputId="Package\DFT - ODS Employees\DER - State CD Rejects.Inputs[Entrée de colonne dérivée]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - ODS Employees\DER - State CD Rejects.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - ODS Employees\DER - State CD Rejects.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - ODS Employees\DER - State CD Rejects.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - ODS Employees\DER - State CD Rejects.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\DFT - ODS Employees\LKP - StateCD"
               componentClassID="Microsoft.Lookup"
               contactInfo="Recherche;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;6"
@@ -1069,6 +1223,154 @@ where [refTable].[StateCD] = ?</property>
                       refId="Package\DFT - ODS Employees\LKP - StateCD.Outputs[Sortie d'erreur de recherche].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\DFT - ODS Employees\LKP - StateCD.Outputs[Sortie d'erreur de recherche].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - ODS Employees\OLE_DST - ADM Rejects"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destination OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;4"
+              description="Destination OLE DB"
+              name="OLE_DST - ADM Rejects"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowset">[dbo].[Technicals_Rejects]</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Commande SQL à exécuter."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Force l'utilisation de la valeur de propriété DefaultCodePage lors de la description des données caractères."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le mode utilisé pour accéder à la base de données."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les valeurs fournies pour les colonnes d'identité seront copiées à la destination. Si la valeur est définie à False, les valeurs des colonnes d'identité seront générées automatiquement à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les colonnes contenant la valeur NULL auront cette valeur NULL copiée à la destination. Si la valeur est définie à False, les colonnes contenant la valeur NULL auront leurs valeurs par défaut insérées à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie les options à utiliser avec le chargement rapide.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie quand les validations sont émises pendant l'insertion des données.  Une valeur égale à 0 spécifie qu'une validation sera émise à la fin de l'insertion des données.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT - ODS Employees\OLE_DST - ADM Rejects.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.Project_ADM]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.Project_ADM]"
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT - ODS Employees\OLE_DST - ADM Rejects.Inputs[Entrée de destination OLE DB]"
+                  errorOrTruncationOperation="Insérer"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrée de destination OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - ODS Employees\OLE_DST - ADM Rejects.Inputs[Entrée de destination OLE DB].Columns[Reject Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Reject Date"
+                      externalMetadataColumnId="Package\DFT - ODS Employees\OLE_DST - ADM Rejects.Inputs[Entrée de destination OLE DB].ExternalColumns[Reject Date]"
+                      lineageId="Package\DFT - ODS Employees\DER - State CD Rejects.Outputs[Sortie de colonne dérivée].Columns[Reject Date]" />
+                    <inputColumn
+                      refId="Package\DFT - ODS Employees\OLE_DST - ADM Rejects.Inputs[Entrée de destination OLE DB].Columns[RejectPackageAndTask]"
+                      cachedDataType="wstr"
+                      cachedLength="205"
+                      cachedName="RejectPackageAndTask"
+                      externalMetadataColumnId="Package\DFT - ODS Employees\OLE_DST - ADM Rejects.Inputs[Entrée de destination OLE DB].ExternalColumns[RejectPackageAndTask]"
+                      lineageId="Package\DFT - ODS Employees\DER - State CD Rejects.Outputs[Sortie de colonne dérivée].Columns[RejectPackageAndTask]" />
+                    <inputColumn
+                      refId="Package\DFT - ODS Employees\OLE_DST - ADM Rejects.Inputs[Entrée de destination OLE DB].Columns[RejectColumn]"
+                      cachedDataType="wstr"
+                      cachedLength="7"
+                      cachedName="RejectColumn"
+                      externalMetadataColumnId="Package\DFT - ODS Employees\OLE_DST - ADM Rejects.Inputs[Entrée de destination OLE DB].ExternalColumns[RejectColumn]"
+                      lineageId="Package\DFT - ODS Employees\DER - State CD Rejects.Outputs[Sortie de colonne dérivée].Columns[RejectColumn]" />
+                    <inputColumn
+                      refId="Package\DFT - ODS Employees\OLE_DST - ADM Rejects.Inputs[Entrée de destination OLE DB].Columns[RejectDescription]"
+                      cachedDataType="wstr"
+                      cachedLength="72"
+                      cachedName="RejectDescription"
+                      externalMetadataColumnId="Package\DFT - ODS Employees\OLE_DST - ADM Rejects.Inputs[Entrée de destination OLE DB].ExternalColumns[RejectDescription]"
+                      lineageId="Package\DFT - ODS Employees\DER - State CD Rejects.Outputs[Sortie de colonne dérivée].Columns[RejectDescription]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT - ODS Employees\OLE_DST - ADM Rejects.Inputs[Entrée de destination OLE DB].ExternalColumns[Reject Date]"
+                      dataType="dbTimeStamp"
+                      name="Reject Date" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - ODS Employees\OLE_DST - ADM Rejects.Inputs[Entrée de destination OLE DB].ExternalColumns[RejectPackageAndTask]"
+                      dataType="wstr"
+                      length="205"
+                      name="RejectPackageAndTask" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - ODS Employees\OLE_DST - ADM Rejects.Inputs[Entrée de destination OLE DB].ExternalColumns[RejectColumn]"
+                      dataType="wstr"
+                      length="9"
+                      name="RejectColumn" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - ODS Employees\OLE_DST - ADM Rejects.Inputs[Entrée de destination OLE DB].ExternalColumns[RejectDescription]"
+                      dataType="nText"
+                      name="RejectDescription" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - ODS Employees\OLE_DST - ADM Rejects.Outputs[Sortie d'erreur de destination OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de destination OLE DB"
+                  synchronousInputId="Package\DFT - ODS Employees\OLE_DST - ADM Rejects.Inputs[Entrée de destination OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - ODS Employees\OLE_DST - ADM Rejects.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - ODS Employees\OLE_DST - ADM Rejects.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - ODS Employees\OLE_DST - ADM Rejects.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - ODS Employees\OLE_DST - ADM Rejects.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1508,6 +1810,11 @@ where [refTable].[StateCD] = ?</property>
               name="Sortie de colonne dérivée"
               startId="Package\DFT - ODS Employees\DER - SiteStateCD.Outputs[Sortie de colonne dérivée]" />
             <path
+              refId="Package\DFT - ODS Employees.Paths[Sortie de colonne dérivée6]"
+              endId="Package\DFT - ODS Employees\OLE_DST - ADM Rejects.Inputs[Entrée de destination OLE DB]"
+              name="Sortie de colonne dérivée"
+              startId="Package\DFT - ODS Employees\DER - State CD Rejects.Outputs[Sortie de colonne dérivée]" />
+            <path
               refId="Package\DFT - ODS Employees.Paths[Sortie de conversion de données]"
               endId="Package\DFT - ODS Employees\LKP - StateCD.Inputs[Entrée de recherche]"
               name="Sortie de conversion de données"
@@ -1523,6 +1830,11 @@ where [refTable].[StateCD] = ?</property>
               name="Sortie de recherche avec correspondance"
               startId="Package\DFT - ODS Employees\LKP - StateCD.Outputs[Sortie de recherche avec correspondance]" />
             <path
+              refId="Package\DFT - ODS Employees.Paths[Sortie de recherche sans correspondance]"
+              endId="Package\DFT - ODS Employees\DER - State CD Rejects.Inputs[Entrée de colonne dérivée]"
+              name="Sortie de recherche sans correspondance"
+              startId="Package\DFT - ODS Employees\LKP - StateCD.Outputs[Sortie de recherche sans correspondance]" />
+            <path
               refId="Package\DFT - ODS Employees.Paths[Sortie de source OLE DB]"
               endId="Package\DFT - ODS Employees\DER - EmployeeFirstName.Inputs[Entrée de colonne dérivée]"
               name="Sortie de source OLE DB"
@@ -1531,7 +1843,34 @@ where [refTable].[StateCD] = ?</property>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL - Truncate ODS Employee"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tâche d'exécution de requêtes SQL"
+      DTS:DTSID="{E349B297-0ABC-4CD7-B79C-51F87F1BF509}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL - Truncate ODS Employee"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{8132B2C0-0E6F-4828-ADF6-1BF5005F45C0}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE dbo.Employees" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Contrainte]"
+      DTS:CreationName=""
+      DTS:DTSID="{58016CFA-6EB7-472D-A9CD-47524C290122}"
+      DTS:From="Package\SQL - Truncate ODS Employee"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Contrainte"
+      DTS:To="Package\DFT - ODS Employees" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--Cette section CDATA contient des informations sur la disposition du package. Elle comprend des informations telles que les coordonnées (x,y), la largeur et la hauteur.-->
 <!--Si vous modifiez manuellement cette section et commettez une erreur, vous pouvez la supprimer. -->
@@ -1543,11 +1882,49 @@ where [refTable].[StateCD] = ?</property>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="191,42"
           Id="Package\DFT - ODS Employees"
           TopLeft="385,182" />
+        <NodeLayout
+          Size="233,42"
+          Id="Package\SQL - Truncate ODS Employee"
+          TopLeft="372,71" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Contrainte]"
+          TopLeft="488.5,113">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-8,69"
+              Start="0,0"
+              End="-8,61.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30.5"
+                    Point2="0,34.5"
+                    Point3="-4,34.5" />
+                  <mssgle:LineSegment
+                    End="-4,34.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-4,34.5"
+                    Point2="-8,34.5"
+                    Point3="-8,38.5" />
+                  <mssgle:LineSegment
+                    End="-8,61.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -1557,59 +1934,97 @@ where [refTable].[StateCD] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="211,42"
+          Id="Package\DFT - ODS Employees\DER - EmployeeFirstName"
+          TopLeft="270,18" />
+        <NodeLayout
+          Size="202,42"
+          Id="Package\DFT - ODS Employees\DER - SiteTown"
+          TopLeft="277,203" />
+        <NodeLayout
+          Size="162,42"
+          Id="Package\DFT - ODS Employees\DCNV - Resizing"
+          TopLeft="533,253" />
+        <NodeLayout
           Size="205,42"
           Id="Package\DFT - ODS Employees\DER - ManagerLastName"
-          TopLeft="63,224" />
+          TopLeft="274,156" />
         <NodeLayout
           Size="211,42"
           Id="Package\DFT - ODS Employees\DER - EmployeeLastName"
-          TopLeft="59.5,123.5" />
+          TopLeft="272.5,65.5" />
         <NodeLayout
-          Size="219,42"
-          Id="Package\DFT - ODS Employees\OLE_SRC - STA Employees"
-          TopLeft="59,25" />
+          Size="204,42"
+          Id="Package\DFT - ODS Employees\LKP - StateCD"
+          TopLeft="525,328" />
         <NodeLayout
-          Size="184,42"
+          Size="262,42"
+          Id="Package\DFT - ODS Employees\DCNV - Resizing Us_States Columns"
+          TopLeft="288,411" />
+        <NodeLayout
+          Size="203,42"
           Id="Package\DFT - ODS Employees\DER - SiteStateCD"
-          TopLeft="73,319" />
+          TopLeft="279,253" />
         <NodeLayout
           Size="206,42"
           Id="Package\DFT - ODS Employees\DER - ManagerFirstName"
-          TopLeft="60.5,171.5" />
+          TopLeft="275.5,111.5" />
         <NodeLayout
-          Size="211,42"
-          Id="Package\DFT - ODS Employees\DER - EmployeeFirstName"
-          TopLeft="60,71" />
+          Size="252,42"
+          Id="Package\DFT - ODS Employees\OLE_DST - ODS Employees"
+          TopLeft="294,470" />
         <NodeLayout
-          Size="190,42"
-          Id="Package\DFT - ODS Employees\DER - SiteTown"
-          TopLeft="63,271" />
+          Size="219,42"
+          Id="Package\DFT - ODS Employees\OLE_SRC - STA Employees"
+          TopLeft="8,22" />
         <EdgeLayout
-          Id="Package\DFT - ODS Employees.Paths[Sortie de source OLE DB]"
-          TopLeft="278,46">
+          Id="Package\DFT - ODS Employees.Paths[Sortie de conversion de données]"
+          TopLeft="614,295">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-7,46"
+              EndConnector="13,33"
               Start="0,0"
-              End="0.5,46">
+              End="13,25.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="18.5,0" />
+                    End="0,12.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="18.5,0"
-                    Point2="22.5,0"
-                    Point3="22.5,4" />
+                    Point1="0,12.5"
+                    Point2="0,16.5"
+                    Point3="4,16.5" />
                   <mssgle:LineSegment
-                    End="22.5,42" />
+                    End="9,16.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="22.5,42"
-                    Point2="22.5,46"
-                    Point3="18.5,46" />
+                    Point1="9,16.5"
+                    Point2="13,16.5"
+                    Point3="13,20.5" />
                   <mssgle:LineSegment
-                    End="0.5,46" />
+                    End="13,25.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - ODS Employees.Paths[Sortie de colonne dérivée5]"
+          TopLeft="482,274">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="51,0"
+              Start="0,0"
+              End="43.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="43.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1620,13 +2035,13 @@ where [refTable].[StateCD] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT - ODS Employees.Paths[Sortie de colonne dérivée4]"
-          TopLeft="63,292">
+          TopLeft="277,229.666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="10,48"
+              EndConnector="2,44.3333333333333"
               Start="0,0"
-              End="2.5,48">
+              End="-5.5,44.3333333333333">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -1637,13 +2052,13 @@ where [refTable].[StateCD] = ?</property>
                     Point2="-22.5,0"
                     Point3="-22.5,4" />
                   <mssgle:LineSegment
-                    End="-22.5,44" />
+                    End="-22.5,40.3333333333333" />
                   <mssgle:CubicBezierSegment
-                    Point1="-22.5,44"
-                    Point2="-22.5,48"
-                    Point3="-18.5,48" />
+                    Point1="-22.5,40.3333333333333"
+                    Point2="-22.5,44.3333333333333"
+                    Point3="-18.5,44.3333333333333" />
                   <mssgle:LineSegment
-                    End="2.5,48" />
+                    End="-5.5,44.3333333333333" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1654,47 +2069,13 @@ where [refTable].[StateCD] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT - ODS Employees.Paths[Sortie de colonne dérivée3]"
-          TopLeft="268,245">
+          TopLeft="274,177">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-15,47"
+              EndConnector="3,47"
               Start="0,0"
-              End="-7.5,47">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="18.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="18.5,0"
-                    Point2="22.5,0"
-                    Point3="22.5,4" />
-                  <mssgle:LineSegment
-                    End="22.5,43" />
-                  <mssgle:CubicBezierSegment
-                    Point1="22.5,43"
-                    Point2="22.5,47"
-                    Point3="18.5,47" />
-                  <mssgle:LineSegment
-                    End="-7.5,47" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT - ODS Employees.Paths[Sortie de colonne dérivée2]"
-          TopLeft="60.5,192.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="2.5,52.5"
-              Start="0,0"
-              End="-5,52.5">
+              End="-4.5,47">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -1705,13 +2086,47 @@ where [refTable].[StateCD] = ?</property>
                     Point2="-22.5,0"
                     Point3="-22.5,4" />
                   <mssgle:LineSegment
-                    End="-22.5,48.5" />
+                    End="-22.5,43" />
                   <mssgle:CubicBezierSegment
-                    Point1="-22.5,48.5"
-                    Point2="-22.5,52.5"
-                    Point3="-18.5,52.5" />
+                    Point1="-22.5,43"
+                    Point2="-22.5,47"
+                    Point3="-18.5,47" />
                   <mssgle:LineSegment
-                    End="-5,52.5" />
+                    End="-4.5,47" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - ODS Employees.Paths[Sortie de colonne dérivée2]"
+          TopLeft="481.5,132.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-2.5,44.5"
+              Start="0,0"
+              End="5,44.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="18.5,0"
+                    Point2="22.5,0"
+                    Point3="22.5,4" />
+                  <mssgle:LineSegment
+                    End="22.5,40.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="22.5,40.5"
+                    Point2="22.5,44.5"
+                    Point3="18.5,44.5" />
+                  <mssgle:LineSegment
+                    End="5,44.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1722,30 +2137,30 @@ where [refTable].[StateCD] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT - ODS Employees.Paths[Sortie de colonne dérivée1]"
-          TopLeft="270.5,150.166666666667">
+          TopLeft="272.5,92.1666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-4,42.3333333333333"
+              EndConnector="3,40.3333333333333"
               Start="0,0"
-              End="3.5,42.3333333333333">
+              End="-4.5,40.3333333333333">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="18.5,0" />
+                    End="-18.5,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="18.5,0"
-                    Point2="22.5,0"
-                    Point3="22.5,4" />
+                    Point1="-18.5,0"
+                    Point2="-22.5,0"
+                    Point3="-22.5,4" />
                   <mssgle:LineSegment
-                    End="22.5,38.3333333333333" />
+                    End="-22.5,36.3333333333333" />
                   <mssgle:CubicBezierSegment
-                    Point1="22.5,38.3333333333333"
-                    Point2="22.5,42.3333333333333"
-                    Point3="18.5,42.3333333333333" />
+                    Point1="-22.5,36.3333333333333"
+                    Point2="-22.5,40.3333333333333"
+                    Point3="-18.5,40.3333333333333" />
                   <mssgle:LineSegment
-                    End="3.5,42.3333333333333" />
+                    End="-4.5,40.3333333333333" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1756,72 +2171,30 @@ where [refTable].[StateCD] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT - ODS Employees.Paths[Sortie de colonne dérivée]"
-          TopLeft="271,97.6666666666667">
+          TopLeft="270,44.6666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-0.5,46.8333333333333"
+              EndConnector="2.5,36.1666666666667"
               Start="0,0"
-              End="7,46.8333333333333">
+              End="-5,36.1666666666667">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="18.5,0" />
+                    End="-18.5,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="18.5,0"
-                    Point2="22.5,0"
-                    Point3="22.5,4" />
+                    Point1="-18.5,0"
+                    Point2="-22.5,0"
+                    Point3="-22.5,4" />
                   <mssgle:LineSegment
-                    End="22.5,42.8333333333333" />
+                    End="-22.5,32.1666666666667" />
                   <mssgle:CubicBezierSegment
-                    Point1="22.5,42.8333333333333"
-                    Point2="22.5,46.8333333333333"
-                    Point3="18.5,46.8333333333333" />
+                    Point1="-22.5,32.1666666666667"
+                    Point2="-22.5,36.1666666666667"
+                    Point3="-18.5,36.1666666666667" />
                   <mssgle:LineSegment
-                    End="7,46.8333333333333" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="204,42"
-          Id="Package\DFT - ODS Employees\LKP - StateCD"
-          TopLeft="59,432" />
-        <NodeLayout
-          Size="162,42"
-          Id="Package\DFT - ODS Employees\DCNV - Resizing"
-          TopLeft="76,376" />
-        <EdgeLayout
-          Id="Package\DFT - ODS Employees.Paths[Sortie de colonne dérivée5]"
-          TopLeft="257,340">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-19,57"
-              Start="0,0"
-              End="-11.5,57">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="18.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="18.5,0"
-                    Point2="22.5,0"
-                    Point3="22.5,4" />
-                  <mssgle:LineSegment
-                    End="22.5,53" />
-                  <mssgle:CubicBezierSegment
-                    Point1="22.5,53"
-                    Point2="22.5,57"
-                    Point3="18.5,57" />
-                  <mssgle:LineSegment
-                    End="-11.5,57" />
+                    End="-5,36.1666666666667" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1831,25 +2204,19 @@ where [refTable].[StateCD] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DFT - ODS Employees.Paths[Sortie de conversion de données]"
-          TopLeft="238,402.666666666667">
+          Id="Package\DFT - ODS Employees.Paths[Sortie de source OLE DB]"
+          TopLeft="227,41">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-77,29.3333333333333"
+              EndConnector="43,0"
               Start="0,0"
-              End="-77,21.8333333333333">
+              End="35.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-73,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-73,0"
-                    Point2="-77,0"
-                    Point3="-77,4" />
-                  <mssgle:LineSegment
-                    End="-77,21.8333333333333" />
+                    End="35.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1858,77 +2225,153 @@ where [refTable].[StateCD] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="220,42"
-          Id="Package\DFT - ODS Employees\OLE_DST - ODS Employees"
-          TopLeft="62,568" />
-        <AnnotationLayout
-          Text="new"
-          ParentId="Package\DFT - ODS Employees"
-          FontInfo="{assembly:Null}"
-          Size="51,60"
-          Id="719f833b-81d7-4254-9e2d-94e1ed74666a"
-          TopLeft="1325,81" />
-        <NodeLayout
-          Size="262,42"
-          Id="Package\DFT - ODS Employees\DCNV - Resizing Us_States Columns"
-          TopLeft="64,505" />
         <EdgeLayout
           Id="Package\DFT - ODS Employees.Paths[Sortie de recherche avec correspondance]"
-          TopLeft="161,474">
+          TopLeft="594.333333333333,370">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="34,31"
+              EndConnector="-175.333333333333,41"
               Start="0,0"
-              End="34,23.5">
+              End="-175.333333333333,33.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,11.5" />
+                    End="0,12.591439688716" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,11.5"
-                    Point2="0,15.5"
-                    Point3="4,15.5" />
+                    Point1="0,12.591439688716"
+                    Point2="0,16.591439688716"
+                    Point3="-4,16.591439688716" />
                   <mssgle:LineSegment
-                    End="30,15.5" />
+                    End="-171.333333333333,16.591439688716" />
                   <mssgle:CubicBezierSegment
-                    Point1="30,15.5"
-                    Point2="34,15.5"
-                    Point3="34,19.5" />
+                    Point1="-171.333333333333,16.591439688716"
+                    Point2="-175.333333333333,16.591439688716"
+                    Point3="-175.333333333333,20.591439688716" />
                   <mssgle:LineSegment
-                    End="34,23.5" />
+                    End="-175.333333333333,33.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-74.67701171875,20.5,183.3540234375,11.609375"
+              BoundingBox="-179.343678385417,21.591439688716,183.3540234375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT - ODS Employees.Paths[Sortie de conversion de données1]"
-          TopLeft="195,547">
+          TopLeft="288,432">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="87,42"
+              EndConnector="6,59"
               Start="0,0"
-              End="79.5,42">
+              End="-1.5,59">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,38" />
+                    End="-18.5,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,38"
-                    Point2="0,42"
-                    Point3="4,42" />
+                    Point1="-18.5,0"
+                    Point2="-22.5,0"
+                    Point3="-22.5,4" />
                   <mssgle:LineSegment
-                    End="79.5,42" />
+                    End="-22.5,55" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-22.5,55"
+                    Point2="-22.5,59"
+                    Point3="-18.5,59" />
+                  <mssgle:LineSegment
+                    End="-1.5,59" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <AnnotationLayout
+          Text="new"
+          ParentId="Package\DFT - ODS Employees"
+          FontInfo="{assembly:Null}"
+          Size="51,40"
+          Id="719f833b-81d7-4254-9e2d-94e1ed74666a"
+          TopLeft="1325,81" />
+        <NodeLayout
+          Size="196,42"
+          Id="Package\DFT - ODS Employees\DER - State CD Rejects"
+          TopLeft="638,410" />
+        <EdgeLayout
+          Id="Package\DFT - ODS Employees.Paths[Sortie de recherche sans correspondance]"
+          TopLeft="659.666666666667,370">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="76.3333333333334,40"
+              Start="0,0"
+              End="76.3333333333334,32.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.1867704280156" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.1867704280156"
+                    Point2="0,16.1867704280156"
+                    Point3="4,16.1867704280156" />
+                  <mssgle:LineSegment
+                    End="72.3333333333334,16.1867704280156" />
+                  <mssgle:CubicBezierSegment
+                    Point1="72.3333333333334,16.1867704280156"
+                    Point2="76.3333333333334,16.1867704280156"
+                    Point3="76.3333333333334,20.1867704280156" />
+                  <mssgle:LineSegment
+                    End="76.3333333333334,32.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-53.3353450520833,21.1867704280156,183.0040234375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="203,42"
+          Id="Package\DFT - ODS Employees\OLE_DST - ADM Rejects"
+          TopLeft="627.444444444444,462.444444444444" />
+        <EdgeLayout
+          Id="Package\DFT - ODS Employees.Paths[Sortie de colonne dérivée6]"
+          TopLeft="834,431">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-3.55555555555554,52.4444444444445"
+              Start="0,0"
+              End="3.94444444444446,52.4444444444445">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="18.5,0"
+                    Point2="22.5,0"
+                    Point3="22.5,4" />
+                  <mssgle:LineSegment
+                    End="22.5,48.4444444444445" />
+                  <mssgle:CubicBezierSegment
+                    Point1="22.5,48.4444444444445"
+                    Point2="22.5,52.4444444444445"
+                    Point3="18.5,52.4444444444445" />
+                  <mssgle:LineSegment
+                    End="3.94444444444446,52.4444444444445" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1940,6 +2383,42 @@ where [refTable].[StateCD] = ?</property>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT - ODS Employees\LKP - StateCD">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[US_States]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT - ODS Employees\OLE_DST - ODS Employees">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\DFT - ODS Employees\OLE_SRC - STA Employees">
     <Properties>
@@ -1954,30 +2433,7 @@ where [refTable].[StateCD] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\DFT - ODS Employees\LKP - StateCD">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[US_States]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT - ODS Employees\OLE_DST - ODS Employees">
+    design-time-name="Package\DFT - ODS Employees\OLE_DST - ADM Rejects">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

@@ -11,8 +11,8 @@
   DTS:LocaleID="1036"
   DTS:ObjectName="ODS_Employee"
   DTS:PackageType="5"
-  DTS:VersionBuild="53"
-  DTS:VersionGUID="{8C22B263-41C4-4927-9E5E-518BC6CC1E31}">
+  DTS:VersionBuild="55"
+  DTS:VersionGUID="{CC81D812-9688-40E6-9940-ADB32C112826}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -58,79 +58,42 @@
           version="1">
           <components>
             <component
-              refId="Package\DFT - ODS Employees\DCNV - Resizing"
+              refId="Package\DFT - ODS Employees\DCNV - Convert SiteStateCD to string"
               componentClassID="Microsoft.DataConvert"
               contactInfo="Conversion de données;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
               description="Conversion de données"
-              name="DCNV - Resizing"
+              name="DCNV - Convert SiteStateCD to string"
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\DFT - ODS Employees\DCNV - Resizing.Inputs[Entrée de conversion de données]"
+                  refId="Package\DFT - ODS Employees\DCNV - Convert SiteStateCD to string.Inputs[Entrée de conversion de données]"
                   name="Entrée de conversion de données">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\DFT - ODS Employees\DCNV - Resizing.Inputs[Entrée de conversion de données].Columns[SiteStateCD]"
+                      refId="Package\DFT - ODS Employees\DCNV - Convert SiteStateCD to string.Inputs[Entrée de conversion de données].Columns[SiteStateCD]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="SiteStateCD"
                       lineageId="Package\DFT - ODS Employees\DER - SiteStateCD.Outputs[Sortie de colonne dérivée].Columns[SiteStateCD]" />
-                    <inputColumn
-                      refId="Package\DFT - ODS Employees\DCNV - Resizing.Inputs[Entrée de conversion de données].Columns[EmployeeID]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="EmployeeID"
-                      lineageId="Package\DFT - ODS Employees\OLE_SRC - STA Employees.Outputs[Sortie de source OLE DB].Columns[EmployeeID]" />
-                    <inputColumn
-                      refId="Package\DFT - ODS Employees\DCNV - Resizing.Inputs[Entrée de conversion de données].Columns[EmployeeFirstName]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="EmployeeFirstName"
-                      lineageId="Package\DFT - ODS Employees\DER - EmployeeFirstName.Outputs[Sortie de colonne dérivée].Columns[EmployeeFirstName]" />
-                    <inputColumn
-                      refId="Package\DFT - ODS Employees\DCNV - Resizing.Inputs[Entrée de conversion de données].Columns[EmployeeLastName]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="EmployeeLastName"
-                      lineageId="Package\DFT - ODS Employees\DER - EmployeeLastName.Outputs[Sortie de colonne dérivée].Columns[EmployeeLastName]" />
-                    <inputColumn
-                      refId="Package\DFT - ODS Employees\DCNV - Resizing.Inputs[Entrée de conversion de données].Columns[ManagerFirstName]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="ManagerFirstName"
-                      lineageId="Package\DFT - ODS Employees\DER - ManagerFirstName.Outputs[Sortie de colonne dérivée].Columns[ManagerFirstName]" />
-                    <inputColumn
-                      refId="Package\DFT - ODS Employees\DCNV - Resizing.Inputs[Entrée de conversion de données].Columns[ManagerLastName]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="ManagerLastName"
-                      lineageId="Package\DFT - ODS Employees\DER - ManagerLastName.Outputs[Sortie de colonne dérivée].Columns[ManagerLastName]" />
-                    <inputColumn
-                      refId="Package\DFT - ODS Employees\DCNV - Resizing.Inputs[Entrée de conversion de données].Columns[SiteTown]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="SiteTown"
-                      lineageId="Package\DFT - ODS Employees\DER - SiteTown.Outputs[Sortie de colonne dérivée].Columns[SiteTown]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\DFT - ODS Employees\DCNV - Resizing.Outputs[Sortie de conversion de données]"
+                  refId="Package\DFT - ODS Employees\DCNV - Convert SiteStateCD to string.Outputs[Sortie de conversion de données]"
                   exclusionGroup="1"
                   name="Sortie de conversion de données"
-                  synchronousInputId="Package\DFT - ODS Employees\DCNV - Resizing.Inputs[Entrée de conversion de données]">
+                  synchronousInputId="Package\DFT - ODS Employees\DCNV - Convert SiteStateCD to string.Inputs[Entrée de conversion de données]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DFT - ODS Employees\DCNV - Resizing.Outputs[Sortie de conversion de données].Columns[SiteStateCD_R]"
+                      refId="Package\DFT - ODS Employees\DCNV - Convert SiteStateCD to string.Outputs[Sortie de conversion de données].Columns[SiteStateCD_R]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="255"
-                      lineageId="Package\DFT - ODS Employees\DCNV - Resizing.Outputs[Sortie de conversion de données].Columns[SiteStateCD_R]"
+                      lineageId="Package\DFT - ODS Employees\DCNV - Convert SiteStateCD to string.Outputs[Sortie de conversion de données].Columns[SiteStateCD_R]"
                       name="SiteStateCD_R"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -145,158 +108,26 @@
                           name="FastParse">false</property>
                       </properties>
                     </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT - ODS Employees\DCNV - Resizing.Outputs[Sortie de conversion de données].Columns[EmployeeID_R]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="20"
-                      lineageId="Package\DFT - ODS Employees\DCNV - Resizing.Outputs[Sortie de conversion de données].Columns[EmployeeID_R]"
-                      name="EmployeeID_R"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
-                          name="SourceInputColumnLineageID">#{Package\DFT - ODS Employees\OLE_SRC - STA Employees.Outputs[Sortie de source OLE DB].Columns[EmployeeID]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT - ODS Employees\DCNV - Resizing.Outputs[Sortie de conversion de données].Columns[EmployeeFirstName_R]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="50"
-                      lineageId="Package\DFT - ODS Employees\DCNV - Resizing.Outputs[Sortie de conversion de données].Columns[EmployeeFirstName_R]"
-                      name="EmployeeFirstName_R"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
-                          name="SourceInputColumnLineageID">#{Package\DFT - ODS Employees\DER - EmployeeFirstName.Outputs[Sortie de colonne dérivée].Columns[EmployeeFirstName]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT - ODS Employees\DCNV - Resizing.Outputs[Sortie de conversion de données].Columns[EmployeeLastName_R]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="50"
-                      lineageId="Package\DFT - ODS Employees\DCNV - Resizing.Outputs[Sortie de conversion de données].Columns[EmployeeLastName_R]"
-                      name="EmployeeLastName_R"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
-                          name="SourceInputColumnLineageID">#{Package\DFT - ODS Employees\DER - EmployeeLastName.Outputs[Sortie de colonne dérivée].Columns[EmployeeLastName]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT - ODS Employees\DCNV - Resizing.Outputs[Sortie de conversion de données].Columns[ManagerFirstName_R]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="50"
-                      lineageId="Package\DFT - ODS Employees\DCNV - Resizing.Outputs[Sortie de conversion de données].Columns[ManagerFirstName_R]"
-                      name="ManagerFirstName_R"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
-                          name="SourceInputColumnLineageID">#{Package\DFT - ODS Employees\DER - ManagerFirstName.Outputs[Sortie de colonne dérivée].Columns[ManagerFirstName]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT - ODS Employees\DCNV - Resizing.Outputs[Sortie de conversion de données].Columns[ManagerLastName_R]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="50"
-                      lineageId="Package\DFT - ODS Employees\DCNV - Resizing.Outputs[Sortie de conversion de données].Columns[ManagerLastName_R]"
-                      name="ManagerLastName_R"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
-                          name="SourceInputColumnLineageID">#{Package\DFT - ODS Employees\DER - ManagerLastName.Outputs[Sortie de colonne dérivée].Columns[ManagerLastName]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT - ODS Employees\DCNV - Resizing.Outputs[Sortie de conversion de données].Columns[SiteTown_R]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="50"
-                      lineageId="Package\DFT - ODS Employees\DCNV - Resizing.Outputs[Sortie de conversion de données].Columns[SiteTown_R]"
-                      name="SiteTown_R"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
-                          name="SourceInputColumnLineageID">#{Package\DFT - ODS Employees\DER - SiteTown.Outputs[Sortie de colonne dérivée].Columns[SiteTown]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\DFT - ODS Employees\DCNV - Resizing.Outputs[Sortie d'erreur de conversion de données]"
+                  refId="Package\DFT - ODS Employees\DCNV - Convert SiteStateCD to string.Outputs[Sortie d'erreur de conversion de données]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Sortie d'erreur de conversion de données"
-                  synchronousInputId="Package\DFT - ODS Employees\DCNV - Resizing.Inputs[Entrée de conversion de données]">
+                  synchronousInputId="Package\DFT - ODS Employees\DCNV - Convert SiteStateCD to string.Inputs[Entrée de conversion de données]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DFT - ODS Employees\DCNV - Resizing.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorCode]"
+                      refId="Package\DFT - ODS Employees\DCNV - Convert SiteStateCD to string.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\DFT - ODS Employees\DCNV - Resizing.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorCode]"
+                      lineageId="Package\DFT - ODS Employees\DCNV - Convert SiteStateCD to string.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\DFT - ODS Employees\DCNV - Resizing.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorColumn]"
+                      refId="Package\DFT - ODS Employees\DCNV - Convert SiteStateCD to string.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\DFT - ODS Employees\DCNV - Resizing.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorColumn]"
+                      lineageId="Package\DFT - ODS Employees\DCNV - Convert SiteStateCD to string.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -330,6 +161,43 @@
                       cachedLength="255"
                       cachedName="Region"
                       lineageId="Package\DFT - ODS Employees\LKP - StateCD.Outputs[Sortie de recherche avec correspondance].Columns[Region]" />
+                    <inputColumn
+                      refId="Package\DFT - ODS Employees\DCNV - Resizing Us_States Columns.Inputs[Entrée de conversion de données].Columns[EmployeeID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="EmployeeID"
+                      lineageId="Package\DFT - ODS Employees\OLE_SRC - STA Employees.Outputs[Sortie de source OLE DB].Columns[EmployeeID]" />
+                    <inputColumn
+                      refId="Package\DFT - ODS Employees\DCNV - Resizing Us_States Columns.Inputs[Entrée de conversion de données].Columns[EmployeeFirstName]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="EmployeeFirstName"
+                      lineageId="Package\DFT - ODS Employees\DER - EmployeeFirstName.Outputs[Sortie de colonne dérivée].Columns[EmployeeFirstName]" />
+                    <inputColumn
+                      refId="Package\DFT - ODS Employees\DCNV - Resizing Us_States Columns.Inputs[Entrée de conversion de données].Columns[EmployeeLastName]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="EmployeeLastName"
+                      lineageId="Package\DFT - ODS Employees\DER - EmployeeLastName.Outputs[Sortie de colonne dérivée].Columns[EmployeeLastName]" />
+                    <inputColumn
+                      refId="Package\DFT - ODS Employees\DCNV - Resizing Us_States Columns.Inputs[Entrée de conversion de données].Columns[ManagerFirstName]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="ManagerFirstName"
+                      lineageId="Package\DFT - ODS Employees\DER - ManagerFirstName.Outputs[Sortie de colonne dérivée].Columns[ManagerFirstName]" />
+                    <inputColumn
+                      refId="Package\DFT - ODS Employees\DCNV - Resizing Us_States Columns.Inputs[Entrée de conversion de données].Columns[ManagerLastName]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="ManagerLastName"
+                      lineageId="Package\DFT - ODS Employees\DER - ManagerLastName.Outputs[Sortie de colonne dérivée].Columns[ManagerLastName]" />
+                    <inputColumn
+                      refId="Package\DFT - ODS Employees\DCNV - Resizing Us_States Columns.Inputs[Entrée de conversion de données].Columns[SiteTown]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="SiteTown"
+                      lineageId="Package\DFT - ODS Employees\DER - SiteTown.Outputs[Sortie de colonne dérivée].Columns[SiteTown]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -379,6 +247,138 @@
                           dataType="System.Int32"
                           description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
                           name="SourceInputColumnLineageID">#{Package\DFT - ODS Employees\LKP - StateCD.Outputs[Sortie de recherche avec correspondance].Columns[Region]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - ODS Employees\DCNV - Resizing Us_States Columns.Outputs[Sortie de conversion de données].Columns[EmployeeID_R]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\DFT - ODS Employees\DCNV - Resizing Us_States Columns.Outputs[Sortie de conversion de données].Columns[EmployeeID_R]"
+                      name="EmployeeID_R"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT - ODS Employees\OLE_SRC - STA Employees.Outputs[Sortie de source OLE DB].Columns[EmployeeID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - ODS Employees\DCNV - Resizing Us_States Columns.Outputs[Sortie de conversion de données].Columns[EmployeeFirstName_R]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DFT - ODS Employees\DCNV - Resizing Us_States Columns.Outputs[Sortie de conversion de données].Columns[EmployeeFirstName_R]"
+                      name="EmployeeFirstName_R"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT - ODS Employees\DER - EmployeeFirstName.Outputs[Sortie de colonne dérivée].Columns[EmployeeFirstName]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - ODS Employees\DCNV - Resizing Us_States Columns.Outputs[Sortie de conversion de données].Columns[EmployeeLastName_R]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DFT - ODS Employees\DCNV - Resizing Us_States Columns.Outputs[Sortie de conversion de données].Columns[EmployeeLastName_R]"
+                      name="EmployeeLastName_R"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT - ODS Employees\DER - EmployeeLastName.Outputs[Sortie de colonne dérivée].Columns[EmployeeLastName]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - ODS Employees\DCNV - Resizing Us_States Columns.Outputs[Sortie de conversion de données].Columns[ManagerFirstName_R]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DFT - ODS Employees\DCNV - Resizing Us_States Columns.Outputs[Sortie de conversion de données].Columns[ManagerFirstName_R]"
+                      name="ManagerFirstName_R"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT - ODS Employees\DER - ManagerFirstName.Outputs[Sortie de colonne dérivée].Columns[ManagerFirstName]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - ODS Employees\DCNV - Resizing Us_States Columns.Outputs[Sortie de conversion de données].Columns[ManagerLastName_R]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DFT - ODS Employees\DCNV - Resizing Us_States Columns.Outputs[Sortie de conversion de données].Columns[ManagerLastName_R]"
+                      name="ManagerLastName_R"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT - ODS Employees\DER - ManagerLastName.Outputs[Sortie de colonne dérivée].Columns[ManagerLastName]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - ODS Employees\DCNV - Resizing Us_States Columns.Outputs[Sortie de conversion de données].Columns[SiteTown_R]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DFT - ODS Employees\DCNV - Resizing Us_States Columns.Outputs[Sortie de conversion de données].Columns[SiteTown_R]"
+                      name="SiteTown_R"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT - ODS Employees\DER - SiteTown.Outputs[Sortie de colonne dérivée].Columns[SiteTown]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
@@ -1109,7 +1109,7 @@ where [refTable].[StateCD] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Spécifie la liste d'identificateurs de traçabilité se mappant aux paramètres utilisés dans la propriété SQLCommand par l'instruction SQL. Les entrées dans la liste sont séparées par des points-virgules."
-                  name="ParameterMap">#{Package\DFT - ODS Employees\DCNV - Resizing.Outputs[Sortie de conversion de données].Columns[SiteStateCD_R]};</property>
+                  name="ParameterMap">#{Package\DFT - ODS Employees\DCNV - Convert SiteStateCD to string.Outputs[Sortie de conversion de données].Columns[SiteStateCD_R]};</property>
                 <property
                   dataType="System.Int32"
                   description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
@@ -1138,7 +1138,7 @@ where [refTable].[StateCD] = ?</property>
                       cachedDataType="str"
                       cachedLength="255"
                       cachedName="SiteStateCD_R"
-                      lineageId="Package\DFT - ODS Employees\DCNV - Resizing.Outputs[Sortie de conversion de données].Columns[SiteStateCD_R]">
+                      lineageId="Package\DFT - ODS Employees\DCNV - Convert SiteStateCD to string.Outputs[Sortie de conversion de données].Columns[SiteStateCD_R]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -1456,7 +1456,7 @@ where [refTable].[StateCD] = ?</property>
                       cachedLength="20"
                       cachedName="EmployeeID_R"
                       externalMetadataColumnId="Package\DFT - ODS Employees\OLE_DST - ODS Employees.Inputs[Entrée de destination OLE DB].ExternalColumns[EmployeeID]"
-                      lineageId="Package\DFT - ODS Employees\DCNV - Resizing.Outputs[Sortie de conversion de données].Columns[EmployeeID_R]" />
+                      lineageId="Package\DFT - ODS Employees\DCNV - Resizing Us_States Columns.Outputs[Sortie de conversion de données].Columns[EmployeeID_R]" />
                     <inputColumn
                       refId="Package\DFT - ODS Employees\OLE_DST - ODS Employees.Inputs[Entrée de destination OLE DB].Columns[EmployeeFirstName_R]"
                       cachedCodepage="1252"
@@ -1464,7 +1464,7 @@ where [refTable].[StateCD] = ?</property>
                       cachedLength="50"
                       cachedName="EmployeeFirstName_R"
                       externalMetadataColumnId="Package\DFT - ODS Employees\OLE_DST - ODS Employees.Inputs[Entrée de destination OLE DB].ExternalColumns[EmployeeFirstName]"
-                      lineageId="Package\DFT - ODS Employees\DCNV - Resizing.Outputs[Sortie de conversion de données].Columns[EmployeeFirstName_R]" />
+                      lineageId="Package\DFT - ODS Employees\DCNV - Resizing Us_States Columns.Outputs[Sortie de conversion de données].Columns[EmployeeFirstName_R]" />
                     <inputColumn
                       refId="Package\DFT - ODS Employees\OLE_DST - ODS Employees.Inputs[Entrée de destination OLE DB].Columns[EmployeeLastName_R]"
                       cachedCodepage="1252"
@@ -1472,7 +1472,7 @@ where [refTable].[StateCD] = ?</property>
                       cachedLength="50"
                       cachedName="EmployeeLastName_R"
                       externalMetadataColumnId="Package\DFT - ODS Employees\OLE_DST - ODS Employees.Inputs[Entrée de destination OLE DB].ExternalColumns[EmployeeLastName]"
-                      lineageId="Package\DFT - ODS Employees\DCNV - Resizing.Outputs[Sortie de conversion de données].Columns[EmployeeLastName_R]" />
+                      lineageId="Package\DFT - ODS Employees\DCNV - Resizing Us_States Columns.Outputs[Sortie de conversion de données].Columns[EmployeeLastName_R]" />
                     <inputColumn
                       refId="Package\DFT - ODS Employees\OLE_DST - ODS Employees.Inputs[Entrée de destination OLE DB].Columns[ManagerFirstName_R]"
                       cachedCodepage="1252"
@@ -1480,7 +1480,7 @@ where [refTable].[StateCD] = ?</property>
                       cachedLength="50"
                       cachedName="ManagerFirstName_R"
                       externalMetadataColumnId="Package\DFT - ODS Employees\OLE_DST - ODS Employees.Inputs[Entrée de destination OLE DB].ExternalColumns[ManagerFirstName]"
-                      lineageId="Package\DFT - ODS Employees\DCNV - Resizing.Outputs[Sortie de conversion de données].Columns[ManagerFirstName_R]" />
+                      lineageId="Package\DFT - ODS Employees\DCNV - Resizing Us_States Columns.Outputs[Sortie de conversion de données].Columns[ManagerFirstName_R]" />
                     <inputColumn
                       refId="Package\DFT - ODS Employees\OLE_DST - ODS Employees.Inputs[Entrée de destination OLE DB].Columns[ManagerLastName_R]"
                       cachedCodepage="1252"
@@ -1488,7 +1488,7 @@ where [refTable].[StateCD] = ?</property>
                       cachedLength="50"
                       cachedName="ManagerLastName_R"
                       externalMetadataColumnId="Package\DFT - ODS Employees\OLE_DST - ODS Employees.Inputs[Entrée de destination OLE DB].ExternalColumns[ManagerLastName]"
-                      lineageId="Package\DFT - ODS Employees\DCNV - Resizing.Outputs[Sortie de conversion de données].Columns[ManagerLastName_R]" />
+                      lineageId="Package\DFT - ODS Employees\DCNV - Resizing Us_States Columns.Outputs[Sortie de conversion de données].Columns[ManagerLastName_R]" />
                     <inputColumn
                       refId="Package\DFT - ODS Employees\OLE_DST - ODS Employees.Inputs[Entrée de destination OLE DB].Columns[SiteTown_R]"
                       cachedCodepage="1252"
@@ -1496,7 +1496,7 @@ where [refTable].[StateCD] = ?</property>
                       cachedLength="50"
                       cachedName="SiteTown_R"
                       externalMetadataColumnId="Package\DFT - ODS Employees\OLE_DST - ODS Employees.Inputs[Entrée de destination OLE DB].ExternalColumns[SiteTown]"
-                      lineageId="Package\DFT - ODS Employees\DCNV - Resizing.Outputs[Sortie de conversion de données].Columns[SiteTown_R]" />
+                      lineageId="Package\DFT - ODS Employees\DCNV - Resizing Us_States Columns.Outputs[Sortie de conversion de données].Columns[SiteTown_R]" />
                     <inputColumn
                       refId="Package\DFT - ODS Employees\OLE_DST - ODS Employees.Inputs[Entrée de destination OLE DB].Columns[Region_R]"
                       cachedCodepage="1252"
@@ -1805,7 +1805,7 @@ where [refTable].[StateCD] = ?</property>
               startId="Package\DFT - ODS Employees\DER - SiteTown.Outputs[Sortie de colonne dérivée]" />
             <path
               refId="Package\DFT - ODS Employees.Paths[Sortie de colonne dérivée5]"
-              endId="Package\DFT - ODS Employees\DCNV - Resizing.Inputs[Entrée de conversion de données]"
+              endId="Package\DFT - ODS Employees\DCNV - Convert SiteStateCD to string.Inputs[Entrée de conversion de données]"
               name="Sortie de colonne dérivée"
               startId="Package\DFT - ODS Employees\DER - SiteStateCD.Outputs[Sortie de colonne dérivée]" />
             <path
@@ -1817,7 +1817,7 @@ where [refTable].[StateCD] = ?</property>
               refId="Package\DFT - ODS Employees.Paths[Sortie de conversion de données]"
               endId="Package\DFT - ODS Employees\LKP - StateCD.Inputs[Entrée de recherche]"
               name="Sortie de conversion de données"
-              startId="Package\DFT - ODS Employees\DCNV - Resizing.Outputs[Sortie de conversion de données]" />
+              startId="Package\DFT - ODS Employees\DCNV - Convert SiteStateCD to string.Outputs[Sortie de conversion de données]" />
             <path
               refId="Package\DFT - ODS Employees.Paths[Sortie de conversion de données1]"
               endId="Package\DFT - ODS Employees\OLE_DST - ODS Employees.Inputs[Entrée de destination OLE DB]"
@@ -1871,12 +1871,12 @@ where [refTable].[StateCD] = ?</property>
       DTS:To="Package\DFT - ODS Employees" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
-<!--Cette section CDATA contient des informations sur la disposition du package. Elle comprend des informations telles que les coordonnées (x,y), la largeur et la hauteur.-->
-<!--Si vous modifiez manuellement cette section et commettez une erreur, vous pouvez la supprimer. -->
-<!--Le package pourra toujours se charger normalement, mais les informations de disposition précédente seront perdues et le concepteur réorganisera automatiquement les éléments sur l'aire de conception.-->
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
 <Objects
   Version="8">
-  <!--Chaque nœud ci-dessous contiendra des propriétés qui n'affectent pas le comportement d'exécution.-->
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>
@@ -1981,8 +1981,8 @@ where [refTable].[StateCD] = ?</property>
           Id="Package\DFT - ODS Employees\DER - ManagerLastName"
           TopLeft="274,156" />
         <NodeLayout
-          Size="162,42"
-          Id="Package\DFT - ODS Employees\DCNV - Resizing"
+          Size="264,42"
+          Id="Package\DFT - ODS Employees\DCNV - Convert SiteStateCD to string"
           TopLeft="533,253" />
         <EdgeLayout
           Id="Package\DFT - ODS Employees.Paths[Sortie de source OLE DB]"
@@ -2114,13 +2114,13 @@ where [refTable].[StateCD] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT - ODS Employees.Paths[Sortie de conversion de données]"
-          TopLeft="614,295">
+          TopLeft="665,295">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="13,33"
+              EndConnector="-38,33"
               Start="0,0"
-              End="13,25.5">
+              End="-38,25.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -2129,15 +2129,15 @@ where [refTable].[StateCD] = ?</property>
                   <mssgle:CubicBezierSegment
                     Point1="0,12.5"
                     Point2="0,16.5"
-                    Point3="4,16.5" />
+                    Point3="-4,16.5" />
                   <mssgle:LineSegment
-                    End="9,16.5" />
+                    End="-34,16.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="9,16.5"
-                    Point2="13,16.5"
-                    Point3="13,20.5" />
+                    Point1="-34,16.5"
+                    Point2="-38,16.5"
+                    Point3="-38,20.5" />
                   <mssgle:LineSegment
-                    End="13,25.5" />
+                    End="-38,25.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2414,7 +2414,7 @@ where [refTable].[StateCD] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>

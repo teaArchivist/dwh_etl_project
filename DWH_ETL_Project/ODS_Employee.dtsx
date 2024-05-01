@@ -11,8 +11,8 @@
   DTS:LocaleID="1036"
   DTS:ObjectName="ODS_Employee"
   DTS:PackageType="5"
-  DTS:VersionBuild="55"
-  DTS:VersionGUID="{CC81D812-9688-40E6-9940-ADB32C112826}">
+  DTS:VersionBuild="57"
+  DTS:VersionGUID="{B7C84E6C-83B5-468E-B86A-47CDBEEFCB0F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -38,6 +38,18 @@
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
           DTS:ConnectionString="Data Source=localhost;Initial Catalog=Project_ODS;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-ODS_Employee-{8132B2C0-0E6F-4828-ADF6-1BF5005F45C0}localhost.Project_ODS;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.Project_STA]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{17F0F903-D12B-424F-8C17-34423D2BA897}"
+      DTS:ObjectName="localhost.Project_STA">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=Project_STA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-STA_-{17F0F903-D12B-424F-8C17-34423D2BA897}localhost.Project_STA;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -1122,8 +1134,8 @@ where [refTable].[StateCD] = ?</property>
               <connections>
                 <connection
                   refId="Package\DFT - ODS Employees\LKP - StateCD.Connections[OleDbConnection]"
-                  connectionManagerID="{17F0F903-D12B-424F-8C17-34423D2BA897}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[localhost.Project_STA]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.Project_STA]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.Project_STA]"
                   description="Gestionnaire de connexions utilisé pour accéder aux données de correspondance."
                   name="OleDbConnection" />
               </connections>
@@ -1643,8 +1655,8 @@ where [refTable].[StateCD] = ?</property>
               <connections>
                 <connection
                   refId="Package\DFT - ODS Employees\OLE_SRC - STA Employees.Connections[OleDbConnection]"
-                  connectionManagerID="{17F0F903-D12B-424F-8C17-34423D2BA897}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[localhost.Project_STA]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.Project_STA]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.Project_STA]"
                   description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
                   name="OleDbConnection" />
               </connections>
@@ -1933,9 +1945,9 @@ where [refTable].[StateCD] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="262,42"
-          Id="Package\DFT - ODS Employees\DCNV - Resizing Us_States Columns"
-          TopLeft="288,411" />
+          Size="196,42"
+          Id="Package\DFT - ODS Employees\DER - State CD Rejects"
+          TopLeft="638,410" />
         <NodeLayout
           Size="206,42"
           Id="Package\DFT - ODS Employees\DER - ManagerFirstName"
@@ -1957,10 +1969,6 @@ where [refTable].[StateCD] = ?</property>
           Id="Package\DFT - ODS Employees\DER - EmployeeLastName"
           TopLeft="272.5,65.5" />
         <NodeLayout
-          Size="196,42"
-          Id="Package\DFT - ODS Employees\DER - State CD Rejects"
-          TopLeft="638,410" />
-        <NodeLayout
           Size="204,42"
           Id="Package\DFT - ODS Employees\LKP - StateCD"
           TopLeft="525,328" />
@@ -1972,6 +1980,10 @@ where [refTable].[StateCD] = ?</property>
           Size="211,42"
           Id="Package\DFT - ODS Employees\DER - EmployeeFirstName"
           TopLeft="270,18" />
+        <NodeLayout
+          Size="262,42"
+          Id="Package\DFT - ODS Employees\DCNV - Resizing Us_States Columns"
+          TopLeft="288,411" />
         <NodeLayout
           Size="203,42"
           Id="Package\DFT - ODS Employees\OLE_DST - ADM Rejects"
@@ -1986,18 +1998,30 @@ where [refTable].[StateCD] = ?</property>
           TopLeft="533,253" />
         <EdgeLayout
           Id="Package\DFT - ODS Employees.Paths[Sortie de source OLE DB]"
-          TopLeft="227,41">
+          TopLeft="227,43">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="43,0"
+              EndConnector="43,-9.66666666666667"
               Start="0,0"
-              End="35.5,0">
+              End="35.5,-9.66666666666667">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="35.5,0" />
+                    End="20.8532110091743,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="20.8532110091743,0"
+                    Point2="24.8532110091743,0"
+                    Point3="24.8532110091743,-4" />
+                  <mssgle:LineSegment
+                    End="24.8532110091743,-5.66666666666667" />
+                  <mssgle:CubicBezierSegment
+                    Point1="24.8532110091743,-5.66666666666667"
+                    Point2="24.8532110091743,-9.66666666666667"
+                    Point3="28.8532110091743,-9.66666666666667" />
+                  <mssgle:LineSegment
+                    End="35.5,-9.66666666666667" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

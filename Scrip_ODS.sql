@@ -154,3 +154,17 @@ CREATE TABLE [dbo].[Call_Data](
 	[Within_SLA] [bit] NULL
 ) ON [PRIMARY]
 GO
+	
+/****** Object:  Table [dbo].[Call_Charges]    Script Date: 5/1/2024 3:19:35 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Call_Charges](
+	[Year] [nvarchar](255) NULL,
+	[CallType] [varchar](255) NULL,
+	[Charges] [varchar](255) NULL
+) ON [PRIMARY]
+GO

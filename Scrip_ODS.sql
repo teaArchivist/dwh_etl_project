@@ -135,3 +135,22 @@ CREATE TABLE [dbo].[Employees](
 	[Region] [varchar](50) NULL
 ) ON [PRIMARY]
 GO
+
+/****** Object:  Table [dbo].[Call_Data]    Script Date: 01/05/2024 19:23:22 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Call_Data](
+	[Call_Type] [bigint] NULL,
+	[EmployeeID] [varchar](20) NULL,
+	[Call_Date] [date] NULL,
+	[Call_Time] [time](7) NULL,
+	[Call_Duration (s)] [numeric](20, 0) NULL,
+	[Wait_Time (s)] [bigint] NULL,
+	[Call_Abandoned] [bit] NULL,
+	[Within_SLA] [bit] NULL
+) ON [PRIMARY]
+GO

@@ -125,9 +125,9 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[Technicals_Rejects](
-	[Reject Date] [datetime] NULL,
-	[RejectPackageAndTask] [nvarchar](205) NULL,
-	[RejectColumn] [nvarchar](9) NULL,
+	[RejectDate] [datetime] NULL,
+	[RejectPackageAndTask] [nvarchar](255) NULL,
+	[RejectColumn] [nvarchar](50) NULL,
 	[RejectDescription] [nvarchar](max) NULL
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO

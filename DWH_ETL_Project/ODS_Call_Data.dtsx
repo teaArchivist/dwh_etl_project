@@ -11,8 +11,8 @@
   DTS:LocaleID="1036"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="35"
-  DTS:VersionGUID="{A06222D8-01C2-4EDA-BA22-6445ED0C4A5A}">
+  DTS:VersionBuild="36"
+  DTS:VersionGUID="{85BB071B-DF8C-4F43-9D86-54F40528B953}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1526,6 +1526,85 @@
               </outputs>
             </component>
             <component
+              refId="Package\DFT - ODS Call_Data\DCNV - Resizing Call Type Label"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Conversion de données;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Conversion de données"
+              name="DCNV - Resizing Call Type Label"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT - ODS Call_Data\DCNV - Resizing Call Type Label.Inputs[Entrée de conversion de données]"
+                  name="Entrée de conversion de données">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - ODS Call_Data\DCNV - Resizing Call Type Label.Inputs[Entrée de conversion de données].Columns[CallTypeLabel]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="CallTypeLabel"
+                      lineageId="Package\DFT - ODS Call_Data\LKP - Call Type.Outputs[Sortie de recherche avec correspondance].Columns[CallTypeLabel]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - ODS Call_Data\DCNV - Resizing Call Type Label.Outputs[Sortie de conversion de données]"
+                  exclusionGroup="1"
+                  name="Sortie de conversion de données"
+                  synchronousInputId="Package\DFT - ODS Call_Data\DCNV - Resizing Call Type Label.Inputs[Entrée de conversion de données]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - ODS Call_Data\DCNV - Resizing Call Type Label.Outputs[Sortie de conversion de données].Columns[CallTypeLabel_R]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DFT - ODS Call_Data\DCNV - Resizing Call Type Label.Outputs[Sortie de conversion de données].Columns[CallTypeLabel_R]"
+                      name="CallTypeLabel_R"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT - ODS Call_Data\LKP - Call Type.Outputs[Sortie de recherche avec correspondance].Columns[CallTypeLabel]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - ODS Call_Data\DCNV - Resizing Call Type Label.Outputs[Sortie d'erreur de conversion de données]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de conversion de données"
+                  synchronousInputId="Package\DFT - ODS Call_Data\DCNV - Resizing Call Type Label.Inputs[Entrée de conversion de données]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - ODS Call_Data\DCNV - Resizing Call Type Label.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - ODS Call_Data\DCNV - Resizing Call Type Label.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - ODS Call_Data\DCNV - Resizing Call Type Label.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - ODS Call_Data\DCNV - Resizing Call Type Label.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\DFT - ODS Call_Data\DCNV - Resizing EmployeeID"
               componentClassID="Microsoft.DataConvert"
               contactInfo="Conversion de données;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
@@ -2668,85 +2747,6 @@
               </outputs>
             </component>
             <component
-              refId="Package\DFT - ODS Call_Data\DNCV - Resizing Call Type Label"
-              componentClassID="Microsoft.DataConvert"
-              contactInfo="Conversion de données;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
-              description="Conversion de données"
-              name="DNCV - Resizing Call Type Label"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\DFT - ODS Call_Data\DNCV - Resizing Call Type Label.Inputs[Entrée de conversion de données]"
-                  name="Entrée de conversion de données">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\DFT - ODS Call_Data\DNCV - Resizing Call Type Label.Inputs[Entrée de conversion de données].Columns[CallTypeLabel]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="CallTypeLabel"
-                      lineageId="Package\DFT - ODS Call_Data\LKP - Call Type.Outputs[Sortie de recherche avec correspondance].Columns[CallTypeLabel]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\DFT - ODS Call_Data\DNCV - Resizing Call Type Label.Outputs[Sortie de conversion de données]"
-                  exclusionGroup="1"
-                  name="Sortie de conversion de données"
-                  synchronousInputId="Package\DFT - ODS Call_Data\DNCV - Resizing Call Type Label.Inputs[Entrée de conversion de données]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\DFT - ODS Call_Data\DNCV - Resizing Call Type Label.Outputs[Sortie de conversion de données].Columns[CallTypeLabel_R]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="50"
-                      lineageId="Package\DFT - ODS Call_Data\DNCV - Resizing Call Type Label.Outputs[Sortie de conversion de données].Columns[CallTypeLabel_R]"
-                      name="CallTypeLabel_R"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
-                          name="SourceInputColumnLineageID">#{Package\DFT - ODS Call_Data\LKP - Call Type.Outputs[Sortie de recherche avec correspondance].Columns[CallTypeLabel]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\DFT - ODS Call_Data\DNCV - Resizing Call Type Label.Outputs[Sortie d'erreur de conversion de données]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Sortie d'erreur de conversion de données"
-                  synchronousInputId="Package\DFT - ODS Call_Data\DNCV - Resizing Call Type Label.Inputs[Entrée de conversion de données]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\DFT - ODS Call_Data\DNCV - Resizing Call Type Label.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\DFT - ODS Call_Data\DNCV - Resizing Call Type Label.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\DFT - ODS Call_Data\DNCV - Resizing Call Type Label.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\DFT - ODS Call_Data\DNCV - Resizing Call Type Label.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               refId="Package\DFT - ODS Call_Data\LKP - Call Type"
               componentClassID="Microsoft.Lookup"
               contactInfo="Recherche;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;6"
@@ -3022,7 +3022,7 @@ where [refTable].[CallTypeID] = ?</property>
                       cachedLength="50"
                       cachedName="CallTypeLabel_R"
                       externalMetadataColumnId="Package\DFT - ODS Call_Data\OLE_DST - ODS Call_Data.Inputs[Entrée de destination OLE DB].ExternalColumns[Call_Type]"
-                      lineageId="Package\DFT - ODS Call_Data\DNCV - Resizing Call Type Label.Outputs[Sortie de conversion de données].Columns[CallTypeLabel_R]" />
+                      lineageId="Package\DFT - ODS Call_Data\DCNV - Resizing Call Type Label.Outputs[Sortie de conversion de données].Columns[CallTypeLabel_R]" />
                     <inputColumn
                       refId="Package\DFT - ODS Call_Data\OLE_DST - ODS Call_Data.Inputs[Entrée de destination OLE DB].Columns[EmployeeID_R]"
                       cachedCodepage="1252"
@@ -3571,7 +3571,7 @@ where [refTable].[CallTypeID] = ?</property>
               refId="Package\DFT - ODS Call_Data.Paths[Sortie de conversion de données5]"
               endId="Package\DFT - ODS Call_Data\OLE_DST - ODS Call_Data.Inputs[Entrée de destination OLE DB]"
               name="Sortie de conversion de données"
-              startId="Package\DFT - ODS Call_Data\DNCV - Resizing Call Type Label.Outputs[Sortie de conversion de données]" />
+              startId="Package\DFT - ODS Call_Data\DCNV - Resizing Call Type Label.Outputs[Sortie de conversion de données]" />
             <path
               refId="Package\DFT - ODS Call_Data.Paths[Sortie de conversion de données6]"
               endId="Package\DFT - ODS Call_Data\DCNV - CallAbandonned into Boolean.Inputs[Entrée de conversion de données]"
@@ -3579,7 +3579,7 @@ where [refTable].[CallTypeID] = ?</property>
               startId="Package\DFT - ODS Call_Data\DCNV - WaitTime into Int.Outputs[Sortie de conversion de données]" />
             <path
               refId="Package\DFT - ODS Call_Data.Paths[Sortie de recherche avec correspondance]"
-              endId="Package\DFT - ODS Call_Data\DNCV - Resizing Call Type Label.Inputs[Entrée de conversion de données]"
+              endId="Package\DFT - ODS Call_Data\DCNV - Resizing Call Type Label.Inputs[Entrée de conversion de données]"
               name="Sortie de recherche avec correspondance"
               startId="Package\DFT - ODS Call_Data\LKP - Call Type.Outputs[Sortie de recherche avec correspondance]" />
             <path
@@ -3689,7 +3689,7 @@ where [refTable].[CallTypeID] = ?</property>
           TopLeft="22,18" />
         <NodeLayout
           Size="241,42"
-          Id="Package\DFT - ODS Call_Data\DNCV - Resizing Call Type Label"
+          Id="Package\DFT - ODS Call_Data\DCNV - Resizing Call Type Label"
           TopLeft="622,457" />
         <NodeLayout
           Size="198,42"

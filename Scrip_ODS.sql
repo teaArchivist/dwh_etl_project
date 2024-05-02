@@ -148,12 +148,13 @@ CREATE TABLE [dbo].[Call_Data](
 	[EmployeeID] [varchar](20) NULL,
 	[Call_Date] [date] NULL,
 	[Call_Time] [time](7) NULL,
-	[Call_Duration (s)] [numeric](20, 0) NULL,
-	[Wait_Time (s)] [bigint] NULL,
+	[Call_Duration (s)] [int] NULL,
+	[Wait_Time (s)] [int] NULL,
 	[Call_Abandoned] [bit] NULL,
 	[Within_SLA] [bit] NULL
 ) ON [PRIMARY]
 GO
+
 	
 /****** Object:  Table [dbo].[Call_Charges]    Script Date: 5/1/2024 3:19:35 PM ******/
 SET ANSI_NULLS ON

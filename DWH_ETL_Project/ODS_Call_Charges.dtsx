@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="ODS_Call_Charges"
   DTS:PackageType="5"
-  DTS:VersionBuild="45"
-  DTS:VersionGUID="{139702D0-33FA-4982-A64F-B677DD3B911E}">
+  DTS:VersionBuild="46"
+  DTS:VersionGUID="{C8FF7DA7-2EA0-4600-96B4-8D121866CDCC}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1263,14 +1263,6 @@
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\DFT - ODS Call Charges\OLE_DST - ODS Call Charges.Inputs[OLE DB Destination Input].Columns[Charges_R]"
-                      cachedDataType="numeric"
-                      cachedName="Charges_R"
-                      cachedPrecision="18"
-                      cachedScale="2"
-                      externalMetadataColumnId="Package\DFT - ODS Call Charges\OLE_DST - ODS Call Charges.Inputs[OLE DB Destination Input].ExternalColumns[Charges]"
-                      lineageId="Package\DFT - ODS Call Charges\DCNV - Charges into Numeric.Outputs[Data Conversion Output].Columns[Charges_R]" />
-                    <inputColumn
                       refId="Package\DFT - ODS Call Charges\OLE_DST - ODS Call Charges.Inputs[OLE DB Destination Input].Columns[CallType_R]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -1284,6 +1276,14 @@
                       cachedName="Year_R"
                       externalMetadataColumnId="Package\DFT - ODS Call Charges\OLE_DST - ODS Call Charges.Inputs[OLE DB Destination Input].ExternalColumns[Year]"
                       lineageId="Package\DFT - ODS Call Charges\DCNV - Year into Integer.Outputs[Sortie de conversion de données].Columns[Year_R]" />
+                    <inputColumn
+                      refId="Package\DFT - ODS Call Charges\OLE_DST - ODS Call Charges.Inputs[OLE DB Destination Input].Columns[Charges_R]"
+                      cachedDataType="numeric"
+                      cachedName="Charges_R"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\DFT - ODS Call Charges\OLE_DST - ODS Call Charges.Inputs[OLE DB Destination Input].ExternalColumns[Charges (/min)]"
+                      lineageId="Package\DFT - ODS Call Charges\DCNV - Charges into Numeric.Outputs[Data Conversion Output].Columns[Charges_R]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1298,9 +1298,9 @@
                       length="50"
                       name="CallType" />
                     <externalMetadataColumn
-                      refId="Package\DFT - ODS Call Charges\OLE_DST - ODS Call Charges.Inputs[OLE DB Destination Input].ExternalColumns[Charges]"
+                      refId="Package\DFT - ODS Call Charges\OLE_DST - ODS Call Charges.Inputs[OLE DB Destination Input].ExternalColumns[Charges (/min)]"
                       dataType="numeric"
-                      name="Charges"
+                      name="Charges (/min)"
                       precision="18"
                       scale="2" />
                   </externalMetadataColumns>

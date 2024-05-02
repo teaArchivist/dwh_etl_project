@@ -164,8 +164,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[Call_Charges](
-	[Year] [nvarchar](255) NULL,
-	[CallType] [varchar](255) NULL,
-	[Charges] [varchar](255) NULL
+	[Year] [int] NULL,
+	[CallType] [varchar](50) NULL,
+	[Charges (/min)] [numeric](18, 2) NULL
 ) ON [PRIMARY]
 GO

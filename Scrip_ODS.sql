@@ -144,7 +144,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[Call_Data](
-	[Call_Type] [bigint] NULL,
+	[Call_Type] [varchar](50) NULL,
 	[EmployeeID] [varchar](20) NULL,
 	[Call_Date] [date] NULL,
 	[Call_Time] [time](7) NULL,

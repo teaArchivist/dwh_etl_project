@@ -151,7 +151,8 @@ CREATE TABLE [dbo].[Call_Data](
 	[Call_Duration (s)] [int] NULL,
 	[Wait_Time (s)] [int] NULL,
 	[Call_Abandoned] [bit] NULL,
-	[Within_SLA] [bit] NULL
+	[Within_SLA] [bit] NULL,
+	[CallChargeKey] [varchar](50) NULL
 ) ON [PRIMARY]
 GO
 

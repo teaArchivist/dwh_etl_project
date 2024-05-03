@@ -144,14 +144,14 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[Call_Data](
-	[Call_Type] [varchar](50) NULL,
+	[CallTypeLabel] [varchar](50) NULL,
 	[EmployeeID] [varchar](20) NULL,
-	[Call_Date] [date] NULL,
-	[Call_Time] [time](7) NULL,
-	[Call_Duration (s)] [int] NULL,
-	[Wait_Time (s)] [int] NULL,
-	[Call_Abandoned] [bit] NULL,
-	[Within_SLA] [bit] NULL,
+	[CallDate] [date] NULL,
+	[CallTime] [time](7) NULL,
+	[CallDurationInSeconds] [int] NULL,
+	[WaitTimeInSeconds] [int] NULL,
+	[CallAbandoned] [bit] NULL,
+	[WithinSLA] [bit] NULL,
 	[CallChargeKey] [varchar](50) NULL
 ) ON [PRIMARY]
 GO

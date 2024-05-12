@@ -11,8 +11,8 @@
   DTS:LocaleID="1036"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="47"
-  DTS:VersionGUID="{24036B46-972D-491E-9048-DE2A27240D54}">
+  DTS:VersionBuild="48"
+  DTS:VersionGUID="{B7E39C3A-8B00-4767-A4A6-FDCA155201DC}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -3638,44 +3638,44 @@ where [refTable].[CallTypeID] = ?</property>
               startId="Package\DFT - ODS Call_Data\DCNV - WaitTime into Int.Outputs[Sortie d'erreur de conversion de données]" />
             <path
               refId="Package\DFT - ODS Call_Data.Paths[Sortie de colonne dérivée7]"
-              endId="Package\DFT - ODS Call_Data\ALL - Rejects.Inputs[Entrée Union All 2]"
+              endId="Package\DFT - ODS Call_Data\ALL - Rejects.Inputs[Entrée Union All 3]"
               name="Sortie de colonne dérivée"
-              startId="Package\DFT - ODS Call_Data\DER - CallDuration Rejects.Outputs[Sortie de colonne dérivée]" />
+              startId="Package\DFT - ODS Call_Data\DER - WaitTime Rejects.Outputs[Sortie de colonne dérivée]" />
             <path
               refId="Package\DFT - ODS Call_Data.Paths[Sortie de colonne dérivée5]"
-              endId="Package\DFT - ODS Call_Data\ALL - Rejects.Inputs[Entrée Union All 1]"
-              name="Sortie de colonne dérivée"
-              startId="Package\DFT - ODS Call_Data\DER - CallTime Rejects.Outputs[Sortie de colonne dérivée]" />
-            <path
-              refId="Package\DFT - ODS Call_Data.Paths[Sortie de colonne dérivée4]"
-              endId="Package\DFT - ODS Call_Data\ALL - Rejects.Inputs[Entrée Union All 6]"
-              name="Sortie de colonne dérivée"
-              startId="Package\DFT - ODS Call_Data\DER - CallType without match.Outputs[Sortie de colonne dérivée]" />
-            <path
-              refId="Package\DFT - ODS Call_Data.Paths[Sortie de colonne dérivée6]"
-              endId="Package\DFT - ODS Call_Data\ALL - Rejects.Inputs[Entrée Union All 4]"
-              name="Sortie de colonne dérivée"
-              startId="Package\DFT - ODS Call_Data\DER - CallAbandonned Rejects.Outputs[Sortie de colonne dérivée]" />
-            <path
-              refId="Package\DFT - ODS Call_Data.Paths[Sortie de colonne dérivée2]"
-              endId="Package\DFT - ODS Call_Data\ALL - Rejects.Inputs[Unir tout entrée 1]"
-              name="Sortie de colonne dérivée"
-              startId="Package\DFT - ODS Call_Data\DER - CallDate Rejects.Outputs[Sortie de colonne dérivée]" />
-            <path
-              refId="Package\DFT - ODS Call_Data.Paths[Sortie de colonne dérivée1]"
               endId="Package\DFT - ODS Call_Data\LKP - Call Type.Inputs[Entrée de recherche]"
               name="Sortie de colonne dérivée"
               startId="Package\DFT - ODS Call_Data\DER - WithinSLA.Outputs[Sortie de colonne dérivée]" />
             <path
-              refId="Package\DFT - ODS Call_Data.Paths[Sortie de colonne dérivée]"
+              refId="Package\DFT - ODS Call_Data.Paths[Sortie de colonne dérivée4]"
+              endId="Package\DFT - ODS Call_Data\ALL - Rejects.Inputs[Unir tout entrée 1]"
+              name="Sortie de colonne dérivée"
+              startId="Package\DFT - ODS Call_Data\DER - CallDate Rejects.Outputs[Sortie de colonne dérivée]" />
+            <path
+              refId="Package\DFT - ODS Call_Data.Paths[Sortie de colonne dérivée6]"
               endId="Package\DFT - ODS Call_Data\DCNV - Resizing Call Type Label.Inputs[Entrée de conversion de données]"
               name="Sortie de colonne dérivée"
               startId="Package\DFT - ODS Call_Data\DER - CallChargeKey.Outputs[Sortie de colonne dérivée]" />
             <path
-              refId="Package\DFT - ODS Call_Data.Paths[Sortie de colonne dérivée3]"
-              endId="Package\DFT - ODS Call_Data\ALL - Rejects.Inputs[Entrée Union All 3]"
+              refId="Package\DFT - ODS Call_Data.Paths[Sortie de colonne dérivée2]"
+              endId="Package\DFT - ODS Call_Data\ALL - Rejects.Inputs[Entrée Union All 6]"
               name="Sortie de colonne dérivée"
-              startId="Package\DFT - ODS Call_Data\DER - WaitTime Rejects.Outputs[Sortie de colonne dérivée]" />
+              startId="Package\DFT - ODS Call_Data\DER - CallType without match.Outputs[Sortie de colonne dérivée]" />
+            <path
+              refId="Package\DFT - ODS Call_Data.Paths[Sortie de colonne dérivée1]"
+              endId="Package\DFT - ODS Call_Data\ALL - Rejects.Inputs[Entrée Union All 1]"
+              name="Sortie de colonne dérivée"
+              startId="Package\DFT - ODS Call_Data\DER - CallTime Rejects.Outputs[Sortie de colonne dérivée]" />
+            <path
+              refId="Package\DFT - ODS Call_Data.Paths[Sortie de colonne dérivée]"
+              endId="Package\DFT - ODS Call_Data\ALL - Rejects.Inputs[Entrée Union All 2]"
+              name="Sortie de colonne dérivée"
+              startId="Package\DFT - ODS Call_Data\DER - CallDuration Rejects.Outputs[Sortie de colonne dérivée]" />
+            <path
+              refId="Package\DFT - ODS Call_Data.Paths[Sortie de colonne dérivée3]"
+              endId="Package\DFT - ODS Call_Data\ALL - Rejects.Inputs[Entrée Union All 4]"
+              name="Sortie de colonne dérivée"
+              startId="Package\DFT - ODS Call_Data\DER - CallAbandonned Rejects.Outputs[Sortie de colonne dérivée]" />
             <path
               refId="Package\DFT - ODS Call_Data.Paths[Sortie de conversion de données]"
               endId="Package\DFT - ODS Call_Data\DER - WithinSLA.Inputs[Entrée de colonne dérivée]"
@@ -3814,9 +3814,9 @@ where [refTable].[CallTypeID] = ?</property>
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="209,42"
-          Id="Package\DFT - ODS Call_Data\DCNV - CallDate into Date"
-          TopLeft="276,24" />
+          Size="216,42"
+          Id="Package\DFT - ODS Call_Data\DCNV - CallDuration into Int"
+          TopLeft="281,116" />
         <NodeLayout
           Size="186,42"
           Id="Package\DFT - ODS Call_Data\DER - CallChargeKey"
@@ -3830,9 +3830,9 @@ where [refTable].[CallTypeID] = ?</property>
           Id="Package\DFT - ODS Call_Data\DER - WithinSLA"
           TopLeft="324,347" />
         <NodeLayout
-          Size="195,42"
-          Id="Package\DFT - ODS Call_Data\DER - CallTime Rejects"
-          TopLeft="552,78" />
+          Size="226,42"
+          Id="Package\DFT - ODS Call_Data\DER - CallType without match"
+          TopLeft="534,312" />
         <NodeLayout
           Size="224,42"
           Id="Package\DFT - ODS Call_Data\DCNV - CallAbandonned into Boolean"
@@ -3842,13 +3842,13 @@ where [refTable].[CallTypeID] = ?</property>
           Id="Package\DFT - ODS Call_Data\OLE_DST - Rejects"
           TopLeft="822,282" />
         <NodeLayout
-          Size="216,42"
-          Id="Package\DFT - ODS Call_Data\DCNV - CallDuration into Int"
-          TopLeft="281,116" />
+          Size="209,42"
+          Id="Package\DFT - ODS Call_Data\DCNV - CallDate into Date"
+          TopLeft="276,24" />
         <NodeLayout
-          Size="226,42"
-          Id="Package\DFT - ODS Call_Data\DER - CallType without match"
-          TopLeft="534,312" />
+          Size="212,42"
+          Id="Package\DFT - ODS Call_Data\DER - CallDuration Rejects"
+          TopLeft="544,120" />
         <NodeLayout
           Size="207,42"
           Id="Package\DFT - ODS Call_Data\OLE_SRC - STA Call_Data"
@@ -3866,17 +3866,17 @@ where [refTable].[CallTypeID] = ?</property>
           Id="Package\DFT - ODS Call_Data\OLE_DST - Call_Data"
           TopLeft="608,532" />
         <NodeLayout
-          Size="212,42"
-          Id="Package\DFT - ODS Call_Data\DER - CallDuration Rejects"
-          TopLeft="544,120" />
+          Size="194,42"
+          Id="Package\DFT - ODS Call_Data\DER - CallDate Rejects"
+          TopLeft="555,24" />
         <NodeLayout
           Size="198,42"
           Id="Package\DFT - ODS Call_Data\DER - WaitTime Rejects"
           TopLeft="553,166" />
         <NodeLayout
-          Size="194,42"
-          Id="Package\DFT - ODS Call_Data\DER - CallDate Rejects"
-          TopLeft="555,24" />
+          Size="195,42"
+          Id="Package\DFT - ODS Call_Data\DER - CallTime Rejects"
+          TopLeft="552,78" />
         <NodeLayout
           Size="211,42"
           Id="Package\DFT - ODS Call_Data\DCNV - CallTime into Time"
@@ -4007,6 +4007,28 @@ where [refTable].[CallTypeID] = ?</property>
             <mssgm:EdgeLabel
               BoundingBox="-122.17701171875,-17.609375,183.3540234375,11.609375"
               RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - ODS Call_Data.Paths[Sortie de conversion de données6]"
+          TopLeft="700.5,500">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,32"
+              Start="0,0"
+              End="0,24.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4203,130 +4225,6 @@ where [refTable].[CallTypeID] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT - ODS Call_Data.Paths[Sortie de colonne dérivée7]"
-          TopLeft="756,140.333333333333">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="42,0"
-              Start="0,0"
-              End="34.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="34.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT - ODS Call_Data.Paths[Sortie de colonne dérivée6]"
-          TopLeft="658.5,217">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="212,-62"
-              Start="0,0"
-              End="212,-54.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-1" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-1"
-                    Point2="0,-5"
-                    Point3="4,-5" />
-                  <mssgle:LineSegment
-                    End="208,-5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="208,-5"
-                    Point2="212,-5"
-                    Point3="212,-9" />
-                  <mssgle:LineSegment
-                    End="212,-54.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT - ODS Call_Data.Paths[Sortie de colonne dérivée5]"
-          TopLeft="747,99">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="51,26.5"
-              Start="0,0"
-              End="43.5,26.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="27.9701492537313,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="27.9701492537313,0"
-                    Point2="31.9701492537313,0"
-                    Point3="31.9701492537313,4" />
-                  <mssgle:LineSegment
-                    End="31.9701492537313,22.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="31.9701492537313,22.5"
-                    Point2="31.9701492537313,26.5"
-                    Point3="35.9701492537313,26.5" />
-                  <mssgle:LineSegment
-                    End="43.5,26.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT - ODS Call_Data.Paths[Sortie de colonne dérivée4]"
-          TopLeft="647,312">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="189.25,-157"
-              Start="0,0"
-              End="189.25,-149.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-27.7765237020316" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-27.7765237020316"
-                    Point2="0,-31.7765237020316"
-                    Point3="4,-31.7765237020316" />
-                  <mssgle:LineSegment
-                    End="185.25,-31.7765237020316" />
-                  <mssgle:CubicBezierSegment
-                    Point1="185.25,-31.7765237020316"
-                    Point2="189.25,-31.7765237020316"
-                    Point3="189.25,-35.7765237020316" />
-                  <mssgle:LineSegment
-                    End="189.25,-149.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT - ODS Call_Data.Paths[Sortie de colonne dérivée3]"
           TopLeft="751,187">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -4360,31 +4258,19 @@ where [refTable].[CallTypeID] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DFT - ODS Call_Data.Paths[Sortie de colonne dérivée2]"
-          TopLeft="652,66">
+          Id="Package\DFT - ODS Call_Data.Paths[Sortie de colonne dérivée6]"
+          TopLeft="510,482">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="218.5,47"
+              EndConnector="69,0"
               Start="0,0"
-              End="218.5,39.5">
+              End="61.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,19.5"
-                    Point2="0,23.5"
-                    Point3="4,23.5" />
-                  <mssgle:LineSegment
-                    End="214.5,23.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="214.5,23.5"
-                    Point2="218.5,23.5"
-                    Point3="218.5,27.5" />
-                  <mssgle:LineSegment
-                    End="218.5,39.5" />
+                    End="61.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4394,7 +4280,7 @@ where [refTable].[CallTypeID] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DFT - ODS Call_Data.Paths[Sortie de colonne dérivée1]"
+          Id="Package\DFT - ODS Call_Data.Paths[Sortie de colonne dérivée5]"
           TopLeft="324,373.666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -4428,19 +4314,155 @@ where [refTable].[CallTypeID] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DFT - ODS Call_Data.Paths[Sortie de colonne dérivée]"
-          TopLeft="510,482">
+          Id="Package\DFT - ODS Call_Data.Paths[Sortie de colonne dérivée4]"
+          TopLeft="652,66">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="69,0"
+              EndConnector="218.5,47"
               Start="0,0"
-              End="61.5,0">
+              End="218.5,39.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="61.5,0" />
+                    End="0,19.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.5"
+                    Point2="0,23.5"
+                    Point3="4,23.5" />
+                  <mssgle:LineSegment
+                    End="214.5,23.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="214.5,23.5"
+                    Point2="218.5,23.5"
+                    Point3="218.5,27.5" />
+                  <mssgle:LineSegment
+                    End="218.5,39.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - ODS Call_Data.Paths[Sortie de colonne dérivée3]"
+          TopLeft="658.5,217">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="212,-62"
+              Start="0,0"
+              End="212,-54.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-1" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-1"
+                    Point2="0,-5"
+                    Point3="4,-5" />
+                  <mssgle:LineSegment
+                    End="208,-5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="208,-5"
+                    Point2="212,-5"
+                    Point3="212,-9" />
+                  <mssgle:LineSegment
+                    End="212,-54.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - ODS Call_Data.Paths[Sortie de colonne dérivée2]"
+          TopLeft="647,312">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="189.25,-157"
+              Start="0,0"
+              End="189.25,-149.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-27.7765237020316" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-27.7765237020316"
+                    Point2="0,-31.7765237020316"
+                    Point3="4,-31.7765237020316" />
+                  <mssgle:LineSegment
+                    End="185.25,-31.7765237020316" />
+                  <mssgle:CubicBezierSegment
+                    Point1="185.25,-31.7765237020316"
+                    Point2="189.25,-31.7765237020316"
+                    Point3="189.25,-35.7765237020316" />
+                  <mssgle:LineSegment
+                    End="189.25,-149.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - ODS Call_Data.Paths[Sortie de colonne dérivée1]"
+          TopLeft="747,99">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="51,26.5"
+              Start="0,0"
+              End="43.5,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="27.9701492537313,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="27.9701492537313,0"
+                    Point2="31.9701492537313,0"
+                    Point3="31.9701492537313,4" />
+                  <mssgle:LineSegment
+                    End="31.9701492537313,22.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="31.9701492537313,22.5"
+                    Point2="31.9701492537313,26.5"
+                    Point3="35.9701492537313,26.5" />
+                  <mssgle:LineSegment
+                    End="43.5,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - ODS Call_Data.Paths[Sortie de colonne dérivée]"
+          TopLeft="756,140.333333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="42,0"
+              Start="0,0"
+              End="34.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="34.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4569,28 +4591,6 @@ where [refTable].[CallTypeID] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT - ODS Call_Data.Paths[Sortie de conversion de données6]"
-          TopLeft="700.5,500">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,32"
-              Start="0,0"
-              End="0,24.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -4639,7 +4639,7 @@ where [refTable].[CallTypeID] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -4649,7 +4649,7 @@ where [refTable].[CallTypeID] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>

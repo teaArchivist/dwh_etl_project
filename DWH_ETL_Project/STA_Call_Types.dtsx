@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{0672CDCA-EA97-4303-9E23-9CCD2FC3A6A3}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{A8B5DE4E-0534-400D-936D-06FECCAFA52B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -52,6 +52,18 @@
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.Project_STA]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{655690B4-4D0C-484E-8E76-4D790588E4A6}"
+      DTS:ObjectName="localhost.Project_STA">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=Project_STA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{655690B4-4D0C-484E-8E76-4D790588E4A6}localhost.Project_STA;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -229,7 +241,7 @@
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">3</property>
+                  typeConverter="AccessMode">0</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -250,8 +262,8 @@
               <connections>
                 <connection
                   refId="Package\DFT - STA Call Types\OLE_DST - STA Call Types.Connections[OleDbConnection]"
-                  connectionManagerID="{17F0F903-D12B-424F-8C17-34423D2BA897}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[localhost.Project_STA]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.Project_STA]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.Project_STA]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -346,7 +358,7 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{17F0F903-D12B-424F-8C17-34423D2BA897}"
+          SQLTask:Connection="{655690B4-4D0C-484E-8E76-4D790588E4A6}"
           SQLTask:SqlStatementSource="TRUNCATE TABLE dbo.Call_Types" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>

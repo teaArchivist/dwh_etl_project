@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="STA_"
   DTS:PackageType="5"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{7195C220-15A5-4E53-9CDB-5A0D96FA3664}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{D8178D7C-3920-47DC-8239-65D8FAA349FC}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -70,18 +70,6 @@
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[localhost.Project_STA]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{D2D4259A-CED7-4FAB-9CA2-BE78418E4572}"
-      DTS:ObjectName="localhost.Project_STA">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=localhost;Initial Catalog=Project_STA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-STA_-{D2D4259A-CED7-4FAB-9CA2-BE78418E4572}localhost.Project_STA;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -336,8 +324,8 @@
               <connections>
                 <connection
                   refId="Package\DFT - STA Employees\OLE_DST - STA Employees.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[localhost.Project_STA]"
-                  connectionManagerRefId="Package.ConnectionManagers[localhost.Project_STA]"
+                  connectionManagerID="{D2D4259A-CED7-4FAB-9CA2-BE78418E4572}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.Project_STA]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>

@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="ODS_Call_Charges"
   DTS:PackageType="5"
-  DTS:VersionBuild="49"
-  DTS:VersionGUID="{27E90D26-D2CD-4705-BC1F-6E71B0C4FE34}">
+  DTS:VersionBuild="50"
+  DTS:VersionGUID="{34DBDF15-56BF-4845-AB47-075E30099687}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>

@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DWH_Call_Charges"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{D0DD7AD4-2330-42E4-8551-F70F2E88BD8A}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{E2223595-3A0A-4D8E-B6AE-227A6F0703BE}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -911,7 +911,7 @@ where [refTable].[CallChargeKey] = ?</property>
         <NodeLayout
           Size="215,42"
           Id="Package\DFT - Call Charges - SCD 1"
-          TopLeft="392,167" />
+          TopLeft="325,142" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -1051,12 +1051,12 @@ where [refTable].[CallChargeKey] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\DFT - Call Charges - SCD 1\LKP - CallChargeKey">
+    design-time-name="Package\DFT - Call Charges - SCD 1\LKP - Any Changes ?">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -1066,7 +1066,7 @@ where [refTable].[CallChargeKey] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1087,12 +1087,12 @@ where [refTable].[CallChargeKey] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\DFT - Call Charges - SCD 1\LKP - Any Changes ?">
+    design-time-name="Package\DFT - Call Charges - SCD 1\LKP - CallChargeKey">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -1102,7 +1102,7 @@ where [refTable].[CallChargeKey] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>

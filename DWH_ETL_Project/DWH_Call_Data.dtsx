@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DWH_Call_Data"
   DTS:PackageType="5"
-  DTS:VersionBuild="12"
-  DTS:VersionGUID="{E0372F50-D9AA-4311-8EF1-ED3E026ED53C}">
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{F8000EB6-8AF8-49C3-8A08-7E93CB2004B4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2178,27 +2178,75 @@ where [refTable].[EmployeeID] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="212,42"
-          Id="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data"
-          TopLeft="26,22" />
+          Size="202,42"
+          Id="Package\DFT - DWH FactCallData\LKP - DimDate(CallDate)"
+          TopLeft="155,468" />
+        <NodeLayout
+          Size="208,42"
+          Id="Package\DFT - DWH FactCallData\MLT - EmployeeNotFound"
+          TopLeft="302,87" />
+        <NodeLayout
+          Size="170,42"
+          Id="Package\DFT - DWH FactCallData\DER - Employee-1"
+          TopLeft="316,190" />
+        <NodeLayout
+          Size="226,42"
+          Id="Package\DFT - DWH FactCallData\OLE_DST - FunctionalRejects"
+          TopLeft="739,372" />
+        <NodeLayout
+          Size="217,42"
+          Id="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey"
+          TopLeft="120,266" />
+        <NodeLayout
+          Size="196,42"
+          Id="Package\DFT - DWH FactCallData\LKP - DimCall_Charges"
+          TopLeft="147,368" />
         <NodeLayout
           Size="178,42"
           Id="Package\DFT - DWH FactCallData\LKP - DimEmployee"
           TopLeft="39,100" />
+        <NodeLayout
+          Size="197,42"
+          Id="Package\DFT - DWH FactCallData\DER - EmployeeRejects"
+          TopLeft="571,190" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\DFT - DWH FactCallData\AGG - GroupBy"
+          TopLeft="700,284" />
+        <NodeLayout
+          Size="212,42"
+          Id="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data"
+          TopLeft="26,22" />
+        <NodeLayout
+          Size="216,42"
+          Id="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data"
+          TopLeft="164,565" />
         <EdgeLayout
-          Id="Package\DFT - DWH FactCallData.Paths[OLE DB Source Output]"
-          TopLeft="130,64">
+          Id="Package\DFT - DWH FactCallData.Paths[Multicast Output 2]"
+          TopLeft="439.333333333333,129">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,36"
+              EndConnector="230.166666666667,61"
               Start="0,0"
-              End="0,28.5">
+              End="230.166666666667,53.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,28.5" />
+                    End="0,20.6793893129771" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.6793893129771"
+                    Point2="0,24.6793893129771"
+                    Point3="4,24.6793893129771" />
+                  <mssgle:LineSegment
+                    End="226.166666666667,24.6793893129771" />
+                  <mssgle:CubicBezierSegment
+                    Point1="226.166666666667,24.6793893129771"
+                    Point2="230.166666666667,24.6793893129771"
+                    Point3="230.166666666667,28.6793893129771" />
+                  <mssgle:LineSegment
+                    End="230.166666666667,53.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2207,222 +2255,146 @@ where [refTable].[EmployeeID] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="208,42"
-          Id="Package\DFT - DWH FactCallData\MLT - EmployeeNotFound"
-          TopLeft="298,102" />
         <EdgeLayout
-          Id="Package\DFT - DWH FactCallData.Paths[Lookup No Match Output]"
-          TopLeft="217,122">
+          Id="Package\DFT - DWH FactCallData.Paths[Multicast Output 1]"
+          TopLeft="372.666666666667,129">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="81,0"
+              EndConnector="28.3333333333334,61"
               Start="0,0"
-              End="73.5,0">
+              End="28.3333333333334,53.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="73.5,0" />
+                    End="0,20.6793893129771" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.6793893129771"
+                    Point2="0,24.6793893129771"
+                    Point3="4,24.6793893129771" />
+                  <mssgle:LineSegment
+                    End="24.3333333333334,24.6793893129771" />
+                  <mssgle:CubicBezierSegment
+                    Point1="24.3333333333334,24.6793893129771"
+                    Point2="28.3333333333334,24.6793893129771"
+                    Point3="28.3333333333334,28.6793893129771" />
+                  <mssgle:LineSegment
+                    End="28.3333333333334,53.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - DWH FactCallData.Paths[Lookup No Match Output]"
+          TopLeft="217,121">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="85,-13"
+              Start="0,0"
+              End="77.5,-13">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="38.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="38.5,0"
+                    Point2="42.5,0"
+                    Point3="42.5,-4" />
+                  <mssgle:LineSegment
+                    End="42.5,-9" />
+                  <mssgle:CubicBezierSegment
+                    Point1="42.5,-9"
+                    Point2="42.5,-13"
+                    Point3="46.5,-13" />
+                  <mssgle:LineSegment
+                    End="77.5,-13" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-19.05638671875,5,111.6127734375,11.609375"
+              BoundingBox="-13.30638671875,1,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="170,42"
-          Id="Package\DFT - DWH FactCallData\DER - Employee-1"
-          TopLeft="316,190" />
         <EdgeLayout
-          Id="Package\DFT - DWH FactCallData.Paths[Multicast Output 1]"
-          TopLeft="368.666666666667,144">
+          Id="Package\DFT - DWH FactCallData.Paths[Lookup Match Output2]"
+          TopLeft="256,510">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="32.3333333333334,46"
+              EndConnector="16,55"
               Start="0,0"
-              End="32.3333333333334,38.5">
+              End="16,47.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,14.6106870229008" />
+                    End="0,23.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,14.6106870229008"
-                    Point2="0,18.6106870229008"
-                    Point3="4,18.6106870229008" />
+                    Point1="0,23.5"
+                    Point2="0,27.5"
+                    Point3="4,27.5" />
                   <mssgle:LineSegment
-                    End="28.3333333333334,18.6106870229008" />
+                    End="12,27.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="28.3333333333334,18.6106870229008"
-                    Point2="32.3333333333334,18.6106870229008"
-                    Point3="32.3333333333334,22.6106870229008" />
+                    Point1="12,27.5"
+                    Point2="16,27.5"
+                    Point3="16,31.5" />
                   <mssgle:LineSegment
-                    End="32.3333333333334,38.5" />
+                    End="16,47.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-40.19138671875,32.5,96.3827734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="197,42"
-          Id="Package\DFT - DWH FactCallData\DER - EmployeeRejects"
-          TopLeft="571,190" />
         <EdgeLayout
-          Id="Package\DFT - DWH FactCallData.Paths[Multicast Output 2]"
-          TopLeft="435.333333333333,144">
+          Id="Package\DFT - DWH FactCallData.Paths[Lookup Match Output1]"
+          TopLeft="245,410">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="234.166666666667,46"
+              EndConnector="11,58"
               Start="0,0"
-              End="234.166666666667,38.5">
+              End="11,50.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,14.6106870229008" />
+                    End="0,25" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,14.6106870229008"
-                    Point2="0,18.6106870229008"
-                    Point3="4,18.6106870229008" />
+                    Point1="0,25"
+                    Point2="0,29"
+                    Point3="4,29" />
                   <mssgle:LineSegment
-                    End="230.166666666667,18.6106870229008" />
+                    End="7,29" />
                   <mssgle:CubicBezierSegment
-                    Point1="230.166666666667,18.6106870229008"
-                    Point2="234.166666666667,18.6106870229008"
-                    Point3="234.166666666667,22.6106870229008" />
+                    Point1="7,29"
+                    Point2="11,29"
+                    Point3="11,33" />
                   <mssgle:LineSegment
-                    End="234.166666666667,38.5" />
+                    End="11,50.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="156,42"
-          Id="Package\DFT - DWH FactCallData\AGG - GroupBy"
-          TopLeft="700,284" />
-        <EdgeLayout
-          Id="Package\DFT - DWH FactCallData.Paths[Derived Column Output]"
-          TopLeft="669.5,232">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="108.5,52"
-              Start="0,0"
-              End="108.5,44.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,22" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,22"
-                    Point2="0,26"
-                    Point3="4,26" />
-                  <mssgle:LineSegment
-                    End="104.5,26" />
-                  <mssgle:CubicBezierSegment
-                    Point1="104.5,26"
-                    Point2="108.5,26"
-                    Point3="108.5,30" />
-                  <mssgle:LineSegment
-                    End="108.5,44.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="226,42"
-          Id="Package\DFT - DWH FactCallData\OLE_DST - FunctionalRejects"
-          TopLeft="739,372" />
-        <EdgeLayout
-          Id="Package\DFT - DWH FactCallData.Paths[Aggregate Output 1]"
-          TopLeft="778,326">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="74,46"
-              Start="0,0"
-              End="74,38.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,19"
-                    Point2="0,23"
-                    Point3="4,23" />
-                  <mssgle:LineSegment
-                    End="70,23" />
-                  <mssgle:CubicBezierSegment
-                    Point1="70,23"
-                    Point2="74,23"
-                    Point3="74,27" />
-                  <mssgle:LineSegment
-                    End="74,38.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="217,42"
-          Id="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey"
-          TopLeft="120,266" />
-        <EdgeLayout
-          Id="Package\DFT - DWH FactCallData.Paths[Derived Column Output1]"
-          TopLeft="401,232">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-137.666666666667,34"
-              Start="0,0"
-              End="-137.666666666667,26.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.2506861848124" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.2506861848124"
-                    Point2="0,20.2506861848124"
-                    Point3="-4,20.2506861848124" />
-                  <mssgle:LineSegment
-                    End="-133.666666666667,20.2506861848124" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-133.666666666667,20.2506861848124"
-                    Point2="-137.666666666667,20.2506861848124"
-                    Point3="-137.666666666667,24.2506861848124" />
-                  <mssgle:LineSegment
-                    End="-137.666666666667,26.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-42.69138671875,34,96.3827734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -2461,10 +2433,108 @@ where [refTable].[EmployeeID] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="196,42"
-          Id="Package\DFT - DWH FactCallData\LKP - DimCall_Charges"
-          TopLeft="147,368" />
+        <EdgeLayout
+          Id="Package\DFT - DWH FactCallData.Paths[Derived Column Output1]"
+          TopLeft="401,232">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-137.666666666667,34"
+              Start="0,0"
+              End="-137.666666666667,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.2506861848124" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.2506861848124"
+                    Point2="0,20.2506861848124"
+                    Point3="-4,20.2506861848124" />
+                  <mssgle:LineSegment
+                    End="-133.666666666667,20.2506861848124" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-133.666666666667,20.2506861848124"
+                    Point2="-137.666666666667,20.2506861848124"
+                    Point3="-137.666666666667,24.2506861848124" />
+                  <mssgle:LineSegment
+                    End="-137.666666666667,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - DWH FactCallData.Paths[Derived Column Output]"
+          TopLeft="669.5,232">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="108.5,52"
+              Start="0,0"
+              End="108.5,44.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22"
+                    Point2="0,26"
+                    Point3="4,26" />
+                  <mssgle:LineSegment
+                    End="104.5,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="104.5,26"
+                    Point2="108.5,26"
+                    Point3="108.5,30" />
+                  <mssgle:LineSegment
+                    End="108.5,44.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - DWH FactCallData.Paths[Aggregate Output 1]"
+          TopLeft="778,326">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="74,46"
+              Start="0,0"
+              End="74,38.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19"
+                    Point2="0,23"
+                    Point3="4,23" />
+                  <mssgle:LineSegment
+                    End="70,23" />
+                  <mssgle:CubicBezierSegment
+                    Point1="70,23"
+                    Point2="74,23"
+                    Point3="74,27" />
+                  <mssgle:LineSegment
+                    End="74,38.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT - DWH FactCallData.Paths[Union All Output 1]"
           TopLeft="228.5,308">
@@ -2499,119 +2569,48 @@ where [refTable].[EmployeeID] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="202,42"
-          Id="Package\DFT - DWH FactCallData\LKP - DimDate(CallDate)"
-          TopLeft="155,468" />
         <EdgeLayout
-          Id="Package\DFT - DWH FactCallData.Paths[Lookup Match Output1]"
-          TopLeft="245,410">
+          Id="Package\DFT - DWH FactCallData.Paths[OLE DB Source Output]"
+          TopLeft="130,64">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="11,58"
+              EndConnector="0,36"
               Start="0,0"
-              End="11,50.5">
+              End="0,28.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,25"
-                    Point2="0,29"
-                    Point3="4,29" />
-                  <mssgle:LineSegment
-                    End="7,29" />
-                  <mssgle:CubicBezierSegment
-                    Point1="7,29"
-                    Point2="11,29"
-                    Point3="11,33" />
-                  <mssgle:LineSegment
-                    End="11,50.5" />
+                    End="0,28.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-42.69138671875,34,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="216,42"
-          Id="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data"
-          TopLeft="167,582" />
-        <EdgeLayout
-          Id="Package\DFT - DWH FactCallData.Paths[Lookup Match Output2]"
-          TopLeft="256,510">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="19,72"
-              Start="0,0"
-              End="19,64.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,32" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,32"
-                    Point2="0,36"
-                    Point3="4,36" />
-                  <mssgle:LineSegment
-                    End="15,36" />
-                  <mssgle:CubicBezierSegment
-                    Point1="15,36"
-                    Point2="19,36"
-                    Point3="19,40" />
-                  <mssgle:LineSegment
-                    End="19,64.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-38.69138671875,41,96.3827734375,11.609375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT - DWH FactCallData\LKP - DimEmployee">
+    design-time-name="Package\DFT - DWH FactCallData\LKP - DimDate(CallDate)">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[DimEmployees]</Value>
+          type="q3:string">[dbo].[DimDate]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2637,7 +2636,7 @@ where [refTable].[EmployeeID] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -2647,7 +2646,7 @@ where [refTable].[EmployeeID] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2655,25 +2654,38 @@ where [refTable].[EmployeeID] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\DFT - DWH FactCallData\LKP - DimDate(CallDate)">
+    design-time-name="Package\DFT - DWH FactCallData\LKP - DimEmployee">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[DimDate]</Value>
+          type="q3:string">[dbo].[DimEmployees]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DWH_Employee"
   DTS:PackageType="5"
-  DTS:VersionBuild="14"
-  DTS:VersionGUID="{940850ED-12B9-4F87-A6FD-48FD858F6C82}">
+  DTS:VersionBuild="15"
+  DTS:VersionGUID="{4B311A39-AF8F-4410-986F-A6EA2A9984C6}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -1252,13 +1252,25 @@ where [refTable].[EmployeeID] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="216,42"
-          Id="Package\DFT - DimEmployee - SCD 1\OLE_SRC - ODS Employee"
-          TopLeft="208,90" />
+          Size="187,42"
+          Id="Package\DFT - DimEmployee - SCD 1\CMD - update records"
+          TopLeft="955,208" />
         <NodeLayout
           Size="169,42"
           Id="Package\DFT - DimEmployee - SCD 1\LKP - EmployeeID"
           TopLeft="229,207" />
+        <NodeLayout
+          Size="207,42"
+          Id="Package\DFT - DimEmployee - SCD 1\OLE_DST - DimEmployee"
+          TopLeft="221,308" />
+        <NodeLayout
+          Size="184,42"
+          Id="Package\DFT - DimEmployee - SCD 1\LKP - Any Changes ?"
+          TopLeft="580,220" />
+        <NodeLayout
+          Size="216,42"
+          Id="Package\DFT - DimEmployee - SCD 1\OLE_SRC - ODS Employee"
+          TopLeft="208,90" />
         <EdgeLayout
           Id="Package\DFT - DimEmployee - SCD 1.Paths[OLE DB Source Output]"
           TopLeft="314.75,132">
@@ -1281,10 +1293,42 @@ where [refTable].[EmployeeID] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="207,42"
-          Id="Package\DFT - DimEmployee - SCD 1\OLE_DST - DimEmployee"
-          TopLeft="221,308" />
+        <EdgeLayout
+          Id="Package\DFT - DimEmployee - SCD 1.Paths[Lookup No Match Output1]"
+          TopLeft="764,241">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="191,-12"
+              Start="0,0"
+              End="183.5,-12">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="91.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="91.5,0"
+                    Point2="95.5,0"
+                    Point3="95.5,-4" />
+                  <mssgle:LineSegment
+                    End="95.5,-8" />
+                  <mssgle:CubicBezierSegment
+                    Point1="95.5,-8"
+                    Point2="95.5,-12"
+                    Point3="99.5,-12" />
+                  <mssgle:LineSegment
+                    End="183.5,-12" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="39.69361328125,1,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT - DimEmployee - SCD 1.Paths[Lookup No Match Output]"
           TopLeft="313.5,249">
@@ -1321,10 +1365,6 @@ where [refTable].[EmployeeID] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="184,42"
-          Id="Package\DFT - DimEmployee - SCD 1\LKP - Any Changes ?"
-          TopLeft="580,220" />
         <EdgeLayout
           Id="Package\DFT - DimEmployee - SCD 1.Paths[Lookup Match Output]"
           TopLeft="398,228">
@@ -1361,49 +1401,22 @@ where [refTable].[EmployeeID] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="187,42"
-          Id="Package\DFT - DimEmployee - SCD 1\CMD - update records"
-          TopLeft="929,206" />
-        <EdgeLayout
-          Id="Package\DFT - DimEmployee - SCD 1.Paths[Lookup No Match Output1]"
-          TopLeft="764,241">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="165,-14"
-              Start="0,0"
-              End="157.5,-14">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="78.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="78.5,0"
-                    Point2="82.5,0"
-                    Point3="82.5,-4" />
-                  <mssgle:LineSegment
-                    End="82.5,-10" />
-                  <mssgle:CubicBezierSegment
-                    Point1="82.5,-10"
-                    Point2="82.5,-14"
-                    Point3="86.5,-14" />
-                  <mssgle:LineSegment
-                    End="157.5,-14" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="26.69361328125,1,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT - DimEmployee - SCD 1\OLE_DST - DimEmployee">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\DFT - DimEmployee - SCD 1\OLE_SRC - ODS Employee">
     <Properties>
@@ -1423,7 +1436,7 @@ where [refTable].[EmployeeID] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -1433,23 +1446,10 @@ where [refTable].[EmployeeID] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT - DimEmployee - SCD 1\OLE_DST - DimEmployee">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -1459,7 +1459,7 @@ where [refTable].[EmployeeID] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -1469,7 +1469,7 @@ where [refTable].[EmployeeID] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>

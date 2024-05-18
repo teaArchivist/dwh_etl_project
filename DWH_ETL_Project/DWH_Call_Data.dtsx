@@ -1,0 +1,2706 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/11/2024 6:43:31 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="WIN-5O8LMHGI6EO"
+  DTS:CreatorName="WIN-5O8LMHGI6EO\Administrator"
+  DTS:DTSID="{9EC92EF3-38AA-4632-9BE0-DAC7948E1A0C}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5397.1"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="DWH_Call_Data"
+  DTS:PackageType="5"
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{F8000EB6-8AF8-49C3-8A08-7E93CB2004B4}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.Project_ADM]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{90CD98EB-1893-4E83-904F-506039380A7C}"
+      DTS:ObjectName="localhost.Project_ADM">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=Project_ADM;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-DWH_Call_Data-{90CD98EB-1893-4E83-904F-506039380A7C}localhost.Project_ADM;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DFT - DWH FactCallData"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{04FA8380-B18F-41F6-BF33-6B642D02144B}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT - DWH FactCallData"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT - DWH FactCallData\AGG - GroupBy"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Aggregate;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
+              description="Aggregates data with functions such as Average, Sum, Count, Max, and Min. For example, group data to compute the sum of sales per product or the average visits per day."
+              name="AGG - GroupBy"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the approximate number of group by keys that the aggregation produces. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no KeyScale value is used."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the exact number of group by keys that the aggregation produces. If a KeyScale value is specified, the value in Keys takes precedence."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the approximate number of distinct values in a column that the aggregation counts distinctly. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no CountDistinctScale value is used."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the exact number of distinct values in a column that the aggregation counts distinctly. If a CountDistinctScale value is specified, the value in CountDistinctKeys takes precedence."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage by which memory can be extended during the aggregation. Valid values are between 1 and 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\DFT - DWH FactCallData\AGG - GroupBy.Inputs[Aggregate Input 1]"
+                  name="Aggregate Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - DWH FactCallData\AGG - GroupBy.Inputs[Aggregate Input 1].Columns[RejectDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="RejectDate"
+                      lineageId="Package\DFT - DWH FactCallData\DER - EmployeeRejects.Outputs[Derived Column Output].Columns[RejectDate]" />
+                    <inputColumn
+                      refId="Package\DFT - DWH FactCallData\AGG - GroupBy.Inputs[Aggregate Input 1].Columns[RejectPackageAndTask]"
+                      cachedDataType="wstr"
+                      cachedLength="205"
+                      cachedName="RejectPackageAndTask"
+                      lineageId="Package\DFT - DWH FactCallData\DER - EmployeeRejects.Outputs[Derived Column Output].Columns[RejectPackageAndTask]" />
+                    <inputColumn
+                      refId="Package\DFT - DWH FactCallData\AGG - GroupBy.Inputs[Aggregate Input 1].Columns[RejectColumn]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="RejectColumn"
+                      lineageId="Package\DFT - DWH FactCallData\DER - EmployeeRejects.Outputs[Derived Column Output].Columns[RejectColumn]" />
+                    <inputColumn
+                      refId="Package\DFT - DWH FactCallData\AGG - GroupBy.Inputs[Aggregate Input 1].Columns[RejectDescription]"
+                      cachedDataType="wstr"
+                      cachedLength="147"
+                      cachedName="RejectDescription"
+                      lineageId="Package\DFT - DWH FactCallData\DER - EmployeeRejects.Outputs[Derived Column Output].Columns[RejectDescription]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - DWH FactCallData\AGG - GroupBy.Outputs[Aggregate Output 1]"
+                  name="Aggregate Output 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the approximate number of group by keys that the aggregation produces. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no KeyScale value is used."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifies the exact number of group by keys that the aggregation produces. If a KeyScale value is specified, the value in Keys takes precedence."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\AGG - GroupBy.Outputs[Aggregate Output 1].Columns[RejectDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\DFT - DWH FactCallData\AGG - GroupBy.Outputs[Aggregate Output 1].Columns[RejectDate]"
+                      name="RejectDate">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\DFT - DWH FactCallData\DER - EmployeeRejects.Outputs[Derived Column Output].Columns[RejectDate]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\AGG - GroupBy.Outputs[Aggregate Output 1].Columns[RejectPackageAndTask]"
+                      dataType="wstr"
+                      length="205"
+                      lineageId="Package\DFT - DWH FactCallData\AGG - GroupBy.Outputs[Aggregate Output 1].Columns[RejectPackageAndTask]"
+                      name="RejectPackageAndTask">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\DFT - DWH FactCallData\DER - EmployeeRejects.Outputs[Derived Column Output].Columns[RejectPackageAndTask]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\AGG - GroupBy.Outputs[Aggregate Output 1].Columns[RejectColumn]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\DFT - DWH FactCallData\AGG - GroupBy.Outputs[Aggregate Output 1].Columns[RejectColumn]"
+                      name="RejectColumn">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\DFT - DWH FactCallData\DER - EmployeeRejects.Outputs[Derived Column Output].Columns[RejectColumn]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\AGG - GroupBy.Outputs[Aggregate Output 1].Columns[RejectDescription]"
+                      dataType="wstr"
+                      length="147"
+                      lineageId="Package\DFT - DWH FactCallData\AGG - GroupBy.Outputs[Aggregate Output 1].Columns[RejectDescription]"
+                      name="RejectDescription">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\DFT - DWH FactCallData\DER - EmployeeRejects.Outputs[Derived Column Output].Columns[RejectDescription]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\AGG - GroupBy.Outputs[Aggregate Output 1].Columns[Count all]"
+                      dataType="ui8"
+                      lineageId="Package\DFT - DWH FactCallData\AGG - GroupBy.Outputs[Aggregate Output 1].Columns[Count all]"
+                      name="Count all">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\DFT - DWH FactCallData\0:invalid}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">2</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+              name="All - EmployeeSurrogateKey"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Inputs[Union All Input 1]"
+                  name="Union All Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Inputs[Union All Input 1].Columns[EmployeeID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="EmployeeID"
+                      lineageId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].Columns[EmployeeID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[EmployeeID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Inputs[Union All Input 1].Columns[CallTypeLabel]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CallTypeLabel"
+                      lineageId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].Columns[CallTypeLabel]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[CallTypeLabel]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Inputs[Union All Input 1].Columns[CallDate]"
+                      cachedDataType="dbDate"
+                      cachedName="CallDate"
+                      lineageId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].Columns[CallDate]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[CallDate]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Inputs[Union All Input 1].Columns[CallTime]"
+                      cachedDataType="dbTime2"
+                      cachedName="CallTime"
+                      cachedScale="7"
+                      lineageId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].Columns[CallTime]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[CallTime]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Inputs[Union All Input 1].Columns[CallDurationInSeconds]"
+                      cachedDataType="i4"
+                      cachedName="CallDurationInSeconds"
+                      lineageId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].Columns[CallDurationInSeconds]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[CallDurationInSeconds]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Inputs[Union All Input 1].Columns[WaitTimeInSeconds]"
+                      cachedDataType="i4"
+                      cachedName="WaitTimeInSeconds"
+                      lineageId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].Columns[WaitTimeInSeconds]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[WaitTimeInSeconds]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Inputs[Union All Input 1].Columns[CallAbandoned]"
+                      cachedDataType="bool"
+                      cachedName="CallAbandoned"
+                      lineageId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].Columns[CallAbandoned]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[CallAbandoned]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Inputs[Union All Input 1].Columns[WithinSLA]"
+                      cachedDataType="bool"
+                      cachedName="WithinSLA"
+                      lineageId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].Columns[WithinSLA]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[WithinSLA]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Inputs[Union All Input 1].Columns[CallChargeKey]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CallChargeKey"
+                      lineageId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].Columns[CallChargeKey]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[CallChargeKey]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Inputs[Union All Input 1].Columns[EmployeeSurrogateKey]"
+                      cachedDataType="i4"
+                      cachedName="EmployeeSurrogateKey"
+                      lineageId="Package\DFT - DWH FactCallData\DER - Employee-1.Outputs[Derived Column Output].Columns[EmployeeSurrogateKey]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[EmployeeSurrogateKey]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Inputs[Union All Input 2]"
+                  hasSideEffects="true"
+                  name="Union All Input 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Inputs[Union All Input 2].Columns[EmployeeID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="EmployeeID"
+                      lineageId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].Columns[EmployeeID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[EmployeeID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Inputs[Union All Input 2].Columns[CallTypeLabel]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CallTypeLabel"
+                      lineageId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].Columns[CallTypeLabel]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[CallTypeLabel]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Inputs[Union All Input 2].Columns[CallDate]"
+                      cachedDataType="dbDate"
+                      cachedName="CallDate"
+                      lineageId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].Columns[CallDate]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[CallDate]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Inputs[Union All Input 2].Columns[CallTime]"
+                      cachedDataType="dbTime2"
+                      cachedName="CallTime"
+                      cachedScale="7"
+                      lineageId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].Columns[CallTime]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[CallTime]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Inputs[Union All Input 2].Columns[CallDurationInSeconds]"
+                      cachedDataType="i4"
+                      cachedName="CallDurationInSeconds"
+                      lineageId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].Columns[CallDurationInSeconds]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[CallDurationInSeconds]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Inputs[Union All Input 2].Columns[WaitTimeInSeconds]"
+                      cachedDataType="i4"
+                      cachedName="WaitTimeInSeconds"
+                      lineageId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].Columns[WaitTimeInSeconds]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[WaitTimeInSeconds]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Inputs[Union All Input 2].Columns[CallAbandoned]"
+                      cachedDataType="bool"
+                      cachedName="CallAbandoned"
+                      lineageId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].Columns[CallAbandoned]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[CallAbandoned]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Inputs[Union All Input 2].Columns[WithinSLA]"
+                      cachedDataType="bool"
+                      cachedName="WithinSLA"
+                      lineageId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].Columns[WithinSLA]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[WithinSLA]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Inputs[Union All Input 2].Columns[CallChargeKey]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CallChargeKey"
+                      lineageId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].Columns[CallChargeKey]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[CallChargeKey]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Inputs[Union All Input 2].Columns[EmployeeSurrogateKey]"
+                      cachedDataType="i4"
+                      cachedName="EmployeeSurrogateKey"
+                      lineageId="Package\DFT - DWH FactCallData\LKP - DimEmployee.Outputs[Lookup Match Output].Columns[EmployeeSurrogateKey]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[EmployeeSurrogateKey]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Inputs[Union All Input 3]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Union All Input 3">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1]"
+                  name="Union All Output 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[EmployeeID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[EmployeeID]"
+                      name="EmployeeID" />
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[CallTypeLabel]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[CallTypeLabel]"
+                      name="CallTypeLabel" />
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[CallDate]"
+                      dataType="dbDate"
+                      lineageId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[CallDate]"
+                      name="CallDate" />
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[CallTime]"
+                      dataType="dbTime2"
+                      lineageId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[CallTime]"
+                      name="CallTime"
+                      scale="7" />
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[CallDurationInSeconds]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[CallDurationInSeconds]"
+                      name="CallDurationInSeconds" />
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[WaitTimeInSeconds]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[WaitTimeInSeconds]"
+                      name="WaitTimeInSeconds" />
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[CallAbandoned]"
+                      dataType="bool"
+                      lineageId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[CallAbandoned]"
+                      name="CallAbandoned" />
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[WithinSLA]"
+                      dataType="bool"
+                      lineageId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[WithinSLA]"
+                      name="WithinSLA" />
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[CallChargeKey]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[CallChargeKey]"
+                      name="CallChargeKey" />
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[EmployeeSurrogateKey]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[EmployeeSurrogateKey]"
+                      name="EmployeeSurrogateKey" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - DWH FactCallData\DER - Employee-1"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="DER - Employee-1"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT - DWH FactCallData\DER - Employee-1.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - DWH FactCallData\DER - Employee-1.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\DFT - DWH FactCallData\DER - Employee-1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\DER - Employee-1.Outputs[Derived Column Output].Columns[EmployeeSurrogateKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT - DWH FactCallData\DER - Employee-1.Outputs[Derived Column Output].Columns[EmployeeSurrogateKey]"
+                      name="EmployeeSurrogateKey"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">-1</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">-1</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - DWH FactCallData\DER - Employee-1.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\DFT - DWH FactCallData\DER - Employee-1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\DER - Employee-1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DWH FactCallData\DER - Employee-1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\DER - Employee-1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DWH FactCallData\DER - Employee-1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - DWH FactCallData\DER - EmployeeRejects"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="DER - EmployeeRejects"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT - DWH FactCallData\DER - EmployeeRejects.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - DWH FactCallData\DER - EmployeeRejects.Inputs[Derived Column Input].Columns[EmployeeID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="EmployeeID"
+                      lineageId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].Columns[EmployeeID]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - DWH FactCallData\DER - EmployeeRejects.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\DFT - DWH FactCallData\DER - EmployeeRejects.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\DER - EmployeeRejects.Outputs[Derived Column Output].Columns[RejectDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT - DWH FactCallData\DER - EmployeeRejects.Outputs[Derived Column Output].Columns[RejectDate]"
+                      name="RejectDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\DER - EmployeeRejects.Outputs[Derived Column Output].Columns[RejectPackageAndTask]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="205"
+                      lineageId="Package\DFT - DWH FactCallData\DER - EmployeeRejects.Outputs[Derived Column Output].Columns[RejectPackageAndTask]"
+                      name="RejectPackageAndTask"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_WSTR,100)@[System::PackageName] + " AND " + (DT_WSTR,100)@[System::TaskName]</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_WSTR,100)@[System::PackageName] + " AND " + (DT_WSTR,100)@[System::TaskName]</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\DER - EmployeeRejects.Outputs[Derived Column Output].Columns[RejectColumn]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\DFT - DWH FactCallData\DER - EmployeeRejects.Outputs[Derived Column Output].Columns[RejectColumn]"
+                      name="RejectColumn"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"EmployeeID"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"EmployeeID"</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\DER - EmployeeRejects.Outputs[Derived Column Output].Columns[RejectDescription]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="147"
+                      lineageId="Package\DFT - DWH FactCallData\DER - EmployeeRejects.Outputs[Derived Column Output].Columns[RejectDescription]"
+                      name="RejectDescription"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"The value " + (DT_WSTR,100)#{Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].Columns[EmployeeID]} + " was not found in the dimension table"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"The value " + (DT_WSTR,100)EmployeeID + " was not found in the dimension table"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - DWH FactCallData\DER - EmployeeRejects.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\DFT - DWH FactCallData\DER - EmployeeRejects.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\DER - EmployeeRejects.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DWH FactCallData\DER - EmployeeRejects.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\DER - EmployeeRejects.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DWH FactCallData\DER - EmployeeRejects.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - DWH FactCallData\LKP - DimCall_Charges"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="LKP - DimCall_Charges"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DimCall_Charges]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimCall_Charges]) [refTable]
+where [refTable].[CallChargeKey] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CallChargeSurrogateKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CallChargeKey" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="CallType" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Year" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ChargesPerMinute" dataType="DT_NUMERIC" length="0" precision="18" scale="2" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[CallChargeKey]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT - DWH FactCallData\LKP - DimCall_Charges.Connections[OleDbConnection]"
+                  connectionManagerID="{FB2932D0-5D7F-42FC-AB1B-E431CEFA4028}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.Project_DWH]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT - DWH FactCallData\LKP - DimCall_Charges.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - DWH FactCallData\LKP - DimCall_Charges.Inputs[Lookup Input].Columns[CallChargeKey]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CallChargeKey"
+                      lineageId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[CallChargeKey]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">CallChargeKey</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - DWH FactCallData\LKP - DimCall_Charges.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\DFT - DWH FactCallData\LKP - DimCall_Charges.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\LKP - DimCall_Charges.Outputs[Lookup Match Output].Columns[CallChargeSurrogateKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\DFT - DWH FactCallData\LKP - DimCall_Charges.Outputs[Lookup Match Output].Columns[CallChargeSurrogateKey]"
+                      name="CallChargeSurrogateKey"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">CallChargeSurrogateKey</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - DWH FactCallData\LKP - DimCall_Charges.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\DFT - DWH FactCallData\LKP - DimCall_Charges.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - DWH FactCallData\LKP - DimCall_Charges.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\DFT - DWH FactCallData\LKP - DimCall_Charges.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\LKP - DimCall_Charges.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DWH FactCallData\LKP - DimCall_Charges.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\LKP - DimCall_Charges.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DWH FactCallData\LKP - DimCall_Charges.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - DWH FactCallData\LKP - DimDate(CallDate)"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="LKP - DimDate(CallDate)"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DimDate]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimDate]) [refTable]
+where [refTable].[Date] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="DateKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Date" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Day" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DaySuffix" dataType="DT_STR" length="2" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Weekday" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="WeekDayName" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="WeekDayName_Short" dataType="DT_STR" length="3" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="WeekDayName_FirstLetter" dataType="DT_STR" length="1" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="DOWInMonth" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DayOfYear" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="WeekOfMonth" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="WeekOfYear" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Month" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MonthName" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="MonthName_Short" dataType="DT_STR" length="3" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="MonthName_FirstLetter" dataType="DT_STR" length="1" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Quarter" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="QuarterName" dataType="DT_STR" length="6" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Year" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MMYYYY" dataType="DT_STR" length="6" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="MonthYear" dataType="DT_STR" length="7" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="IsWeekend" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[CallDate]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT - DWH FactCallData\LKP - DimDate(CallDate).Connections[OleDbConnection]"
+                  connectionManagerID="{FB2932D0-5D7F-42FC-AB1B-E431CEFA4028}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.Project_DWH]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT - DWH FactCallData\LKP - DimDate(CallDate).Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - DWH FactCallData\LKP - DimDate(CallDate).Inputs[Lookup Input].Columns[CallDate]"
+                      cachedDataType="dbDate"
+                      cachedName="CallDate"
+                      lineageId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[CallDate]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Date</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - DWH FactCallData\LKP - DimDate(CallDate).Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\DFT - DWH FactCallData\LKP - DimDate(CallDate).Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\LKP - DimDate(CallDate).Outputs[Lookup Match Output].Columns[CallDate_DateKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\DFT - DWH FactCallData\LKP - DimDate(CallDate).Outputs[Lookup Match Output].Columns[CallDate_DateKey]"
+                      name="CallDate_DateKey"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">DateKey</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - DWH FactCallData\LKP - DimDate(CallDate).Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\DFT - DWH FactCallData\LKP - DimDate(CallDate).Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - DWH FactCallData\LKP - DimDate(CallDate).Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\DFT - DWH FactCallData\LKP - DimDate(CallDate).Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\LKP - DimDate(CallDate).Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DWH FactCallData\LKP - DimDate(CallDate).Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\LKP - DimDate(CallDate).Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DWH FactCallData\LKP - DimDate(CallDate).Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - DWH FactCallData\LKP - DimEmployee"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="LKP - DimEmployee"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DimEmployees]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimEmployees]) [refTable]
+where [refTable].[EmployeeID] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="EmployeeSurrogateKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="EmployeeID" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="EmployeeFirstName" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="EmployeeLastName" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="ManagerFirstName" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="ManagerLastName" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="SiteTown" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="State" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Region" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].Columns[EmployeeID]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT - DWH FactCallData\LKP - DimEmployee.Connections[OleDbConnection]"
+                  connectionManagerID="{FB2932D0-5D7F-42FC-AB1B-E431CEFA4028}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.Project_DWH]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT - DWH FactCallData\LKP - DimEmployee.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - DWH FactCallData\LKP - DimEmployee.Inputs[Lookup Input].Columns[EmployeeID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="EmployeeID"
+                      lineageId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].Columns[EmployeeID]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">EmployeeID</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - DWH FactCallData\LKP - DimEmployee.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\DFT - DWH FactCallData\LKP - DimEmployee.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\LKP - DimEmployee.Outputs[Lookup Match Output].Columns[EmployeeSurrogateKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\DFT - DWH FactCallData\LKP - DimEmployee.Outputs[Lookup Match Output].Columns[EmployeeSurrogateKey]"
+                      name="EmployeeSurrogateKey"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">EmployeeSurrogateKey</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - DWH FactCallData\LKP - DimEmployee.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\DFT - DWH FactCallData\LKP - DimEmployee.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - DWH FactCallData\LKP - DimEmployee.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\DFT - DWH FactCallData\LKP - DimEmployee.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\LKP - DimEmployee.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DWH FactCallData\LKP - DimEmployee.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\LKP - DimEmployee.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DWH FactCallData\LKP - DimEmployee.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - DWH FactCallData\MLT - EmployeeNotFound"
+              componentClassID="Microsoft.Multicast"
+              contactInfo="Multicast;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Distributes every input row to every row in one or more outputs. For example, branch your data flow to make a copy of data so that some values can be masked before sharing with external partners."
+              name="MLT - EmployeeNotFound">
+              <inputs>
+                <input
+                  refId="Package\DFT - DWH FactCallData\MLT - EmployeeNotFound.Inputs[Multicast Input 1]"
+                  name="Multicast Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - DWH FactCallData\MLT - EmployeeNotFound.Outputs[Multicast Output 1]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 1"
+                  synchronousInputId="Package\DFT - DWH FactCallData\MLT - EmployeeNotFound.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - DWH FactCallData\MLT - EmployeeNotFound.Outputs[Multicast Output 2]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 2"
+                  synchronousInputId="Package\DFT - DWH FactCallData\MLT - EmployeeNotFound.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - DWH FactCallData\MLT - EmployeeNotFound.Outputs[Multicast Output 3]"
+                  dangling="true"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 3"
+                  synchronousInputId="Package\DFT - DWH FactCallData\MLT - EmployeeNotFound.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE_DST - DWH Call_Data"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[FactCall_Data]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Connections[OleDbConnection]"
+                  connectionManagerID="{FB2932D0-5D7F-42FC-AB1B-E431CEFA4028}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.Project_DWH]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].Columns[EmployeeID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="EmployeeID"
+                      externalMetadataColumnId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].ExternalColumns[EmployeeID]"
+                      lineageId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[EmployeeID]" />
+                    <inputColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].Columns[CallTypeLabel]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CallTypeLabel"
+                      externalMetadataColumnId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].ExternalColumns[CallTypeLabel]"
+                      lineageId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[CallTypeLabel]" />
+                    <inputColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].Columns[CallDate]"
+                      cachedDataType="dbDate"
+                      cachedName="CallDate"
+                      externalMetadataColumnId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].ExternalColumns[CallDate]"
+                      lineageId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[CallDate]" />
+                    <inputColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].Columns[CallTime]"
+                      cachedDataType="dbTime2"
+                      cachedName="CallTime"
+                      cachedScale="7"
+                      externalMetadataColumnId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].ExternalColumns[CallTime]"
+                      lineageId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[CallTime]" />
+                    <inputColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].Columns[CallDurationInSeconds]"
+                      cachedDataType="i4"
+                      cachedName="CallDurationInSeconds"
+                      externalMetadataColumnId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].ExternalColumns[CallDurationInSeconds]"
+                      lineageId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[CallDurationInSeconds]" />
+                    <inputColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].Columns[WaitTimeInSeconds]"
+                      cachedDataType="i4"
+                      cachedName="WaitTimeInSeconds"
+                      externalMetadataColumnId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].ExternalColumns[WaitTimeInSeconds]"
+                      lineageId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[WaitTimeInSeconds]" />
+                    <inputColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].Columns[CallAbandoned]"
+                      cachedDataType="bool"
+                      cachedName="CallAbandoned"
+                      externalMetadataColumnId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].ExternalColumns[CallAbandoned]"
+                      lineageId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[CallAbandoned]" />
+                    <inputColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].Columns[WithinSLA]"
+                      cachedDataType="bool"
+                      cachedName="WithinSLA"
+                      externalMetadataColumnId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].ExternalColumns[WithinSLA]"
+                      lineageId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[WithinSLA]" />
+                    <inputColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].Columns[CallChargeKey]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CallChargeKey"
+                      externalMetadataColumnId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].ExternalColumns[CallChargeKey]"
+                      lineageId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[CallChargeKey]" />
+                    <inputColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].Columns[EmployeeSurrogateKey]"
+                      cachedDataType="i4"
+                      cachedName="EmployeeSurrogateKey"
+                      externalMetadataColumnId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].ExternalColumns[EmployeeSurrogateKey]"
+                      lineageId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[EmployeeSurrogateKey]" />
+                    <inputColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].Columns[CallChargeSurrogateKey]"
+                      cachedDataType="i4"
+                      cachedName="CallChargeSurrogateKey"
+                      externalMetadataColumnId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].ExternalColumns[CallChargeSurrogateKey]"
+                      lineageId="Package\DFT - DWH FactCallData\LKP - DimCall_Charges.Outputs[Lookup Match Output].Columns[CallChargeSurrogateKey]" />
+                    <inputColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].Columns[CallDate_DateKey]"
+                      cachedDataType="i4"
+                      cachedName="CallDate_DateKey"
+                      externalMetadataColumnId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].ExternalColumns[CallDate_DateKey]"
+                      lineageId="Package\DFT - DWH FactCallData\LKP - DimDate(CallDate).Outputs[Lookup Match Output].Columns[CallDate_DateKey]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].ExternalColumns[EmployeeID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="EmployeeID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].ExternalColumns[CallTypeLabel]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CallTypeLabel" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].ExternalColumns[CallDate]"
+                      dataType="dbDate"
+                      name="CallDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].ExternalColumns[CallTime]"
+                      dataType="dbTime2"
+                      name="CallTime"
+                      scale="7" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].ExternalColumns[CallDurationInSeconds]"
+                      dataType="i4"
+                      name="CallDurationInSeconds" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].ExternalColumns[WaitTimeInSeconds]"
+                      dataType="i4"
+                      name="WaitTimeInSeconds" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].ExternalColumns[CallAbandoned]"
+                      dataType="bool"
+                      name="CallAbandoned" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].ExternalColumns[WithinSLA]"
+                      dataType="bool"
+                      name="WithinSLA" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].ExternalColumns[CallChargeKey]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CallChargeKey" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].ExternalColumns[EmployeeSurrogateKey]"
+                      dataType="i4"
+                      name="EmployeeSurrogateKey" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].ExternalColumns[CallChargeSurrogateKey]"
+                      dataType="i4"
+                      name="CallChargeSurrogateKey" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].ExternalColumns[CallDate_DateKey]"
+                      dataType="i4"
+                      name="CallDate_DateKey" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - DWH FactCallData\OLE_DST - FunctionalRejects"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE_DST - FunctionalRejects"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Functional_Rejects]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT - DWH FactCallData\OLE_DST - FunctionalRejects.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.Project_ADM]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.Project_ADM]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT - DWH FactCallData\OLE_DST - FunctionalRejects.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_DST - FunctionalRejects.Inputs[OLE DB Destination Input].Columns[RejectDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="RejectDate"
+                      externalMetadataColumnId="Package\DFT - DWH FactCallData\OLE_DST - FunctionalRejects.Inputs[OLE DB Destination Input].ExternalColumns[RejectDate]"
+                      lineageId="Package\DFT - DWH FactCallData\AGG - GroupBy.Outputs[Aggregate Output 1].Columns[RejectDate]" />
+                    <inputColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_DST - FunctionalRejects.Inputs[OLE DB Destination Input].Columns[RejectPackageAndTask]"
+                      cachedDataType="wstr"
+                      cachedLength="205"
+                      cachedName="RejectPackageAndTask"
+                      externalMetadataColumnId="Package\DFT - DWH FactCallData\OLE_DST - FunctionalRejects.Inputs[OLE DB Destination Input].ExternalColumns[RejectPackageAndTask]"
+                      lineageId="Package\DFT - DWH FactCallData\AGG - GroupBy.Outputs[Aggregate Output 1].Columns[RejectPackageAndTask]" />
+                    <inputColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_DST - FunctionalRejects.Inputs[OLE DB Destination Input].Columns[RejectColumn]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="RejectColumn"
+                      externalMetadataColumnId="Package\DFT - DWH FactCallData\OLE_DST - FunctionalRejects.Inputs[OLE DB Destination Input].ExternalColumns[RejectColumn]"
+                      lineageId="Package\DFT - DWH FactCallData\AGG - GroupBy.Outputs[Aggregate Output 1].Columns[RejectColumn]" />
+                    <inputColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_DST - FunctionalRejects.Inputs[OLE DB Destination Input].Columns[RejectDescription]"
+                      cachedDataType="wstr"
+                      cachedLength="147"
+                      cachedName="RejectDescription"
+                      externalMetadataColumnId="Package\DFT - DWH FactCallData\OLE_DST - FunctionalRejects.Inputs[OLE DB Destination Input].ExternalColumns[RejectDescription]"
+                      lineageId="Package\DFT - DWH FactCallData\AGG - GroupBy.Outputs[Aggregate Output 1].Columns[RejectDescription]" />
+                    <inputColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_DST - FunctionalRejects.Inputs[OLE DB Destination Input].Columns[Count all]"
+                      cachedDataType="ui8"
+                      cachedName="Count all"
+                      externalMetadataColumnId="Package\DFT - DWH FactCallData\OLE_DST - FunctionalRejects.Inputs[OLE DB Destination Input].ExternalColumns[Number_of_cases]"
+                      lineageId="Package\DFT - DWH FactCallData\AGG - GroupBy.Outputs[Aggregate Output 1].Columns[Count all]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_DST - FunctionalRejects.Inputs[OLE DB Destination Input].ExternalColumns[RejectDate]"
+                      dataType="dbTimeStamp"
+                      name="RejectDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_DST - FunctionalRejects.Inputs[OLE DB Destination Input].ExternalColumns[RejectPackageAndTask]"
+                      dataType="wstr"
+                      length="205"
+                      name="RejectPackageAndTask" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_DST - FunctionalRejects.Inputs[OLE DB Destination Input].ExternalColumns[RejectColumn]"
+                      dataType="nText"
+                      name="RejectColumn" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_DST - FunctionalRejects.Inputs[OLE DB Destination Input].ExternalColumns[RejectDescription]"
+                      dataType="nText"
+                      name="RejectDescription" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_DST - FunctionalRejects.Inputs[OLE DB Destination Input].ExternalColumns[Number_of_cases]"
+                      dataType="numeric"
+                      name="Number_of_cases"
+                      precision="20" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - DWH FactCallData\OLE_DST - FunctionalRejects.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DFT - DWH FactCallData\OLE_DST - FunctionalRejects.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_DST - FunctionalRejects.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DWH FactCallData\OLE_DST - FunctionalRejects.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_DST - FunctionalRejects.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DWH FactCallData\OLE_DST - FunctionalRejects.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE_SRC - ODS Call Data"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Call_Data]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Connections[OleDbConnection]"
+                  connectionManagerID="{D68D1FE2-8082-41E5-9D52-6B6B046C8054}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.Project_ODS]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].Columns[EmployeeID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].ExternalColumns[EmployeeID]"
+                      length="20"
+                      lineageId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].Columns[EmployeeID]"
+                      name="EmployeeID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].Columns[CallTypeLabel]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].ExternalColumns[CallTypeLabel]"
+                      length="50"
+                      lineageId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].Columns[CallTypeLabel]"
+                      name="CallTypeLabel"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].Columns[CallDate]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].ExternalColumns[CallDate]"
+                      lineageId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].Columns[CallDate]"
+                      name="CallDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].Columns[CallTime]"
+                      dataType="dbTime2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].ExternalColumns[CallTime]"
+                      lineageId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].Columns[CallTime]"
+                      name="CallTime"
+                      scale="7"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].Columns[CallDurationInSeconds]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].ExternalColumns[CallDurationInSeconds]"
+                      lineageId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].Columns[CallDurationInSeconds]"
+                      name="CallDurationInSeconds"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].Columns[WaitTimeInSeconds]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].ExternalColumns[WaitTimeInSeconds]"
+                      lineageId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].Columns[WaitTimeInSeconds]"
+                      name="WaitTimeInSeconds"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].Columns[CallAbandoned]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].ExternalColumns[CallAbandoned]"
+                      lineageId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].Columns[CallAbandoned]"
+                      name="CallAbandoned"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].Columns[WithinSLA]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].ExternalColumns[WithinSLA]"
+                      lineageId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].Columns[WithinSLA]"
+                      name="WithinSLA"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].Columns[CallChargeKey]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].ExternalColumns[CallChargeKey]"
+                      length="50"
+                      lineageId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].Columns[CallChargeKey]"
+                      name="CallChargeKey"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].ExternalColumns[EmployeeID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="EmployeeID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].ExternalColumns[CallTypeLabel]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CallTypeLabel" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].ExternalColumns[CallDate]"
+                      dataType="dbDate"
+                      name="CallDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].ExternalColumns[CallTime]"
+                      dataType="dbTime2"
+                      name="CallTime"
+                      scale="7" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].ExternalColumns[CallDurationInSeconds]"
+                      dataType="i4"
+                      name="CallDurationInSeconds" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].ExternalColumns[WaitTimeInSeconds]"
+                      dataType="i4"
+                      name="WaitTimeInSeconds" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].ExternalColumns[CallAbandoned]"
+                      dataType="bool"
+                      name="CallAbandoned" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].ExternalColumns[WithinSLA]"
+                      dataType="bool"
+                      name="WithinSLA" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output].ExternalColumns[CallChargeKey]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CallChargeKey" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Error Output].Columns[CallTypeLabel]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Error Output].Columns[CallTypeLabel]"
+                      name="CallTypeLabel" />
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Error Output].Columns[EmployeeID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Error Output].Columns[EmployeeID]"
+                      name="EmployeeID" />
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Error Output].Columns[CallDate]"
+                      dataType="dbDate"
+                      lineageId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Error Output].Columns[CallDate]"
+                      name="CallDate" />
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Error Output].Columns[CallTime]"
+                      dataType="dbTime2"
+                      lineageId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Error Output].Columns[CallTime]"
+                      name="CallTime"
+                      scale="7" />
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Error Output].Columns[CallDurationInSeconds]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Error Output].Columns[CallDurationInSeconds]"
+                      name="CallDurationInSeconds" />
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Error Output].Columns[WaitTimeInSeconds]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Error Output].Columns[WaitTimeInSeconds]"
+                      name="WaitTimeInSeconds" />
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Error Output].Columns[CallAbandoned]"
+                      dataType="bool"
+                      lineageId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Error Output].Columns[CallAbandoned]"
+                      name="CallAbandoned" />
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Error Output].Columns[WithinSLA]"
+                      dataType="bool"
+                      lineageId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Error Output].Columns[WithinSLA]"
+                      name="WithinSLA" />
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Error Output].Columns[CallChargeKey]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Error Output].Columns[CallChargeKey]"
+                      name="CallChargeKey" />
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DFT - DWH FactCallData.Paths[Aggregate Output 1]"
+              endId="Package\DFT - DWH FactCallData\OLE_DST - FunctionalRejects.Inputs[OLE DB Destination Input]"
+              name="Aggregate Output 1"
+              startId="Package\DFT - DWH FactCallData\AGG - GroupBy.Outputs[Aggregate Output 1]" />
+            <path
+              refId="Package\DFT - DWH FactCallData.Paths[Derived Column Output]"
+              endId="Package\DFT - DWH FactCallData\AGG - GroupBy.Inputs[Aggregate Input 1]"
+              name="Derived Column Output"
+              startId="Package\DFT - DWH FactCallData\DER - EmployeeRejects.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DFT - DWH FactCallData.Paths[Derived Column Output1]"
+              endId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Inputs[Union All Input 1]"
+              name="Derived Column Output"
+              startId="Package\DFT - DWH FactCallData\DER - Employee-1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DFT - DWH FactCallData.Paths[Lookup Match Output]"
+              endId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Inputs[Union All Input 2]"
+              name="Lookup Match Output"
+              startId="Package\DFT - DWH FactCallData\LKP - DimEmployee.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\DFT - DWH FactCallData.Paths[Lookup Match Output1]"
+              endId="Package\DFT - DWH FactCallData\LKP - DimDate(CallDate).Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\DFT - DWH FactCallData\LKP - DimCall_Charges.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\DFT - DWH FactCallData.Paths[Lookup Match Output2]"
+              endId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input]"
+              name="Lookup Match Output"
+              startId="Package\DFT - DWH FactCallData\LKP - DimDate(CallDate).Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\DFT - DWH FactCallData.Paths[Lookup No Match Output]"
+              endId="Package\DFT - DWH FactCallData\MLT - EmployeeNotFound.Inputs[Multicast Input 1]"
+              name="Lookup No Match Output"
+              startId="Package\DFT - DWH FactCallData\LKP - DimEmployee.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\DFT - DWH FactCallData.Paths[Multicast Output 1]"
+              endId="Package\DFT - DWH FactCallData\DER - Employee-1.Inputs[Derived Column Input]"
+              name="Multicast Output 1"
+              startId="Package\DFT - DWH FactCallData\MLT - EmployeeNotFound.Outputs[Multicast Output 1]" />
+            <path
+              refId="Package\DFT - DWH FactCallData.Paths[Multicast Output 2]"
+              endId="Package\DFT - DWH FactCallData\DER - EmployeeRejects.Inputs[Derived Column Input]"
+              name="Multicast Output 2"
+              startId="Package\DFT - DWH FactCallData\MLT - EmployeeNotFound.Outputs[Multicast Output 2]" />
+            <path
+              refId="Package\DFT - DWH FactCallData.Paths[OLE DB Source Output]"
+              endId="Package\DFT - DWH FactCallData\LKP - DimEmployee.Inputs[Lookup Input]"
+              name="OLE DB Source Output"
+              startId="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\DFT - DWH FactCallData.Paths[Union All Output 1]"
+              endId="Package\DFT - DWH FactCallData\LKP - DimCall_Charges.Inputs[Lookup Input]"
+              name="Union All Output 1"
+              startId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL - TRUNCATE FactCall_Data"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{E4472B50-2F78-4C79-B363-ABEFE24065C6}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL - TRUNCATE FactCall_Data"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{FB2932D0-5D7F-42FC-AB1B-E431CEFA4028}"
+          SQLTask:BypassPrepare="False"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE dbo.FactCall_Data" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{F71946AE-C0B4-4CAD-A97A-B493511AF83E}"
+      DTS:From="Package\SQL - TRUNCATE FactCall_Data"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\DFT - DWH FactCallData" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="203,42"
+          Id="Package\DFT - DWH FactCallData"
+          TopLeft="157,168" />
+        <NodeLayout
+          Size="243,42"
+          Id="Package\SQL - TRUNCATE FactCall_Data"
+          TopLeft="136,62" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="258,104">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,64"
+              Start="0,0"
+              End="0,56.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,56.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\DFT - DWH FactCallData">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="202,42"
+          Id="Package\DFT - DWH FactCallData\LKP - DimDate(CallDate)"
+          TopLeft="155,468" />
+        <NodeLayout
+          Size="208,42"
+          Id="Package\DFT - DWH FactCallData\MLT - EmployeeNotFound"
+          TopLeft="302,87" />
+        <NodeLayout
+          Size="170,42"
+          Id="Package\DFT - DWH FactCallData\DER - Employee-1"
+          TopLeft="316,190" />
+        <NodeLayout
+          Size="226,42"
+          Id="Package\DFT - DWH FactCallData\OLE_DST - FunctionalRejects"
+          TopLeft="739,372" />
+        <NodeLayout
+          Size="217,42"
+          Id="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey"
+          TopLeft="120,266" />
+        <NodeLayout
+          Size="196,42"
+          Id="Package\DFT - DWH FactCallData\LKP - DimCall_Charges"
+          TopLeft="147,368" />
+        <NodeLayout
+          Size="178,42"
+          Id="Package\DFT - DWH FactCallData\LKP - DimEmployee"
+          TopLeft="39,100" />
+        <NodeLayout
+          Size="197,42"
+          Id="Package\DFT - DWH FactCallData\DER - EmployeeRejects"
+          TopLeft="571,190" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\DFT - DWH FactCallData\AGG - GroupBy"
+          TopLeft="700,284" />
+        <NodeLayout
+          Size="212,42"
+          Id="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data"
+          TopLeft="26,22" />
+        <NodeLayout
+          Size="216,42"
+          Id="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data"
+          TopLeft="164,565" />
+        <EdgeLayout
+          Id="Package\DFT - DWH FactCallData.Paths[Multicast Output 2]"
+          TopLeft="439.333333333333,129">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="230.166666666667,61"
+              Start="0,0"
+              End="230.166666666667,53.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.6793893129771" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.6793893129771"
+                    Point2="0,24.6793893129771"
+                    Point3="4,24.6793893129771" />
+                  <mssgle:LineSegment
+                    End="226.166666666667,24.6793893129771" />
+                  <mssgle:CubicBezierSegment
+                    Point1="226.166666666667,24.6793893129771"
+                    Point2="230.166666666667,24.6793893129771"
+                    Point3="230.166666666667,28.6793893129771" />
+                  <mssgle:LineSegment
+                    End="230.166666666667,53.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - DWH FactCallData.Paths[Multicast Output 1]"
+          TopLeft="372.666666666667,129">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="28.3333333333334,61"
+              Start="0,0"
+              End="28.3333333333334,53.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.6793893129771" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.6793893129771"
+                    Point2="0,24.6793893129771"
+                    Point3="4,24.6793893129771" />
+                  <mssgle:LineSegment
+                    End="24.3333333333334,24.6793893129771" />
+                  <mssgle:CubicBezierSegment
+                    Point1="24.3333333333334,24.6793893129771"
+                    Point2="28.3333333333334,24.6793893129771"
+                    Point3="28.3333333333334,28.6793893129771" />
+                  <mssgle:LineSegment
+                    End="28.3333333333334,53.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - DWH FactCallData.Paths[Lookup No Match Output]"
+          TopLeft="217,121">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="85,-13"
+              Start="0,0"
+              End="77.5,-13">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="38.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="38.5,0"
+                    Point2="42.5,0"
+                    Point3="42.5,-4" />
+                  <mssgle:LineSegment
+                    End="42.5,-9" />
+                  <mssgle:CubicBezierSegment
+                    Point1="42.5,-9"
+                    Point2="42.5,-13"
+                    Point3="46.5,-13" />
+                  <mssgle:LineSegment
+                    End="77.5,-13" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-13.30638671875,1,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - DWH FactCallData.Paths[Lookup Match Output2]"
+          TopLeft="256,510">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="16,55"
+              Start="0,0"
+              End="16,47.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.5"
+                    Point2="0,27.5"
+                    Point3="4,27.5" />
+                  <mssgle:LineSegment
+                    End="12,27.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="12,27.5"
+                    Point2="16,27.5"
+                    Point3="16,31.5" />
+                  <mssgle:LineSegment
+                    End="16,47.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-40.19138671875,32.5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - DWH FactCallData.Paths[Lookup Match Output1]"
+          TopLeft="245,410">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="11,58"
+              Start="0,0"
+              End="11,50.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25"
+                    Point2="0,29"
+                    Point3="4,29" />
+                  <mssgle:LineSegment
+                    End="7,29" />
+                  <mssgle:CubicBezierSegment
+                    Point1="7,29"
+                    Point2="11,29"
+                    Point3="11,33" />
+                  <mssgle:LineSegment
+                    End="11,50.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-42.69138671875,34,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - DWH FactCallData.Paths[Lookup Match Output]"
+          TopLeft="128,142">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="65.6666666666667,124"
+              Start="0,0"
+              End="65.6666666666667,116.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,69.8554437328454" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,69.8554437328454"
+                    Point2="0,73.8554437328454"
+                    Point3="4,73.8554437328454" />
+                  <mssgle:LineSegment
+                    End="61.6666666666667,73.8554437328454" />
+                  <mssgle:CubicBezierSegment
+                    Point1="61.6666666666667,73.8554437328454"
+                    Point2="65.6666666666667,73.8554437328454"
+                    Point3="65.6666666666667,77.8554437328454" />
+                  <mssgle:LineSegment
+                    End="65.6666666666667,116.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-15.3580533854167,78.8554437328454,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - DWH FactCallData.Paths[Derived Column Output1]"
+          TopLeft="401,232">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-137.666666666667,34"
+              Start="0,0"
+              End="-137.666666666667,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.2506861848124" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.2506861848124"
+                    Point2="0,20.2506861848124"
+                    Point3="-4,20.2506861848124" />
+                  <mssgle:LineSegment
+                    End="-133.666666666667,20.2506861848124" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-133.666666666667,20.2506861848124"
+                    Point2="-137.666666666667,20.2506861848124"
+                    Point3="-137.666666666667,24.2506861848124" />
+                  <mssgle:LineSegment
+                    End="-137.666666666667,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - DWH FactCallData.Paths[Derived Column Output]"
+          TopLeft="669.5,232">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="108.5,52"
+              Start="0,0"
+              End="108.5,44.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22"
+                    Point2="0,26"
+                    Point3="4,26" />
+                  <mssgle:LineSegment
+                    End="104.5,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="104.5,26"
+                    Point2="108.5,26"
+                    Point3="108.5,30" />
+                  <mssgle:LineSegment
+                    End="108.5,44.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - DWH FactCallData.Paths[Aggregate Output 1]"
+          TopLeft="778,326">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="74,46"
+              Start="0,0"
+              End="74,38.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19"
+                    Point2="0,23"
+                    Point3="4,23" />
+                  <mssgle:LineSegment
+                    End="70,23" />
+                  <mssgle:CubicBezierSegment
+                    Point1="70,23"
+                    Point2="74,23"
+                    Point3="74,27" />
+                  <mssgle:LineSegment
+                    End="74,38.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - DWH FactCallData.Paths[Union All Output 1]"
+          TopLeft="228.5,308">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="16.5,60"
+              Start="0,0"
+              End="16.5,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26"
+                    Point2="0,30"
+                    Point3="4,30" />
+                  <mssgle:LineSegment
+                    End="12.5,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="12.5,30"
+                    Point2="16.5,30"
+                    Point3="16.5,34" />
+                  <mssgle:LineSegment
+                    End="16.5,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - DWH FactCallData.Paths[OLE DB Source Output]"
+          TopLeft="130,64">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36"
+              Start="0,0"
+              End="0,28.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT - DWH FactCallData\LKP - DimDate(CallDate)">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimDate]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT - DWH FactCallData\OLE_DST - FunctionalRejects">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT - DWH FactCallData\LKP - DimCall_Charges">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimCall_Charges]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT - DWH FactCallData\LKP - DimEmployee">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimEmployees]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

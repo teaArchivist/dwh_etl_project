@@ -169,7 +169,6 @@ GO
 
 CREATE TABLE [dbo].[FactCall_Data](
 	[CallUniqueKey] [int] IDENTITY(1,1) NOT NULL,
-	[CallTypeLabel] [varchar](50) NULL,
 	[CallTime] [time](7) NULL,
 	[CallDurationInSeconds] [int] NULL,
 	[WaitTimeInSeconds] [int] NULL,

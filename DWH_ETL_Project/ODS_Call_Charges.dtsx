@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="ODS_Call_Charges"
   DTS:PackageType="5"
-  DTS:VersionBuild="50"
-  DTS:VersionGUID="{34DBDF15-56BF-4845-AB47-075E30099687}">
+  DTS:VersionBuild="52"
+  DTS:VersionGUID="{45320DB8-A33F-467C-A97D-85146CE7D29F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -722,7 +722,7 @@
                   <outputColumns>
                     <outputColumn
                       refId="Package\DFT - ODS Call Charges\DCNV - Year into Integer.Outputs[Sortie de conversion de données].Columns[Year_R]"
-                      dataType="i4"
+                      dataType="ui4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="RedirectRow"
                       lineageId="Package\DFT - ODS Call Charges\DCNV - Year into Integer.Outputs[Sortie de conversion de données].Columns[Year_R]"
@@ -1389,7 +1389,7 @@
                       lineageId="Package\DFT - ODS Call Charges\DCNV - Resize CallType &amp; CallChargeKey.Outputs[Data Conversion Output].Columns[CallType_R]" />
                     <inputColumn
                       refId="Package\DFT - ODS Call Charges\OLE_DST - ODS Call Charges.Inputs[OLE DB Destination Input].Columns[Year_R]"
-                      cachedDataType="i4"
+                      cachedDataType="ui4"
                       cachedName="Year_R"
                       externalMetadataColumnId="Package\DFT - ODS Call Charges\OLE_DST - ODS Call Charges.Inputs[OLE DB Destination Input].ExternalColumns[Year]"
                       lineageId="Package\DFT - ODS Call Charges\DCNV - Year into Integer.Outputs[Sortie de conversion de données].Columns[Year_R]" />
@@ -2150,7 +2150,7 @@
         <NodeLayout
           Size="226,42"
           Id="Package\DFT - ODS Call Charges\DCNV - Charges into Numeric"
-          TopLeft="293,548" />
+          TopLeft="294,548" />
         <NodeLayout
           Size="205,42"
           Id="Package\DFT - ODS Call Charges\DER - Retrieve Only Year"
@@ -2401,7 +2401,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT - ODS Call Charges.Paths[Derived Column Output2]"
-          TopLeft="405,511">
+          TopLeft="405.5,511">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2489,7 +2489,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT - ODS Call Charges.Paths[Data Conversion Output]"
-          TopLeft="404.25,590">
+          TopLeft="404.75,590">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2511,25 +2511,25 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT - ODS Call Charges.Paths[Data Conversion Error Output]"
-          TopLeft="519,567.5">
+          TopLeft="520,567.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="144,0"
+              EndConnector="143,0"
               Start="0,0"
-              End="136.5,0">
+              End="135.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="136.5,0" />
+                    End="135.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="2.16361328125001,5,132.1727734375,11.43359375"
+              BoundingBox="1.66361328125001,5,132.1727734375,11.43359375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>

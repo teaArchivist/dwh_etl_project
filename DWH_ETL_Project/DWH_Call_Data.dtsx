@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DWH_Call_Data"
   DTS:PackageType="5"
-  DTS:VersionBuild="14"
-  DTS:VersionGUID="{F8000EB6-8AF8-49C3-8A08-7E93CB2004B4}">
+  DTS:VersionBuild="15"
+  DTS:VersionGUID="{4F4B9A87-2ABC-4296-B710-5C28DAB44EDD}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1580,6 +1580,10 @@ where [refTable].[EmployeeID] = ?</property>
                       refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].ExternalColumns[CallDate_DateKey]"
                       dataType="i4"
                       name="CallDate_DateKey" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].ExternalColumns[CallUniqueKey]"
+                      dataType="i4"
+                      name="CallUniqueKey" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -2220,7 +2224,7 @@ where [refTable].[EmployeeID] = ?</property>
         <NodeLayout
           Size="216,42"
           Id="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data"
-          TopLeft="164,565" />
+          TopLeft="164,566" />
         <EdgeLayout
           Id="Package\DFT - DWH FactCallData.Paths[Multicast Output 2]"
           TopLeft="439.333333333333,129">
@@ -2331,33 +2335,33 @@ where [refTable].[EmployeeID] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="16,55"
+              EndConnector="16,56"
               Start="0,0"
-              End="16,47.5">
+              End="16,48.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,23.5" />
+                    End="0,24" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,23.5"
-                    Point2="0,27.5"
-                    Point3="4,27.5" />
+                    Point1="0,24"
+                    Point2="0,28"
+                    Point3="4,28" />
                   <mssgle:LineSegment
-                    End="12,27.5" />
+                    End="12,28" />
                   <mssgle:CubicBezierSegment
-                    Point1="12,27.5"
-                    Point2="16,27.5"
-                    Point3="16,31.5" />
+                    Point1="12,28"
+                    Point2="16,28"
+                    Point3="16,32" />
                   <mssgle:LineSegment
-                    End="16,47.5" />
+                    End="16,48.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-40.19138671875,32.5,96.3827734375,11.609375"
+              BoundingBox="-40.19138671875,33,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>

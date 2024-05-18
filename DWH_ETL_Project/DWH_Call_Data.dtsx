@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DWH_Call_Data"
   DTS:PackageType="5"
-  DTS:VersionBuild="16"
-  DTS:VersionGUID="{F2EE3DEE-8C45-4332-90AD-D883B12CF40C}">
+  DTS:VersionBuild="17"
+  DTS:VersionGUID="{D766D827-CCB0-444B-8FB9-56D23AF05DAA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1444,14 +1444,6 @@ where [refTable].[EmployeeID] = ?</property>
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].Columns[CallTypeLabel]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="CallTypeLabel"
-                      externalMetadataColumnId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].ExternalColumns[CallTypeLabel]"
-                      lineageId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[CallTypeLabel]" />
-                    <inputColumn
                       refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].Columns[CallTime]"
                       cachedDataType="dbTime2"
                       cachedName="CallTime"
@@ -1503,12 +1495,6 @@ where [refTable].[EmployeeID] = ?</property>
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].ExternalColumns[CallTypeLabel]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="CallTypeLabel" />
                     <externalMetadataColumn
                       refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].ExternalColumns[CallTime]"
                       dataType="dbTime2"

@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DWH_Call_Data"
   DTS:PackageType="5"
-  DTS:VersionBuild="15"
-  DTS:VersionGUID="{4F4B9A87-2ABC-4296-B710-5C28DAB44EDD}">
+  DTS:VersionBuild="16"
+  DTS:VersionGUID="{F2EE3DEE-8C45-4332-90AD-D883B12CF40C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1444,14 +1444,6 @@ where [refTable].[EmployeeID] = ?</property>
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].Columns[EmployeeID]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="20"
-                      cachedName="EmployeeID"
-                      externalMetadataColumnId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].ExternalColumns[EmployeeID]"
-                      lineageId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[EmployeeID]" />
-                    <inputColumn
                       refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].Columns[CallTypeLabel]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -1459,12 +1451,6 @@ where [refTable].[EmployeeID] = ?</property>
                       cachedName="CallTypeLabel"
                       externalMetadataColumnId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].ExternalColumns[CallTypeLabel]"
                       lineageId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[CallTypeLabel]" />
-                    <inputColumn
-                      refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].Columns[CallDate]"
-                      cachedDataType="dbDate"
-                      cachedName="CallDate"
-                      externalMetadataColumnId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].ExternalColumns[CallDate]"
-                      lineageId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[CallDate]" />
                     <inputColumn
                       refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].Columns[CallTime]"
                       cachedDataType="dbTime2"
@@ -1497,14 +1483,6 @@ where [refTable].[EmployeeID] = ?</property>
                       externalMetadataColumnId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].ExternalColumns[WithinSLA]"
                       lineageId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[WithinSLA]" />
                     <inputColumn
-                      refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].Columns[CallChargeKey]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="CallChargeKey"
-                      externalMetadataColumnId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].ExternalColumns[CallChargeKey]"
-                      lineageId="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey.Outputs[Union All Output 1].Columns[CallChargeKey]" />
-                    <inputColumn
                       refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].Columns[EmployeeSurrogateKey]"
                       cachedDataType="i4"
                       cachedName="EmployeeSurrogateKey"
@@ -1526,21 +1504,11 @@ where [refTable].[EmployeeID] = ?</property>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].ExternalColumns[EmployeeID]"
-                      codePage="1252"
-                      dataType="str"
-                      length="20"
-                      name="EmployeeID" />
-                    <externalMetadataColumn
                       refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].ExternalColumns[CallTypeLabel]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="CallTypeLabel" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].ExternalColumns[CallDate]"
-                      dataType="dbDate"
-                      name="CallDate" />
                     <externalMetadataColumn
                       refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].ExternalColumns[CallTime]"
                       dataType="dbTime2"
@@ -1562,12 +1530,6 @@ where [refTable].[EmployeeID] = ?</property>
                       refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].ExternalColumns[WithinSLA]"
                       dataType="bool"
                       name="WithinSLA" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].ExternalColumns[CallChargeKey]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="CallChargeKey" />
                     <externalMetadataColumn
                       refId="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data.Inputs[OLE DB Destination Input].ExternalColumns[EmployeeSurrogateKey]"
                       dataType="i4"
@@ -2224,41 +2186,7 @@ where [refTable].[EmployeeID] = ?</property>
         <NodeLayout
           Size="216,42"
           Id="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data"
-          TopLeft="164,566" />
-        <EdgeLayout
-          Id="Package\DFT - DWH FactCallData.Paths[Multicast Output 2]"
-          TopLeft="439.333333333333,129">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="230.166666666667,61"
-              Start="0,0"
-              End="230.166666666667,53.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.6793893129771" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.6793893129771"
-                    Point2="0,24.6793893129771"
-                    Point3="4,24.6793893129771" />
-                  <mssgle:LineSegment
-                    End="226.166666666667,24.6793893129771" />
-                  <mssgle:CubicBezierSegment
-                    Point1="226.166666666667,24.6793893129771"
-                    Point2="230.166666666667,24.6793893129771"
-                    Point3="230.166666666667,28.6793893129771" />
-                  <mssgle:LineSegment
-                    End="230.166666666667,53.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="166,570" />
         <EdgeLayout
           Id="Package\DFT - DWH FactCallData.Paths[Multicast Output 1]"
           TopLeft="372.666666666667,129">
@@ -2335,33 +2263,33 @@ where [refTable].[EmployeeID] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="16,56"
+              EndConnector="18,60"
               Start="0,0"
-              End="16,48.5">
+              End="18,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,24" />
+                    End="0,26" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,24"
-                    Point2="0,28"
-                    Point3="4,28" />
+                    Point1="0,26"
+                    Point2="0,30"
+                    Point3="4,30" />
                   <mssgle:LineSegment
-                    End="12,28" />
+                    End="14,30" />
                   <mssgle:CubicBezierSegment
-                    Point1="12,28"
-                    Point2="16,28"
-                    Point3="16,32" />
+                    Point1="14,30"
+                    Point2="18,30"
+                    Point3="18,34" />
                   <mssgle:LineSegment
-                    End="16,48.5" />
+                    End="18,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-40.19138671875,33,96.3827734375,11.609375"
+              BoundingBox="-39.19138671875,35,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -2587,6 +2515,40 @@ where [refTable].[EmployeeID] = ?</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,28.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - DWH FactCallData.Paths[Multicast Output 2]"
+          TopLeft="439.333333333333,129">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="230.166666666667,61"
+              Start="0,0"
+              End="230.166666666667,53.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.6793893129771" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.6793893129771"
+                    Point2="0,24.6793893129771"
+                    Point3="4,24.6793893129771" />
+                  <mssgle:LineSegment
+                    End="226.166666666667,24.6793893129771" />
+                  <mssgle:CubicBezierSegment
+                    Point1="226.166666666667,24.6793893129771"
+                    Point2="230.166666666667,24.6793893129771"
+                    Point3="230.166666666667,28.6793893129771" />
+                  <mssgle:LineSegment
+                    End="230.166666666667,53.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

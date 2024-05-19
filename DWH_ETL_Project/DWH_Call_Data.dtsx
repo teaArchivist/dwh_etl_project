@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DWH_Call_Data"
   DTS:PackageType="5"
-  DTS:VersionBuild="20"
-  DTS:VersionGUID="{EF8D966D-8583-40BB-99B0-AD4362E28D49}">
+  DTS:VersionBuild="21"
+  DTS:VersionGUID="{D06E16B4-DF6B-4C07-A07C-8F0EE95CDF33}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2295,45 +2295,83 @@ where [refTable].[TimeVal] = ?</property>
           Id="Package\DFT - DWH FactCallData\OLE_DST - FunctionalRejects"
           TopLeft="739,372" />
         <NodeLayout
-          Size="202,42"
-          Id="Package\DFT - DWH FactCallData\LKP - DimDate(CallDate)"
-          TopLeft="155,468" />
-        <NodeLayout
-          Size="208,42"
-          Id="Package\DFT - DWH FactCallData\MLT - EmployeeNotFound"
-          TopLeft="302,87" />
-        <NodeLayout
-          Size="170,42"
-          Id="Package\DFT - DWH FactCallData\DER - Employee-1"
-          TopLeft="316,190" />
-        <NodeLayout
           Size="212,42"
           Id="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data"
           TopLeft="26,22" />
-        <NodeLayout
-          Size="217,42"
-          Id="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey"
-          TopLeft="120,266" />
-        <NodeLayout
-          Size="196,42"
-          Id="Package\DFT - DWH FactCallData\LKP - DimCall_Charges"
-          TopLeft="147,368" />
         <NodeLayout
           Size="178,42"
           Id="Package\DFT - DWH FactCallData\LKP - DimEmployee"
           TopLeft="38,102" />
         <NodeLayout
+          Size="170,42"
+          Id="Package\DFT - DWH FactCallData\DER - Employee-1"
+          TopLeft="316,190" />
+        <NodeLayout
+          Size="208,42"
+          Id="Package\DFT - DWH FactCallData\MLT - EmployeeNotFound"
+          TopLeft="302,87" />
+        <NodeLayout
           Size="197,42"
           Id="Package\DFT - DWH FactCallData\DER - EmployeeRejects"
           TopLeft="571,190" />
+        <NodeLayout
+          Size="203,42"
+          Id="Package\DFT - DWH FactCallData\LKP - DimTime(CallDate)"
+          TopLeft="146,566" />
+        <NodeLayout
+          Size="196,42"
+          Id="Package\DFT - DWH FactCallData\LKP - DimCall_Charges"
+          TopLeft="147,368" />
+        <NodeLayout
+          Size="216,42"
+          Id="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data"
+          TopLeft="138,668" />
+        <NodeLayout
+          Size="217,42"
+          Id="Package\DFT - DWH FactCallData\All - EmployeeSurrogateKey"
+          TopLeft="120,266" />
         <NodeLayout
           Size="156,42"
           Id="Package\DFT - DWH FactCallData\AGG - GroupBy"
           TopLeft="700,284" />
         <NodeLayout
-          Size="216,42"
-          Id="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data"
-          TopLeft="138,668" />
+          Size="202,42"
+          Id="Package\DFT - DWH FactCallData\LKP - DimDate(CallDate)"
+          TopLeft="155,468" />
+        <EdgeLayout
+          Id="Package\DFT - DWH FactCallData.Paths[Aggregate Output 1]"
+          TopLeft="778,326">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="74,46"
+              Start="0,0"
+              End="74,38.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19"
+                    Point2="0,23"
+                    Point3="4,23" />
+                  <mssgle:LineSegment
+                    End="70,23" />
+                  <mssgle:CubicBezierSegment
+                    Point1="70,23"
+                    Point2="74,23"
+                    Point3="74,27" />
+                  <mssgle:LineSegment
+                    End="74,38.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT - DWH FactCallData.Paths[Union All Output 1]"
           TopLeft="228.5,308">
@@ -2495,6 +2533,66 @@ where [refTable].[TimeVal] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\DFT - DWH FactCallData.Paths[Lookup Match Output3]"
+          TopLeft="246.75,608">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - DWH FactCallData.Paths[Lookup Match Output2]"
+          TopLeft="256,510">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-8.5,56"
+              Start="0,0"
+              End="-8.5,48.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24"
+                    Point2="0,28"
+                    Point3="-4,28" />
+                  <mssgle:LineSegment
+                    End="-4.5,28" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-4.5,28"
+                    Point2="-8.5,28"
+                    Point3="-8.5,32" />
+                  <mssgle:LineSegment
+                    End="-8.5,48.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-52.44138671875,33,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\DFT - DWH FactCallData.Paths[Lookup Match Output1]"
           TopLeft="245,410">
           <EdgeLayout.Curve>
@@ -2634,104 +2732,6 @@ where [refTable].[TimeVal] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT - DWH FactCallData.Paths[Aggregate Output 1]"
-          TopLeft="778,326">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="74,46"
-              Start="0,0"
-              End="74,38.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,19"
-                    Point2="0,23"
-                    Point3="4,23" />
-                  <mssgle:LineSegment
-                    End="70,23" />
-                  <mssgle:CubicBezierSegment
-                    Point1="70,23"
-                    Point2="74,23"
-                    Point3="74,27" />
-                  <mssgle:LineSegment
-                    End="74,38.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="203,42"
-          Id="Package\DFT - DWH FactCallData\LKP - DimTime(CallDate)"
-          TopLeft="146,566" />
-        <EdgeLayout
-          Id="Package\DFT - DWH FactCallData.Paths[Lookup Match Output2]"
-          TopLeft="256,510">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-8.5,56"
-              Start="0,0"
-              End="-8.5,48.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,24"
-                    Point2="0,28"
-                    Point3="-4,28" />
-                  <mssgle:LineSegment
-                    End="-4.5,28" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-4.5,28"
-                    Point2="-8.5,28"
-                    Point3="-8.5,32" />
-                  <mssgle:LineSegment
-                    End="-8.5,48.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-52.44138671875,33,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT - DWH FactCallData.Paths[Lookup Match Output3]"
-          TopLeft="246.75,608">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -2772,7 +2772,30 @@ where [refTable].[TimeVal] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data">
+    design-time-name="Package\DFT - DWH FactCallData\LKP - DimTime(CallDate)">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimTime]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2831,7 +2854,7 @@ where [refTable].[TimeVal] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\DFT - DWH FactCallData\OLE_DST - DWH Call_Data">
+    design-time-name="Package\DFT - DWH FactCallData\OLE_SRC - ODS Call Data">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2840,29 +2863,6 @@ where [refTable].[TimeVal] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT - DWH FactCallData\LKP - DimTime(CallDate)">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimTime]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

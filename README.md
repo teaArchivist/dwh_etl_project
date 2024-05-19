@@ -1,5 +1,7 @@
 # Data Warehousing Project
 
+![image](https://github.com/teaArchivist/dwh_etl_project/assets/148533888/f0d36fac-a05a-4e3a-8166-03a60d47b7de)
+
 ## Team Members
 
 Alex CURRAN, Mathilde ROMAN, Chloé GRANGEON, Clémence ROLDAN, Garam BAEK

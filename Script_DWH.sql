@@ -326,3 +326,37 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
+
+TRUNCATE TABLE DimTime
+
+DECLARE @Hour INT = 0;
+DECLARE @Minute INT = 0;
+DECLARE @Second INT = 0;
+
+WHILE @Hour < 24
+BEGIN
+    SET @Minute = 0;
+    WHILE @Minute < 60
+    BEGIN
+        SET @Second = 0;
+        WHILE @Second < 60
+        BEGIN
+            DECLARE @TimeKey INT;
+            DECLARE @Time VARCHAR(16);
+
+            SET @TimeKey = @Hour * 10000 + @Minute * 100 + @Second;
+            SET @Time = RIGHT('0' + CAST(@Hour AS VARCHAR(2)), 2) + ':'
+                      + RIGHT('0' + CAST(@Minute AS VARCHAR(2)), 2) + ':'
+                      + RIGHT('0' + CAST(@Second AS VARCHAR(2)), 2) + '.0000000';
+
+            INSERT INTO DimTime (TimeKey, TimeVal, Hour, Minute, Second, HourMinute, HourMinuteSecond)
+            VALUES (@TimeKey, @Time, @Hour, @Minute, @Second,
+                    RIGHT('0' + CAST(@Hour AS VARCHAR(2)), 2) + ':' + RIGHT('0' + CAST(@Minute AS VARCHAR(2)), 2),
+                    RIGHT('0' + CAST(@Hour AS VARCHAR(2)), 2) + ':' + RIGHT('0' + CAST(@Minute AS VARCHAR(2)), 2) + ':' + RIGHT('0' + CAST(@Second AS VARCHAR(2)), 2));
+
+            SET @Second = @Second + 1;
+        END
+        SET @Minute = @Minute + 1;
+    END
+    SET @Hour = @Hour + 1;
+END

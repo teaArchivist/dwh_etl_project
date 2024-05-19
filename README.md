@@ -2,7 +2,7 @@
 
 ## Team Members
 
-Alex CURRAN, Mathiled ROMAN, Chloé GRANGEON, Clémence ROLDAN, Garam BAEK
+Alex CURRAN, Mathilde ROMAN, Chloé GRANGEON, Clémence ROLDAN, Garam BAEK
 
 ## Project Description
 

@@ -169,14 +169,14 @@ GO
 
 CREATE TABLE [dbo].[FactCall_Data](
 	[CallUniqueKey] [int] IDENTITY(1,1) NOT NULL,
-	[CallTime] [time](7) NULL,
 	[CallDurationInSeconds] [int] NULL,
 	[WaitTimeInSeconds] [int] NULL,
 	[CallAbandoned] [bit] NULL,
 	[WithinSLA] [bit] NULL,
 	[EmployeeSurrogateKey] [int] NULL,
 	[CallChargeSurrogateKey] [int] NULL,
-	[CallDate_DateKey] [int] NULL
+	[CallDate_DateKey] [int] NULL,
+	[CallDate_TimeKey] [int] NULL
 ) ON [PRIMARY]
 GO
 
@@ -303,3 +303,26 @@ BEGIN
 
    SET @CurrentDate = DATEADD(DD, 1, @CurrentDate)
 END
+GO
+
+/****** Object:  Table [dbo].[DimTime]    Script Date: 5/19/2024 7:58:50 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[DimTime](
+	[TimeKey] [int] NOT NULL,
+	[TimeVal] [time](7) NULL,
+	[Hour] [int] NULL,
+	[Minute] [int] NULL,
+	[Second] [int] NULL,
+	[HourMinute] [varchar](5) NULL,
+	[HourMinuteSecond] [varchar](8) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[TimeKey] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
